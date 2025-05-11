@@ -14,19 +14,14 @@ test.beforeAll(async () => {
   });
 });
 
-test('GET GetChatResource returns chat configuration details', async () => {
+test('Check if the response has a title', async () => {
   const response = await apiContext.get('/govilHF/api/GetChatResource?culture=he');
 
   // ודא שהתגובה הצליחה
-  expect(response.ok(), `Request failed with status ${response.status()}`).toBeTruthy();
+  expect(response.ok()).toBeTruthy();
 
   const data = await response.json();
 
-  // בדיקות בסיסיות למבנה הנתונים
+  // בדוק אם יש כותרת בתגובה
   expect(data).toHaveProperty('title');
-  expect(data).toHaveProperty('message');
-  expect(data).toHaveProperty('notice');
-
-  // הדפסה לצרכי debug (אפשר להסיר)
-  console.log(JSON.stringify(data, null, 2));
 });

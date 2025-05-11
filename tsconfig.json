@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+      "target": "ES6",                 // המטרה היא JavaScript ES6
+      "module": "commonjs",            // שימוש במודולים מסוג commonjs
+      "strict": true,                  // הפעלת בדיקות מחמירות (אופציה מומלצת)
+      "esModuleInterop": true,         // אינטרופציה עם מודולי ES
+      "skipLibCheck": true             // דילוג על בדיקות ספריות
+    },
+    "include": [
+      "simple-test.ts"                 // כלל את קובץ ה-TypeScript שלך
+    ]
+  }
+  

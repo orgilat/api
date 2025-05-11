@@ -3,31 +3,31 @@ import { test, expect, request, APIRequestContext } from '@playwright/test';
 let apiContext: APIRequestContext;
 
 test.beforeAll(async () => {
+  // יצירת קונטקסט חדש לבקשות API
   apiContext = await request.newContext({
-    baseURL: 'https://www.gov.il',
+    baseURL: 'https://moovitapp.com/index/api/location/search',
     extraHTTPHeaders: {
-      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
       'Accept': 'application/json',
-      'Referer': 'https://www.gov.il/',
-      'Origin': 'https://www.gov.il',
+      'Content-Type': 'application/json',
     },
   });
 });
 
-test('Check if the response has a title', async () => {
-  const response = await apiContext.get('/govilHF/api/GetChatResource?culture=he');
+test('Send POST request and print the response body', async () => {
+  // נתונים שנשלחים ב-POST (במקרה הזה לדוגמה)
+  const postData = {
+    location: "Tel Aviv", // דוגמה בלבד
+  };
 
-  // בדוק אם התגובה הצליחה
-  if (!response.ok()) {
-    console.error('Request failed with status:', response.status());
-    // הדפס את התוכן של התגובה במקרה של שגיאה
-    const errorBody = await response.body();
-    console.error('Response body:', errorBody.toString());
-  }
-  expect(response.ok()).toBeTruthy();
+  // שליחת בקשת POST עם הנתונים
+  const response = await apiContext.post('', {
+    data: postData,
+  });
 
+  // מוודא שהבקשה הצליחה (סטטוס 200)
+  expect(response.ok(), `Request failed with status ${response.status()}`).toBeTruthy();
+
+  // הדפסת התשובה המתקבלת (הגולמית)
   const data = await response.json();
-
-  // בדוק אם יש כותרת בתגובה
-  expect(data).toHaveProperty('title');
+  console.log(data); // כאן תראה את התשובה
 });

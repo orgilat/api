@@ -17,7 +17,13 @@ test.beforeAll(async () => {
 test('Check if the response has a title', async () => {
   const response = await apiContext.get('/govilHF/api/GetChatResource?culture=he');
 
-  // ודא שהתגובה הצליחה
+  // בדוק אם התגובה הצליחה
+  if (!response.ok()) {
+    console.error('Request failed with status:', response.status());
+    // הדפס את התוכן של התגובה במקרה של שגיאה
+    const errorBody = await response.body();
+    console.error('Response body:', errorBody.toString());
+  }
   expect(response.ok()).toBeTruthy();
 
   const data = await response.json();

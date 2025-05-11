@@ -8,7 +8,6 @@ export default defineConfig({
   },
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    baseURL: 'https://www.amazon.com',
     extraHTTPHeaders: {
       'User-Agent': 'PlaywrightTestBot/1.0',
       'Accept': 'text/html',

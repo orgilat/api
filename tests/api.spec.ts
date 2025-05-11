@@ -4,16 +4,29 @@ let apiContext: APIRequestContext;
 
 test.beforeAll(async () => {
   apiContext = await request.newContext({
-    baseURL: 'https://www.gov.il', // שים לב, לא amazon.com הרגיל
+    baseURL: 'https://www.gov.il',
+    extraHTTPHeaders: {
+      'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64)',
+      'Accept': 'application/json',
+      'Referer': 'https://www.gov.il/',
+      'Origin': 'https://www.gov.il',
+    },
   });
 });
 
-test('GET product by ID returns product details', async () => {
+test('GET GetChatResource returns chat configuration details', async () => {
   const response = await apiContext.get('/govilHF/api/GetChatResource?culture=he');
-  expect(response.ok()).toBeTruthy();
+
+  // ודא שהתגובה הצליחה
+  expect(response.ok(), `Request failed with status ${response.status()}`).toBeTruthy();
 
   const data = await response.json();
-  console.log(data);
 
+  // בדיקות בסיסיות למבנה הנתונים
+  expect(data).toHaveProperty('title');
+  expect(data).toHaveProperty('message');
+  expect(data).toHaveProperty('notice');
 
+  // הדפסה לצרכי debug (אפשר להסיר)
+  console.log(JSON.stringify(data, null, 2));
 });

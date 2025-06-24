@@ -1,0 +1,3 @@
+[2025-06-21 20:55:37] info: הטסט התחיל
+Count from API: undefined
+Count from UI: 64

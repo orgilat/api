@@ -1,0 +1,1416 @@
+# Test info
+
+- Name: u,תFbfffzzfffתvvvcccccccccת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:194:16
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 7
+Received: 0
+    at FlowPage.eleven14 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:448:18)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:200:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:199:5
+```
+
+# Page snapshot
+
+```yaml
+- text: maxqorder=36
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=mtableedit
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "אדמינ.":
+      - /url: admin.asp
+  - listitem: ">>"
+  - listitem:
+    - link "תכנית הסקר":
+      - /url: planadmin.asp
+  - listitem: ">>"
+  - listitem:
+    - link "רשימת מאגרי המשיבים":
+      - /url: mtableslist.asp
+  - listitem: ">>"
+  - listitem: הוספה/ עריכה שדות במאגר המשיבים
+  - listitem:
+    - img
+- text: "רשימת שדות עבור המאגר: מאגר עדכני"
+- table:
+  - rowgroup:
+    - row
+    - row
+    - row "קשרים בין שדות קשרים בין ערכים בשדות חישוב והסקה משאלת תאריך":
+      - cell "קשרים בין שדות":
+        - button "קשרים בין שדות"
+      - cell "קשרים בין ערכים בשדות":
+        - button "קשרים בין ערכים בשדות"
+      - cell "חישוב והסקה משאלת תאריך":
+        - button "חישוב והסקה משאלת תאריך"
+    - row "אינטגרציה בין שדות הסקה מקוד מנהל לקוד מנהל (מולטי) עריכת שדה לפי שדה":
+      - cell "אינטגרציה בין שדות":
+        - button "אינטגרציה בין שדות"
+      - cell "הסקה מקוד מנהל לקוד מנהל (מולטי)":
+        - button "הסקה מקוד מנהל לקוד מנהל (מולטי)"
+      - cell "עריכת שדה לפי שדה":
+        - button "עריכת שדה לפי שדה"
+    - row "התניית משלוח תזכורות לפי שדה":
+      - cell "התניית משלוח תזכורות לפי שדה":
+        - button "התניית משלוח תזכורות לפי שדה"
+- separator
+- table:
+  - rowgroup:
+    - row "שם השדה העבר שדה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell
+      - cell "שם השדה"
+      - cell "העבר שדה"
+      - cell "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה"
+    - row "1 שם פרטי (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "1":
+        - combobox:
+          - option "1" [selected]
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "שם פרטי (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "2 שם משפחה (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "2":
+        - combobox:
+          - option "1"
+          - option "2" [selected]
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "שם משפחה (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "3 שם מלא הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "3":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3" [selected]
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "שם מלא"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "4 דרגת כתף באירוע הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "4":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4" [selected]
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "דרגת כתף באירוע"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "5 תעודת זהות (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "5":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5" [selected]
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "תעודת זהות (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "6 כינוי (מנוהל) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "6":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6" [selected]
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "כינוי (מנוהל)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "7 חיל (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "7":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7" [selected]
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "חיל (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "8 מספר אישי (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "8":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8" [selected]
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "מספר אישי (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "9 יחידת אמת (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "9":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9" [selected]
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "יחידת אמת (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "10 יחידת אירוע הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "10":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10" [selected]
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "יחידת אירוע"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "11 דרגה ייצוגית (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "11":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11" [selected]
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "דרגה ייצוגית (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "12 דרגת כתף הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "12":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12" [selected]
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "דרגת כתף"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "14 תפקיד (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "14":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14" [selected]
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "תפקיד (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "15 תפקיד באירוע (מנוהל) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "15":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15" [selected]
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "תפקיד באירוע (מנוהל)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "18 תאריך קליטה ביחידה (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "18":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18" [selected]
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "תאריך קליטה ביחידה (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "19 סוג שירות (סאפ) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "19":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19" [selected]
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "סוג שירות (סאפ)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "21 מייל (מוסק) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "21":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21" [selected]
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "מייל (מוסק)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "22 אוכלוסיות (מוסק) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "22":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22" [selected]
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "אוכלוסיות (מוסק)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "23 אוכלוסיות + (מוסק) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "23":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23" [selected]
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "אוכלוסיות + (מוסק)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "24 תאריך טעינה למערכת (מוסק) הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "24":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24" [selected]
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+      - cell "תאריך טעינה למערכת (מוסק)"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "35 משתתף בפיילוט הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "35":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35" [selected]
+          - option "36"
+      - cell "משתתף בפיילוט"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "36 respid הזז למעלה הזז למטה ערוך שם ומאפייני השדה הוספה ועריכה של ערכים לשדות מחק שדה":
+      - cell "36":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36" [selected]
+      - cell "respid"
+      - cell "הזז למעלה הזז למטה":
+        - button "הזז למעלה"
+        - button "הזז למטה"
+      - cell "ערוך שם ומאפייני השדה":
+        - button "ערוך שם ומאפייני השדה"
+      - cell "הוספה ועריכה של ערכים לשדות":
+        - button "הוספה ועריכה של ערכים לשדות"
+      - cell "מחק שדה":
+        - button "מחק שדה"
+    - row "הוסף שדה חדש":
+      - cell "הוסף שדה חדש":
+        - button "הוסף שדה חדש"
+- table:
+  - rowgroup:
+    - row
+    - row
+    - row "קשרים בין שדות קשרים בין ערכים בשדות חישוב והסקה משאלת תאריך":
+      - cell "קשרים בין שדות":
+        - button "קשרים בין שדות"
+      - cell "קשרים בין ערכים בשדות":
+        - button "קשרים בין ערכים בשדות"
+      - cell "חישוב והסקה משאלת תאריך":
+        - button "חישוב והסקה משאלת תאריך"
+    - row "אינטגרציה בין שדות הסקה מקוד מנהל לקוד מנהל (מולטי) עריכת שדה לפי שדה":
+      - cell "אינטגרציה בין שדות":
+        - button "אינטגרציה בין שדות"
+      - cell "הסקה מקוד מנהל לקוד מנהל (מולטי)":
+        - button "הסקה מקוד מנהל לקוד מנהל (מולטי)"
+      - cell "עריכת שדה לפי שדה":
+        - button "עריכת שדה לפי שדה"
+    - row "התניית משלוח תזכורות לפי שדה":
+      - cell "התניית משלוח תזכורות לפי שדה":
+        - button "התניית משלוח תזכורות לפי שדה"
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+- text: "%>"
+```
+
+# Test source
+
+```ts
+  348 | async eleven8() {
+  349 |    await this.all.nth(11).click()
+  350 |    await expect(this.must3).toContainText("רשימת אשכולות")
+  351 |    const a = await this.kpi.inputValue();
+  352 |    expect(a).toContain("אשכולות");
+  353 |    const ab = await this.kpi2.inputValue();
+  354 |    expect(ab).toContain("הגדרת מענה");
+  355 |    await expect(this.table3).toBeVisible()
+  356 |    await expect(this.table4).toBeVisible()
+  357 |    const abc = await this.table4.inputValue();
+  358 |    expect(abc).toContain("אשכול חדש");
+  359 |
+  360 |
+  361 |  }
+  362 |
+  363 |  async eleven9() {
+  364 |    await this.all.nth(12).click()
+  365 |    await expect(this.must3).toContainText("העברת משיבים ממאגר פוטנציאלי למאגר פעיל ולהיפך")
+  366 |    await expect(this.all).toBeVisible()
+  367 |    const a=await this.table5.count()
+  368 |    expect(a).toBe(46)
+  369 |    await expect(this.must4).toBeVisible()
+  370 |
+  371 |  }
+  372 |   async eleven10() {
+  373 |    await this.all.nth(13).click()
+  374 |    await expect(this.must3).toContainText("ניהול הרשאות משתמשים")
+  375 |    await expect(this.all).toBeVisible()
+  376 |    const a=await this.table5.count()
+  377 |    expect(a).toBe(46)
+  378 |    await expect(this.must4).toBeVisible()
+  379 |
+  380 |  }
+  381 |
+  382 |   async eleven11() {
+  383 |    await this.all.nth(14).click()
+  384 |  
+  385 |    await expect(this.submitButton).toBeVisible()
+  386 |    await expect(this.all).toBeVisible()
+  387 |    // ניגש לאלמנט לפי ID (כמו בדוגמה שלך)
+  388 |    const dateInput = this.page.locator('#dateFrom');
+  389 |    const dateTo = await this.page.locator('#dateTo').inputValue();
+  390 |
+  391 | // קולטים את הערך מתוך השדה
+  392 |     const inputValue = await dateInput.inputValue();
+  393 |
+  394 | // מייצרים את התאריך של היום בפורמט dd/MM/yyyy
+  395 | const today = new Date();
+  396 | const day = String(today.getDate()).padStart(2, '0');
+  397 | const month = String(today.getMonth() + 1).padStart(2, '0');
+  398 | const year = today.getFullYear();
+  399 | const todayFormatted = `${day}/${month}/${year}`;
+  400 |
+  401 | // משווים בין התאריך שבשדה לתאריך של היום
+  402 | expect(inputValue).toBe(todayFormatted);
+  403 | expect(dateTo).toBe(todayFormatted);
+  404 |
+  405 |
+  406 |  }
+  407 |
+  408 |
+  409 | async eleven12() {
+  410 |    await this.all.nth(15).click()
+  411 |    await expect(this.must3).toContainText("הגדרת חוקי העתקה של נתונים מחושבים לשאלון העזר")
+  412 |    await expect(this.must4).toBeVisible()
+  413 |    // קולט את כל הלייבלים שבתוך הטופס
+  414 |     const labels = this.page.locator("//form[@name='sm_precalcrules']//label");
+  415 |     const count1 = await labels.count();
+  416 |     expect(count1).toBe(5);
+  417 | }
+  418 |
+  419 | async eleven13() {
+  420 |    await this.all.nth(16).click()
+  421 |    await expect(this.must3).toContainText("הגדרת כללים לחוקות חישוב ואוכלוסיות למודל חישוב")
+  422 |    await expect(this.submitButton).toBeVisible()
+  423 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  424 |    const table = this.page.locator("(//table[@cellpadding='0'])");
+  425 |
+  426 | // סופר את מספר השורות
+  427 | const rowCount = await table.count();
+  428 |
+  429 | // בודק שיש בדיוק 2
+  430 | expect(rowCount).toBe(2);
+  431 |
+  432 | }
+  433 |
+  434 | async eleven14() {
+  435 |    await this.all.nth(17).click()
+  436 |    await expect(this.must3).toContainText("רשימת שדות עבור המאגר: מאגר עדכני")
+  437 |   
+  438 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  439 |     const table2 = this.page.locator(".mtableedit-table");
+  440 |    const table = this.page.locator("input[fdprocessedid='x28mb']");
+  441 | const table3 = this.page.locator("input[value='הוסף שדה חדש']");
+  442 |  await expect(table2).toBeVisible()
+  443 |    await expect(table3).toBeVisible()
+  444 | // סופר את מספר השורות
+  445 | const rowCount = await table.count();
+  446 |
+  447 | // בודק שיש בדיוק 2
+> 448 | expect(rowCount).toBe(7);
+      |                  ^ Error: expect(received).toBe(expected) // Object.is equality
+  449 |
+  450 | }
+  451 |
+  452 |
+  453 |
+  454 |
+  455 |
+  456 |
+  457 |
+  458 |
+  459 |
+  460 |
+  461 |
+  462 |
+  463 |
+  464 |
+  465 |
+  466 |
+  467 |
+  468 |
+  469 |
+  470 |
+  471 |
+  472 |
+  473 |
+  474 |
+  475 |
+  476 |
+  477 |
+  478 |
+  479 |
+  480 |
+  481 |
+  482 |
+  483 |
+  484 |
+  485 |
+  486 |
+  487 |
+  488 |
+  489 |
+  490 |
+  491 |
+  492 |
+  493 |  async ele() {
+  494 |   await this.all.nth(5).click();
+  495 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  496 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  497 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  498 |
+  499 |   // טען את תמונת ה-expected הקיימת
+  500 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  501 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  502 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  503 |
+  504 |   const { width, height } = expectedImage;
+  505 |   const diff = new PNG({ width, height });
+  506 |
+  507 |   // השווה בין התמונות
+  508 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  509 |
+  510 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  511 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  512 | };
+  513 | async compareScreenshots(start: number, end: number) {
+  514 |   for (let i = start; i <= end; i++) {
+  515 |     await this.all.nth(i).click();
+  516 |
+  517 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  518 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  519 |
+  520 |     const width = await this.page.evaluate(() => window.innerWidth);
+  521 |     const height = await this.page.evaluate(() => window.innerHeight);
+  522 |     
+  523 |     
+  524 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  525 |
+  526 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  527 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  528 |
+  529 |     const { width: w, height: h } = expectedImage;
+  530 |     const diff = new PNG({ width: w, height: h });
+  531 |
+  532 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  533 |
+  534 |     const TOLERANCE = 100;
+  535 |
+  536 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  537 |
+  538 |
+  539 |     await this.page.goBack();
+  540 |   }
+  541 | }
+  542 | async captureExpectedScreenshots(start: number, end: number) {
+  543 |   for (let i = start; i <= end; i++) {
+  544 |     await this.all.nth(i).click();
+  545 |
+  546 |     const width = await this.page.evaluate(() => window.innerWidth);
+  547 |     const height = await this.page.evaluate(() => window.innerHeight);
+  548 |
+```

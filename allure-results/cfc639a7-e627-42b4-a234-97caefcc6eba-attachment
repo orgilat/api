@@ -1,0 +1,228 @@
+# Test info
+
+- Name: u,תFbffעעfsfsfעfzzfffתvvvcccccזהזכccccת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:239:11
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible()
+
+Locator: locator('div.ss-main')
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  - expect.toBeVisible with timeout 190000ms
+  - waiting for locator('div.ss-main')
+
+    at FlowPage.eleven19 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:498:23)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:245:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:244:5
+```
+
+# Test source
+
+```ts
+  398 | const year = today.getFullYear();
+  399 | const todayFormatted = `${day}/${month}/${year}`;
+  400 |
+  401 | // משווים בין התאריך שבשדה לתאריך של היום
+  402 | expect(inputValue).toBe(todayFormatted);
+  403 | expect(dateTo).toBe(todayFormatted);
+  404 |
+  405 |
+  406 |  }
+  407 |
+  408 |
+  409 | async eleven12() {
+  410 |    await this.all.nth(15).click()
+  411 |    await expect(this.must3).toContainText("הגדרת חוקי העתקה של נתונים מחושבים לשאלון העזר")
+  412 |    await expect(this.must4).toBeVisible()
+  413 |    // קולט את כל הלייבלים שבתוך הטופס
+  414 |     const labels = this.page.locator("//form[@name='sm_precalcrules']//label");
+  415 |     const count1 = await labels.count();
+  416 |     expect(count1).toBe(5);
+  417 | }
+  418 |
+  419 | async eleven13() {
+  420 |    await this.all.nth(16).click()
+  421 |    await expect(this.must3).toContainText("הגדרת כללים לחוקות חישוב ואוכלוסיות למודל חישוב")
+  422 |    await expect(this.submitButton).toBeVisible()
+  423 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  424 |    const table = this.page.locator("(//table[@cellpadding='0'])");
+  425 |
+  426 | // סופר את מספר השורות
+  427 | const rowCount = await table.count();
+  428 |
+  429 | // בודק שיש בדיוק 2
+  430 | expect(rowCount).toBe(2);
+  431 |
+  432 | }
+  433 |
+  434 | async eleven14() {
+  435 |    await this.all.nth(17).click()
+  436 |    await expect(this.must3).toContainText("רשימת שדות עבור המאגר: מאגר עדכני")
+  437 |   
+  438 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  439 |     const table2 = this.page.locator(".mtableedit-table");
+  440 |    const table = this.page.locator("(//input[@type='button'])");
+  441 | const table3 = this.page.locator("input[value='הוסף שדה חדש']");
+  442 |  await expect(table2).toBeVisible()
+  443 |    await expect(table3).toBeVisible()
+  444 | // סופר את מספר השורות
+  445 | const rowCount = await table.count();
+  446 |
+  447 | // בודק שיש בדיוק 2
+  448 | expect(rowCount).toBe(15);
+  449 |
+  450 | }
+  451 |
+  452 | async eleven15() {
+  453 |   
+  454 |   await this.all.nth(18).click();
+  455 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp");
+  456 | }
+  457 | async eleven16() {
+  458 |   await this.all.nth(19).click();
+  459 |  await expect(this.must3).toContainText("יצוא מצגות לקבוצות משתמשים במרוכז")
+  460 |   const elements = await this.page.locator("(//div[@class='BodyOut-continar']//td)");
+  461 |   const count = await elements.count();
+  462 |   expect(count).toBe(4);
+  463 |   
+  464 | }
+  465 | async eleven17() {
+  466 |   await this.all.nth(20).click();
+  467 |
+  468 |    // 1. קליטת שדה חיפוש (input[type='search'])
+  469 |   const searchInput = this.page.locator("input[type='search']");
+  470 |   await expect(searchInput).toHaveCount(1); // ודא שיש בדיוק אחד
+  471 |
+  472 |   // 2. קליטת כפתור בתוך השורה הראשונה של הטבלה
+  473 |   const firstRowButton = this.page.locator("(//table[@id='mailTable']//tr)[1]");
+  474 |   await expect(firstRowButton).toHaveCount(1); // ודא שקיים כפתור אחד בשורה הראשונה
+  475 |
+  476 |   // 3. קליטת div של מידע - dt-info
+  477 |   const dtInfo = this.page.locator("div.dt-info");
+  478 |   await expect(dtInfo).toHaveCount(1); // ודא שיש div אחד עם info
+  479 |
+  480 |   // 4. ודא שסה"כ 4 כפתורים קיימים (לדוגמה אם אתה מתכוון לכמות כללית)
+  481 |   const allButtons = this.page.locator("input[type='button']");
+  482 |   await expect(allButtons).toHaveCount(1); // ודא שיש 4 כפתורי input בעמוד
+  483 |   
+  484 | }
+  485 |
+  486 | async eleven18() {
+  487 |   await this.all.nth(21).click();
+  488 |   await expect(this.must3).toContainText("ערוך מאפייני קבצי עובד")
+  489 |   const allButtons = this.page.locator("//a[normalize-space(text())='ערוך רשימת מאפיינים']");
+  490 |   await allButtons.click()
+  491 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/interface.asp?ipagename=employeefilesprop");
+  492 |   
+  493 | }
+  494 |
+  495 | async eleven19() {
+  496 |   await this.all.nth(22).click();
+  497 |   const allButtons1 = this.page.locator('div.ss-main');
+> 498 |   expect(allButtons1).toBeVisible()
+      |                       ^ Error: expect(locator).toBeVisible()
+  499 |   const allButtons = this.page.locator("(//input[@class='btns'])");
+  500 |   const count = await allButtons.count();
+  501 |   expect(count).toBe(2);
+  502 | }
+  503 |
+  504 |
+  505 |
+  506 |
+  507 |
+  508 |
+  509 |
+  510 |
+  511 |
+  512 |
+  513 |
+  514 |
+  515 |
+  516 |
+  517 |
+  518 |
+  519 |
+  520 |
+  521 |
+  522 |
+  523 |
+  524 |
+  525 |
+  526 |
+  527 |
+  528 |
+  529 |
+  530 |
+  531 |
+  532 |
+  533 |
+  534 |
+  535 |
+  536 |
+  537 |
+  538 |  async ele() {
+  539 |   await this.all.nth(5).click();
+  540 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  541 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  542 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  543 |
+  544 |   // טען את תמונת ה-expected הקיימת
+  545 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  546 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  547 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  548 |
+  549 |   const { width, height } = expectedImage;
+  550 |   const diff = new PNG({ width, height });
+  551 |
+  552 |   // השווה בין התמונות
+  553 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  554 |
+  555 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  556 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  557 | };
+  558 | async compareScreenshots(start: number, end: number) {
+  559 |   for (let i = start; i <= end; i++) {
+  560 |     await this.all.nth(i).click();
+  561 |
+  562 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  563 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  564 |
+  565 |     const width = await this.page.evaluate(() => window.innerWidth);
+  566 |     const height = await this.page.evaluate(() => window.innerHeight);
+  567 |     
+  568 |     
+  569 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  570 |
+  571 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  572 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  573 |
+  574 |     const { width: w, height: h } = expectedImage;
+  575 |     const diff = new PNG({ width: w, height: h });
+  576 |
+  577 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  578 |
+  579 |     const TOLERANCE = 100;
+  580 |
+  581 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  582 |
+  583 |
+  584 |     await this.page.goBack();
+  585 |   }
+  586 | }
+  587 | async captureExpectedScreenshots(start: number, end: number) {
+  588 |   for (let i = start; i <= end; i++) {
+  589 |     await this.all.nth(i).click();
+  590 |
+  591 |     const width = await this.page.evaluate(() => window.innerWidth);
+  592 |     const height = await this.page.evaluate(() => window.innerHeight);
+  593 |
+  594 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  595 |
+  596 |     await this.page.screenshot({
+  597 |       path: screenshotPath,
+  598 |       clip: {
+```

@@ -1,0 +1,223 @@
+# Test info
+
+- Name: u,תFbffffffתת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:150:12
+
+# Error details
+
+```
+Error: locator.inputValue: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('input[fdprocessedid=\'hmu6jx\']')
+
+    at FlowPage.eleven8 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:340:29)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:156:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:155:5
+```
+
+# Test source
+
+```ts
+  240 |  await this.all.nth(0).click()
+  241 |  await expect(this.must).toBeVisible()
+  242 |  await expect(this.must2).toBeVisible()
+  243 |
+  244 | }
+  245 | async seven() {
+  246 |
+  247 |   await this.all.nth(1).click()
+  248 |   await expect(this.must3).toBeVisible()
+  249 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  250 |   await expect(this.must4).toBeVisible()
+  251 |   await expect(this.must5).toBeVisible()
+  252 |  }
+  253 |  async eight() {
+  254 |
+  255 |   await this.all.nth(2).click()
+  256 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  257 |   await expect(this.must6).toBeVisible()
+  258 |   await expect(this.must6).toContainText("סוציומטרי")
+  259 |   await expect(this.must7).toContainText("מספר אישי")
+  260 |  
+  261 | }
+  262 |  async nine() {
+  263 |
+  264 |   await this.all.nth(3).click()
+  265 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  266 |   await expect(this.must5).toBeVisible()
+  267 |   await expect(this.must8).toBeVisible()
+  268 |   await this.must8.click()
+  269 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  270 |
+  271 |  
+  272 |  }
+  273 |  async ten() {
+  274 |
+  275 |   await this.all.nth(4).click()
+  276 |   await expect(this.must9).toBeVisible()
+  277 |   await this.must9.click()
+  278 |   const count = await this.must10.count();
+  279 |   await expect(count).toBe(24);
+  280 |   await expect(this.must11).toBeVisible()
+  281 |
+  282 |
+  283 |  
+  284 |  }
+  285 |
+  286 |  async eleven() {
+  287 |    await this.all.nth(5).click()
+  288 |    await expect(this.must3).toContainText("כללי השתתפות לפי סוג יחידה")
+  289 |    await expect(this.must4).toBeVisible()
+  290 |    const value = await this.must14.textContent();
+  291 |    expect(value).toBe("שדה")
+  292 |    const value2 = await this.must15.textContent();
+  293 |    expect(value2).toBe("מטה")
+  294 |
+  295 |  
+  296 |  }
+  297 |
+  298 |  async eleven2() {
+  299 |    await this.all.nth(6).click()
+  300 |    await expect(this.must3).toContainText("הגדרת השדות שיופיעו בטבלאות")
+  301 |    await expect(this.table).toBeVisible()
+  302 |    await expect(this.must17).toBeVisible()
+  303 |
+  304 |  
+  305 |  }
+  306 |  async eleven3() {
+  307 |    await this.all.nth(7).click()
+  308 |    await expect(this.must3).toContainText("אופציות שונות לניהול מינ מקס לבחירת היגדים וכללים שונים")
+  309 |    await expect(this.table2).toBeVisible()
+  310 |
+  311 |
+  312 |  
+  313 |  }
+  314 |  async eleven4() {
+  315 |    await this.all.nth(8).click()
+  316 |    await expect(this.must3).toContainText("הגדרה וניהול סטטוסים לאירועים")
+  317 |    await expect(this.table).toBeVisible()
+  318 |
+  319 |  
+  320 |  }
+  321 |
+  322 |
+  323 |
+  324 |  async eleven6() {
+  325 |    await this.all.nth(9).click()
+  326 |    await expect(this.must3).toContainText("סיבות להוספת או הסרת משתתפים באירוע סוציומטרי")
+  327 |    await expect(this.table).toBeVisible()
+  328 |    await expect(this.submitButton).toBeVisible()
+  329 |  
+  330 |  }
+  331 | async eleven7() {
+  332 |    await this.all.nth(10).click()
+  333 |    await expect(this.must3).toContainText("כמות היגדים נדרשים למילוי כתלות בתשובה בהיגד ספציפי כגון מידת היכרות")
+  334 |    await expect(this.table).toBeVisible()
+  335 |
+  336 |  }
+  337 | async eleven8() {
+  338 |    await this.all.nth(11).click()
+  339 |    await expect(this.must3).toContainText("רשימת אשכולות")
+> 340 |    const a = await this.kpi.inputValue();
+      |                             ^ Error: locator.inputValue: Target page, context or browser has been closed
+  341 |    expect(a).toContain("may");
+  342 |
+  343 |
+  344 |  }
+  345 |
+  346 |
+  347 |
+  348 |
+  349 |
+  350 |
+  351 |
+  352 |
+  353 |
+  354 |
+  355 |
+  356 |
+  357 |
+  358 |
+  359 |
+  360 |
+  361 |
+  362 |
+  363 |
+  364 |
+  365 |
+  366 |
+  367 |
+  368 |
+  369 |
+  370 |
+  371 |
+  372 |
+  373 |
+  374 |
+  375 |
+  376 |
+  377 |
+  378 |
+  379 |
+  380 |
+  381 |
+  382 |
+  383 |
+  384 |
+  385 |
+  386 |
+  387 |
+  388 |
+  389 |
+  390 |
+  391 |
+  392 |
+  393 |  async ele() {
+  394 |   await this.all.nth(5).click();
+  395 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  396 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  397 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  398 |
+  399 |   // טען את תמונת ה-expected הקיימת
+  400 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  401 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  402 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  403 |
+  404 |   const { width, height } = expectedImage;
+  405 |   const diff = new PNG({ width, height });
+  406 |
+  407 |   // השווה בין התמונות
+  408 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  409 |
+  410 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  411 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  412 | };
+  413 | async compareScreenshots(start: number, end: number) {
+  414 |   for (let i = start; i <= end; i++) {
+  415 |     await this.all.nth(i).click();
+  416 |
+  417 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  418 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  419 |
+  420 |     const width = await this.page.evaluate(() => window.innerWidth);
+  421 |     const height = await this.page.evaluate(() => window.innerHeight);
+  422 |     
+  423 |     
+  424 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  425 |
+  426 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  427 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  428 |
+  429 |     const { width: w, height: h } = expectedImage;
+  430 |     const diff = new PNG({ width: w, height: h });
+  431 |
+  432 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  433 |
+  434 |     const TOLERANCE = 100;
+  435 |
+  436 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  437 |
+  438 |
+  439 |     await this.page.goBack();
+  440 |   }
+```

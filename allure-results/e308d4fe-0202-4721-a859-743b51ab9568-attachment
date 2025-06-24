@@ -1,0 +1,246 @@
+# Test info
+
+- Name: בדיקה פלואו: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:25:7
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('div.dropdown.dropdown-select[label="No-Text period"]')
+    - locator resolved to <div label="No-Text period" class="dropdown dropdown-select">…</div>
+  - attempting click action
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div data-bind="dxControlsDescendantBindings: true" class="dx-overlay-wrapper dx-loadpanel-wrapper dx-overlay-shader">…</div> intercepts pointer events
+    - retrying click action
+    - waiting 20ms
+    2 × waiting for element to be visible, enabled and stable
+      - element is visible, enabled and stable
+      - scrolling into view if needed
+      - done scrolling
+      - <div data-bind="dxControlsDescendantBindings: true" class="dx-overlay-wrapper dx-loadpanel-wrapper dx-overlay-shader">…</div> intercepts pointer events
+    - retrying click action
+      - waiting 100ms
+    - waiting for element to be visible, enabled and stable
+    - element is visible, enabled and stable
+    - scrolling into view if needed
+    - done scrolling
+    - <div data-bind="dxControlsDescendantBindings: true" class="dx-overlay-wrapper dx-loadpanel-wrapper dx-overlay-shader">…</div> intercepts pointer events
+  - retrying click action
+    - waiting 500ms
+
+    at FlowPage.five (C:\Users\User\Documents\k6try\pages\FlowPage.ts:185:31)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:31:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:30:5
+```
+
+# Test source
+
+```ts
+   85 |             'li[role="treeitem"][aria-label="פיקוד 1"] >> div[role="checkbox"]'
+   86 |           );
+   87 |           this.list22 = page.locator(
+   88 |             'div.col-4:has(div.section_title:has-text("בחירת יחידות מאגדות להצגת דוח מילוי"))'
+   89 |           );
+   90 |         
+   91 |           // מתוך אותו קונטיינר – מגדירים את ה־checkbox של אוגדה 1
+   92 |                this.ogda1 = this.list2.locator(
+   93 |             'li[role="treeitem"][aria-label="אוגדה 1"] >> div.dx-checkbox-container'
+   94 |           );
+   95 |         
+   96 |        
+   97 |         
+   98 |         
+   99 |                 this.startDateButton = page.locator(
+  100 |                     '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(1) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  101 |                 );
+  102 |                 this.endDateButton = page.locator(
+  103 |                     '#layout > div > div.app_content > div > main > div > div:nth-child(9) > div > div:nth-child(2) > div > div.dx-dropdowneditor-input-wrapper > div > div.dx-texteditor-buttons-container > div.dx-widget.dx-button-mode-contained.dx-button-normal.dx-rtl.dx-dropdowneditor-button'
+  104 |                 );
+  105 |         
+  106 |         
+  107 |         
+  108 |                 this.end1 = page.locator('#layout > div > div.app_content > div > main > div > div:nth-child(22) > div.questions_section > div:nth-child(2) > div');
+  109 |                 
+  110 |                 this.end3 = page.locator('#layout > div > div.app_content > div > main > div > div:nth-child(22) > div.questions_section > div:nth-child(6) > div');
+  111 |                 
+  112 |                 this.final = page.locator('div.q-tab__label:has-text("ניהול פוטנציאל")');
+  113 |         
+  114 |            this.calculate = page.getByRole('button', { name: 'חשב פוטנציאל מחדש' });
+  115 |     this.show = page.getByRole('button', { name: 'הצג פוטנציאל' })
+  116 |     this.show1 = page.getByRole('button', { name: 'הצג פוטנציאל' })  
+  117 |  
+  118 |     this.f1 = page.getByRole('button', { name: 'Select' }).nth(1)
+  119 |     this.f2= page.getByText('לא', { exact: true })
+  120 |     this.f4= page.getByText('close')
+  121 |     this.all = page.locator('//input[@type="button"]');
+  122 |     this.must = page.locator(' input[value="שאלות חובה לסוציומטרי"]');
+  123 |     this.must2 = page.locator('input[value="שדות לפילטור הפוטנציאל"]');
+  124 |     this.must3= page.locator('//div[@class="page-title"]//span[1]');
+  125 |     this.must4= page.locator('input[type="submit"]');
+  126 |     this.must5= page.locator('table.tablestyle');
+  127 |     this.must6= page.locator('(//div[@class="ss-single"])[1]');
+  128 |     this.must7= page.locator('(//div[@class="ss-single"])[2]');
+  129 |     this.must8= page.locator("button[title='חריגות בגין מידת היכרות']");
+  130 |     this.must9= page.locator('#myBtn');
+  131 |     this.must10= page.locator("(//div[@class='text-center']//label)");
+  132 |     this.must11= page.locator("#mainTable");
+  133 |     this.must12 = page.locator("(//form[@method='POST']//label)");
+  134 |     this.must13 = page.locator("(//div[@class='ss-main btn'])");
+  135 |     this.tr1 = page.locator("//tr[@aria-selected='false']");
+  136 |     this.page2 = page.locator("//div[@aria-label='Page 7']");
+  137 |     this.tableRows = page.locator("//table[@letxpath='letxpathtable']//tr");
+  138 |
+  139 |
+  140 |     
+  141 |   }
+  142 |  
+  143 |   async goto() {
+  144 |     await this.page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+  145 |   }
+  146 |
+  147 |   async login(username: string, password: string) {
+  148 |     await this.loginInput.fill(username);
+  149 |     await this.passwordInput.fill(password);
+  150 |     await this.submitButton.click();
+  151 |     await this.page.waitForTimeout(1001);
+  152 |   }
+  153 |
+  154 |   async goToSociometricManagement() {
+  155 |     await this.surveyAdminLink.hover();
+  156 |     await this.sociometricLink.click();
+  157 |    
+  158 |
+  159 |   }
+  160 |   async four() {
+  161 |     await this.modelingButton.scrollIntoViewIfNeeded()
+  162 |     await this.modelingButton.click();
+  163 |     await this.modelingButton1.click();
+  164 |     await this.list.locator('div.ss-option').nth(1).click();
+  165 |    await this.list1.hover()
+  166 |    await this.list2.click()
+  167 |    
+  168 |   
+  169 |   }
+  170 |   async five() {
+  171 |     await this.eventManagementButton.click();
+  172 |     await this.createNewEventButton.click();
+  173 |     await this.eventNameInput.waitFor({ state: 'visible' });
+  174 |     await this.eventNameInput.click({ force: true });
+  175 |     await this.page.waitForTimeout(200); // זמן קטן לייצוב
+  176 |     await this.eventNameInput.fill(''); // לנקות את השדה
+  177 |     await this.page.waitForTimeout(200); // עוד זמן קטן
+  178 |     await this.page.keyboard.type('מרינה 2025', { delay: 150 });
+  179 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  180 |
+  181 |
+  182 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  183 |
+  184 |
+> 185 |     await this.seasonDropdown.click();
+      |                               ^ Error: locator.click: Target page, context or browser has been closed
+  186 |     await this.seasonOption.click();
+  187 |     // הוספת בחירת עונה כאן אם צריך
+  188 |
+  189 |     // בחירת תאריך התחלה
+  190 |     await this.startDateButton.click();
+  191 |     await this.page.keyboard.press('Enter');   // בחירת תאריך סיום
+  192 |     await this.endDateButton.click();
+  193 |     await this.page.keyboard.press('Enter');
+  194 |     await this.recruit.click();
+  195 |     await this.recruitOption.click();
+  196 |     logger.info('we came to the end');
+  197 |     await this.mateS.click();
+  198 |     logger.info('worked');
+  199 |     await this.mateC.click();
+  200 |     await this.pikud1.click();
+  201 |     logger.info('פיקוד אחד נלחץ');
+  202 |     await this.page.waitForTimeout(2000)
+  203 |     await this.page.locator('div:nth-child(18) > .dx-treeview-with-search > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container > .dx-scrollable-content > ul > li > .dx-treeview-node-container > li > .dx-widget').first().click();
+  204 |     logger.info('אוגדה 1 נלחצה');
+  205 |     await this.page.waitForTimeout(2500);
+  206 |     await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  207 |     await this.end1.click({ force: true });
+  208 |     await this.page.waitForTimeout(2500);
+  209 |   
+  210 |     await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  211 |     await this.end3.click({ force: true });
+  212 |     await this.page.waitForTimeout(2500);
+  213 |     await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  214 |     await this.final.click({ force: true });
+  215 |     await this.page.waitForTimeout(2500);
+  216 |     await this.calculate.click();
+  217 |     await this.show.click();
+  218 |     await this.f1.waitFor({ state: 'visible' });
+  219 |     await this.f1.click();
+  220 |     await this.f2.waitFor({ state: 'visible' });
+  221 |     await this.f2.click();
+  222 |     await this.f4.waitFor({ state: 'visible' });
+  223 |     await this.f4.click();
+  224 |     await this.show1.waitFor({ state: 'visible' });
+  225 |     await this.show1.click();
+  226 |   }
+  227 |   async six() {
+  228 |
+  229 |  await this.all.nth(0).click()
+  230 |  await expect(this.must).toBeVisible()
+  231 |  await expect(this.must2).toBeVisible()
+  232 |
+  233 | }
+  234 | async seven() {
+  235 |
+  236 |   await this.all.nth(1).click()
+  237 |   await expect(this.must3).toBeVisible()
+  238 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  239 |   await expect(this.must4).toBeVisible()
+  240 |   await expect(this.must5).toBeVisible()
+  241 |  }
+  242 |  async eight() {
+  243 |
+  244 |   await this.all.nth(2).click()
+  245 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  246 |   await expect(this.must6).toBeVisible()
+  247 |   await expect(this.must6).toContainText("סוציומטרי")
+  248 |   await expect(this.must7).toContainText("מספר אישי")
+  249 |  
+  250 | }
+  251 |  async nine() {
+  252 |
+  253 |   await this.all.nth(3).click()
+  254 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  255 |   await expect(this.must5).toBeVisible()
+  256 |   await expect(this.must8).toBeVisible()
+  257 |   await this.must8.click()
+  258 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  259 |
+  260 |  
+  261 |  }
+  262 |  async ten() {
+  263 |
+  264 |   await this.all.nth(4).click()
+  265 |   await expect(this.must9).toBeVisible()
+  266 |   await this.must9.click()
+  267 |   const count = await this.must10.count();
+  268 |   await expect(count).toBe(24);
+  269 |   await expect(this.must11).toBeVisible()
+  270 |
+  271 |
+  272 |  
+  273 |  }
+  274 |  async ele() {
+  275 |   await this.all.nth(5).click();
+  276 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  277 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  278 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  279 |
+  280 |   // טען את תמונת ה-expected הקיימת
+  281 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  282 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  283 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  284 |
+  285 |   const { width, height } = expectedImage;
+```

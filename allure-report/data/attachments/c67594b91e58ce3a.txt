@@ -1,0 +1,226 @@
+# Test info
+
+- Name: pic2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:134:8
+
+# Error details
+
+```
+Error: יש הבדל של 49117 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 19
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: 0
+Received: 49117
+    at FlowPage.compareScreenshots (C:\Users\User\Documents\k6try\pages\FlowPage.ts:307:101)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:144:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:139:5
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=batchpresentations
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem: ייצוא מצגות לקבוצה של מוערכים או יחידות
+  - listitem:
+    - img
+- text: יצוא מצגות לקבוצות משתמשים במרוכז
+- table:
+  - rowgroup:
+    - row "אנא בחר מצב":
+      - cell "אנא בחר מצב"
+      - cell:
+        - combobox:
+          - text: הקמה וייצוא של מצגות אישיות ויחידתיות (שמירה בתיקיית המוערך)
+          - img
+    - row "אנא בחר מצגת:":
+      - cell "אנא בחר מצגת:"
+      - cell:
+        - combobox:
+          - text: אנא בחר מצגת
+          - img
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+- listbox:
+  - searchbox "Search"
+  - option "הקמה וייצוא של מצגות אישיות ויחידתיות (שמירה בתיקיית המוערך)" [selected]
+  - option "איסוף וייצוא של פלטים אישיים מתיקיית עובד"
+- listbox:
+  - searchbox "Search"
+  - option "אנא בחר מצגת" [selected]
+  - option "1. דוחות לפי ציון מסכם - כקבוצה - עונת 1 - שינוי האחרון 06/02/2025 12:25:03"
+  - option "2. דוחות חתך - אישי - עונת 1 - שינוי האחרון"
+  - option "7. test esu - כקבוצה - עונת 1 - שינוי האחרון"
+```
+
+# Test source
+
+```ts
+  207 |     await this.page.waitForTimeout(2500);
+  208 |     await this.calculate.click();
+  209 |     await this.show.click();
+  210 |     await this.f1.waitFor({ state: 'visible' });
+  211 |     await this.f1.click();
+  212 |     await this.f2.waitFor({ state: 'visible' });
+  213 |     await this.f2.click();
+  214 |     await this.f4.waitFor({ state: 'visible' });
+  215 |     await this.f4.click();
+  216 |     await this.show1.waitFor({ state: 'visible' });
+  217 |     await this.show1.click();
+  218 |   }
+  219 |   async six() {
+  220 |
+  221 |  await this.all.nth(0).click()
+  222 |  await expect(this.must).toBeVisible()
+  223 |  await expect(this.must2).toBeVisible()
+  224 |
+  225 | }
+  226 | async seven() {
+  227 |
+  228 |   await this.all.nth(1).click()
+  229 |   await expect(this.must3).toBeVisible()
+  230 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  231 |   await expect(this.must4).toBeVisible()
+  232 |   await expect(this.must5).toBeVisible()
+  233 |  }
+  234 |  async eight() {
+  235 |
+  236 |   await this.all.nth(2).click()
+  237 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  238 |   await expect(this.must6).toBeVisible()
+  239 |   await expect(this.must6).toContainText("סוציומטרי")
+  240 |   await expect(this.must7).toContainText("מספר אישי")
+  241 |  
+  242 | }
+  243 |  async nine() {
+  244 |
+  245 |   await this.all.nth(3).click()
+  246 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  247 |   await expect(this.must5).toBeVisible()
+  248 |   await expect(this.must8).toBeVisible()
+  249 |   await this.must8.click()
+  250 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  251 |
+  252 |  
+  253 |  }
+  254 |  async ten() {
+  255 |
+  256 |   await this.all.nth(4).click()
+  257 |   await expect(this.must9).toBeVisible()
+  258 |   await this.must9.click()
+  259 |   const count = await this.must10.count();
+  260 |   await expect(count).toBe(24);
+  261 |   await expect(this.must11).toBeVisible()
+  262 |
+  263 |
+  264 |  
+  265 |  }
+  266 |  async ele() {
+  267 |   await this.all.nth(5).click();
+  268 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  269 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  270 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  271 |
+  272 |   // טען את תמונת ה-expected הקיימת
+  273 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  274 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  275 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  276 |
+  277 |   const { width, height } = expectedImage;
+  278 |   const diff = new PNG({ width, height });
+  279 |
+  280 |   // השווה בין התמונות
+  281 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  282 |
+  283 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  284 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  285 | };
+  286 | async compareScreenshots(start: number, end: number) {
+  287 |   for (let i = start; i <= end; i++) {
+  288 |     await this.all.nth(i).click();
+  289 |
+  290 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  291 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  292 |
+  293 |     const width = await this.page.evaluate(() => window.innerWidth);
+  294 |     const height = await this.page.evaluate(() => window.innerHeight);
+  295 |     
+  296 |     
+  297 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  298 |
+  299 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  300 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  301 |
+  302 |     const { width: w, height: h } = expectedImage;
+  303 |     const diff = new PNG({ width: w, height: h });
+  304 |
+  305 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  306 |
+> 307 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBe(0);
+      |                                                                                                     ^ Error: יש הבדל של 49117 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 19
+  308 |
+  309 |     await this.page.goBack();
+  310 |   }
+  311 | }
+  312 | async captureExpectedScreenshots(start: number, end: number) {
+  313 |   for (let i = start; i <= end; i++) {
+  314 |     await this.all.nth(i).click();
+  315 |
+  316 |     const width = await this.page.evaluate(() => window.innerWidth);
+  317 |     const height = await this.page.evaluate(() => window.innerHeight);
+  318 |
+  319 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  320 |
+  321 |     await this.page.screenshot({
+  322 |       path: screenshotPath,
+  323 |       clip: {
+  324 |         x: 0,
+  325 |         y: 0,
+  326 |         width,
+  327 |         height
+  328 |       }
+  329 |     });
+  330 |
+  331 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  332 |
+  333 |     await this.page.goBack();
+  334 |   }
+  335 | }
+  336 | }
+  337 |
+  338 | // .click();
+```

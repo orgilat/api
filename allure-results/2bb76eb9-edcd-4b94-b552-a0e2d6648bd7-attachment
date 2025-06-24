@@ -1,0 +1,342 @@
+# Test info
+
+- Name: u,תFbffעעfsxvxvxfsfsffffעfzzffדכדכדfתvvvcccccדכדכזהזכccccת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:284:10
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 2
+Received: 6
+    at FlowPage.eleven24 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:546:18)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:290:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:289:5
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=sm_noImportFields
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "ניהול סוציומטרי":
+      - /url: sm.asp
+  - listitem: ">>"
+  - listitem: הגדרת שאלונים בהם מותר למחוק נתונים
+- text: הגדרת שדות בהם יוקפאו הערכים בעת טעינות לכלל המשתתפים שנמצאים בסטטוס ביצוע
+- table:
+  - rowgroup:
+    - row "שאלון 1. שאלון סוציומטרי":
+      - cell "שאלון"
+      - cell "1. שאלון סוציומטרי":
+        - combobox:
+          - option "1. שאלון סוציומטרי" [selected]
+          - option "2. מעקב תכולת עבודה"
+          - option "4. סוציומטריה יחידתית-בדיקה"
+          - option "5. סוציומטריה-מטה"
+          - option "6. שאלון סוציומטרי מאסטר לא לגעת"
+          - option "7. ניהול חריגים"
+          - option "9. נושאים שצריך לקבל תשובות מהצבא"
+          - option "10. תקלות במערכת"
+          - option "11. שאלון עזר לתוצאות המחושבות עבור כל משתתף"
+          - option "15. שאלון עזר לחישוב תוצאות"
+    - row "קוד שדה 41. מספר אישי (סאפ)":
+      - cell "קוד שדה"
+      - cell "41. מספר אישי (סאפ)":
+        - combobox:
+          - option "41. מספר אישי (סאפ)" [selected]
+          - option "42. שם פרטי (סאפ)"
+          - option "43. שם משפחה (סאפ)"
+          - option "44. שם מלא"
+          - option "45. כינוי (מנוהל)"
+          - option "46. יחידת אירוע"
+          - option "47. יחידת אמת (סאפ)"
+          - option "49. מספר טלפון (סאפ)"
+          - option "50. מייל (מוסק)"
+          - option "51. תאריך טעינה למערכת (מוסק)"
+          - option "52. וותק בימים ביחידה (מוסק)"
+          - option "58. דרגת כתף"
+          - option "59. אוכלוסיות (מוסק)"
+          - option "61. סוג שירות (סאפ)"
+          - option "63. תאריך קליטה ביחידה (סאפ)"
+          - option "66. חיל (סאפ)"
+          - option "73. תעודת זהות (סאפ)"
+          - option "75. מין (סאפ)"
+          - option "76. תאריך לידה (סאפ)"
+          - option "97. תפקיד באירוע (מנוהל)"
+          - option "98. אוכלוסיות + (מוסק)"
+          - option "99. דרגה ייצוגית (סאפ)"
+          - option "113. תפקיד (סאפ)"
+          - option "114. מייל 2 (מוסק)"
+          - option "115. מייל 3 (מוסק)"
+          - option "116. סיבת העדרות אחרונה (סאפ)"
+          - option "117. נוכחות ביחידה פחות מ-30 יום (סאפ)"
+          - option "118. כמות ימים שלא היה ביחידה (סאפ)"
+          - option "119. דרגת כתף באירוע"
+          - option "120. משתתף בפיילוט"
+          - option "121. respid"
+    - row "הוסף":
+      - cell
+      - cell "הוסף":
+        - button "הוסף"
+- table:
+  - rowgroup:
+    - row "N שם שדה מחק":
+      - cell "N"
+      - cell "שם שדה"
+      - cell "מחק"
+    - row "1 46. יחידת אירוע  מחק":
+      - cell "1"
+      - cell "46. יחידת אירוע"
+      - cell " מחק":
+        - button " מחק"
+    - row "2 97. תפקיד באירוע (מנוהל)  מחק":
+      - cell "2"
+      - cell "97. תפקיד באירוע (מנוהל)"
+      - cell " מחק":
+        - button " מחק"
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+```
+
+# Test source
+
+```ts
+  446 |
+  447 | // בודק שיש בדיוק 2
+  448 | expect(rowCount).toBe(15);
+  449 |
+  450 | }
+  451 |
+  452 | async eleven15() {
+  453 |   
+  454 |   await this.all.nth(18).click();
+  455 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp");
+  456 | }
+  457 | async eleven16() {
+  458 |   await this.all.nth(19).click();
+  459 |  await expect(this.must3).toContainText("יצוא מצגות לקבוצות משתמשים במרוכז")
+  460 |   const elements = await this.page.locator("(//div[@class='BodyOut-continar']//td)");
+  461 |   const count = await elements.count();
+  462 |   expect(count).toBe(4);
+  463 |   
+  464 | }
+  465 | async eleven17() {
+  466 |   await this.all.nth(20).click();
+  467 |
+  468 |    // 1. קליטת שדה חיפוש (input[type='search'])
+  469 |   const searchInput = this.page.locator("input[type='search']");
+  470 |   await expect(searchInput).toHaveCount(1); // ודא שיש בדיוק אחד
+  471 |
+  472 |   // 2. קליטת כפתור בתוך השורה הראשונה של הטבלה
+  473 |   const firstRowButton = this.page.locator("(//table[@id='mailTable']//tr)[1]");
+  474 |   await expect(firstRowButton).toHaveCount(1); // ודא שקיים כפתור אחד בשורה הראשונה
+  475 |
+  476 |   // 3. קליטת div של מידע - dt-info
+  477 |   const dtInfo = this.page.locator("div.dt-info");
+  478 |   await expect(dtInfo).toHaveCount(1); // ודא שיש div אחד עם info
+  479 |
+  480 |   // 4. ודא שסה"כ 4 כפתורים קיימים (לדוגמה אם אתה מתכוון לכמות כללית)
+  481 |   const allButtons = this.page.locator("input[type='button']");
+  482 |   await expect(allButtons).toHaveCount(1); // ודא שיש 4 כפתורי input בעמוד
+  483 |   
+  484 | }
+  485 |
+  486 | async eleven18() {
+  487 |   await this.all.nth(21).click();
+  488 |   await expect(this.must3).toContainText("ערוך מאפייני קבצי עובד")
+  489 |   const allButtons = this.page.locator("//a[normalize-space(text())='ערוך רשימת מאפיינים']");
+  490 |   await allButtons.click()
+  491 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/interface.asp?ipagename=employeefilesprop");
+  492 |   
+  493 | }
+  494 |
+  495 | async eleven19() {
+  496 |   await this.all.nth(22).click();
+  497 |   const allButtons = this.page.locator("(//input[@class='btns'])");
+  498 |   const count = await allButtons.count();
+  499 |   expect(count).toBe(2);
+  500 | }
+  501 |
+  502 | async eleven20() {
+  503 |   await this.all.nth(23).click();
+  504 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp");
+  505 | }
+  506 | async eleven21() {
+  507 |   await this.all.nth(24).click();
+  508 |  await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp?action=datalake1");
+  509 |     this.page.once('dialog', async dialog => {
+  510 |     const message = dialog.message();
+  511 |     expect(message).toBe("MMDA Datalake1  - הופעל");  // בדיקת תוכן הפופ-אפ
+  512 |    
+  513 |   });
+  514 | }
+  515 | async eleven22() {
+  516 |   await this.all.nth(25).click();
+  517 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp?action=datalake2");
+  518 |     this.page.once('dialog', async dialog => {
+  519 |     const message = dialog.message();
+  520 |     expect(message).toBe("MMDA Datalake2 -  הופעל"); 
+  521 |   
+  522 |   });
+  523 | }
+  524 |
+  525 | async eleven23() {
+  526 |   await this.all.nth(26).click();
+  527 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp?action=datalake3");
+  528 |     this.page.once('dialog', async dialog => {
+  529 |     const message = dialog.message();
+  530 |     expect(message).toBe("MMDA Datalake3 -  הופעל"); 
+  531 |   
+  532 |   });
+  533 | }
+  534 |
+  535 |
+  536 | async eleven24() {
+  537 |   await this.all.nth(27).click();
+  538 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm_noImportFields.asp");
+  539 |    await expect(this.must3).toContainText("הגדרת שדות בהם יוקפאו הערכים בעת טעינות לכלל המשתתפים שנמצאים בסטטוס ביצוע")
+  540 |   const allButtons = this.page.locator("(//button[@type='button'])");
+  541 |   const count = await allButtons.count();
+  542 |   await expect(this.must4).toBeVisible()
+  543 |   const allButtons2 = this.page.locator("(//form[@method='POST']//td)");
+  544 |   const count2 = await allButtons2.count();
+  545 |   expect(count).toBe(2);
+> 546 |   expect(count2).toBe(2);
+      |                  ^ Error: expect(received).toBe(expected) // Object.is equality
+  547 |   };
+  548 |
+  549 |
+  550 |
+  551 |
+  552 |
+  553 |
+  554 |
+  555 |
+  556 |
+  557 |
+  558 |
+  559 |
+  560 |
+  561 |
+  562 |
+  563 |
+  564 |
+  565 |
+  566 |
+  567 |
+  568 |
+  569 |
+  570 |
+  571 |
+  572 |
+  573 |
+  574 |
+  575 |
+  576 |  async ele() {
+  577 |   await this.all.nth(5).click();
+  578 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  579 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  580 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  581 |
+  582 |   // טען את תמונת ה-expected הקיימת
+  583 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  584 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  585 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  586 |
+  587 |   const { width, height } = expectedImage;
+  588 |   const diff = new PNG({ width, height });
+  589 |
+  590 |   // השווה בין התמונות
+  591 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  592 |
+  593 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  594 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  595 | };
+  596 | async compareScreenshots(start: number, end: number) {
+  597 |   for (let i = start; i <= end; i++) {
+  598 |     await this.all.nth(i).click();
+  599 |
+  600 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  601 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  602 |
+  603 |     const width = await this.page.evaluate(() => window.innerWidth);
+  604 |     const height = await this.page.evaluate(() => window.innerHeight);
+  605 |     
+  606 |     
+  607 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  608 |
+  609 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  610 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  611 |
+  612 |     const { width: w, height: h } = expectedImage;
+  613 |     const diff = new PNG({ width: w, height: h });
+  614 |
+  615 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  616 |
+  617 |     const TOLERANCE = 100;
+  618 |
+  619 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  620 |
+  621 |
+  622 |     await this.page.goBack();
+  623 |   }
+  624 | }
+  625 | async captureExpectedScreenshots(start: number, end: number) {
+  626 |   for (let i = start; i <= end; i++) {
+  627 |     await this.all.nth(i).click();
+  628 |
+  629 |     const width = await this.page.evaluate(() => window.innerWidth);
+  630 |     const height = await this.page.evaluate(() => window.innerHeight);
+  631 |
+  632 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  633 |
+  634 |     await this.page.screenshot({
+  635 |       path: screenshotPath,
+  636 |       clip: {
+  637 |         x: 0,
+  638 |         y: 0,
+  639 |         width,
+  640 |         height
+  641 |       }
+  642 |     });
+  643 |
+  644 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  645 |
+  646 |     await this.page.goBack();
+```

@@ -1,0 +1,219 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:5:5
+
+# Error details
+
+```
+Error: locator.click: Error: strict mode violation: locator('div.ss-values') resolved to 4 elements:
+    1) <div class="ss-values">…</div> aka getByRole('row', { name: 'בחר אירוע לחץ למעבר להגדרת חתכי מעריך להגדרת קבוצות לחתך מעריכים' }).locator('div').nth(1)
+    2) <div class="ss-values">…</div> aka getByRole('row', { name: 'מודל החישוב', exact: true }).locator('div').nth(1)
+    3) <div class="ss-values">…</div> aka locator('div').filter({ hasText: /^חישוב האחוזונים \(אוכלוסיית ההשוואה\) לפי המשתתפים באירוע$/ }).nth(1)
+    4) <div class="ss-values">…</div> aka locator('div').filter({ hasText: /^כולם$/ }).nth(1)
+
+Call log:
+  - waiting for locator('div.ss-values')
+
+    at FlowPage.four (C:\Users\User\Documents\k6try\pages\FlowPage.ts:51:34)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:16:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:11:3
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=sm_precalc
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "ניהול סוציומטרי":
+      - /url: sm.asp
+  - listitem: ">>"
+  - listitem: הגדרת מודלי חישוב
+  - listitem:
+    - img
+- text: הגדרת מודלי חישוב
+- table:
+  - rowgroup:
+    - row "בחר אירוע לחץ למעבר להגדרת חתכי מעריך להגדרת קבוצות לחתך מעריכים":
+      - cell "בחר אירוע"
+      - cell:
+        - combobox:
+          - text: 179. בדיקת שאלון עזר לחישובים
+          - img
+      - cell "לחץ למעבר להגדרת חתכי מעריך"
+      - cell "להגדרת קבוצות לחתך מעריכים":
+        - button "להגדרת קבוצות לחתך מעריכים"
+    - row "לא הוגדרו קבוצות חישוב לאירוע זה לביצוע הגדרות הגדרת קבוצות בתוך ומחוץ ליחידה":
+      - cell "לא הוגדרו קבוצות חישוב לאירוע זה לביצוע הגדרות":
+        - text: לא הוגדרו קבוצות חישוב לאירוע זה
+        - button "לביצוע הגדרות"
+      - cell "הגדרת קבוצות בתוך ומחוץ ליחידה":
+        - button "הגדרת קבוצות בתוך ומחוץ ליחידה"
+    - row "מודל החישוב":
+      - cell "מודל החישוב"
+      - cell:
+        - combobox:
+          - text: 1. כלל יחידתי - כולם על כולם
+          - img
+    - row " שמור וחשב":
+      - cell
+      - cell " שמור וחשב":
+        - button " שמור וחשב"
+    - row:
+      - cell
+    - row:
+      - cell
+- table:
+  - rowgroup:
+    - row "מודל החישוב לפי אירוע שדה רשימת ערכים נוצר בצע מחק":
+      - cell
+      - cell "מודל החישוב"
+      - cell "לפי אירוע"
+      - cell "שדה"
+      - cell "רשימת ערכים"
+      - cell "נוצר"
+      - cell "בצע"
+      - cell "מחק"
+- text: Following LOG table is for debugging purposes only.
+- table:
+  - rowgroup:
+    - row "לפי אירוע שדה ערך נוצר":
+      - cell "לפי אירוע"
+      - cell "שדה"
+      - cell "ערך"
+      - cell "נוצר"
+- button "clean log"
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+- listbox:
+  - searchbox "Search"
+  - option "בחר אירוע"
+  - option "179. בדיקת שאלון עזר לחישובים" [selected]
+  - option "181. בדיקת מודל כלל יחידתי***"
+  - option "182. בדיקת מודל תת יחידתי"
+  - option "183. בדיקת מודל כוכב"
+  - option "189. בדיקת אירוע מקושר"
+  - option "202. בדיקה 2 1/7/2024"
+  - option "207. אירוע תת יחידתי"
+  - option "211. אירוע משותף 2"
+  - option "212. אירוע משותף 3"
+  - option "216. מרק בדיקות חישובים"
+  - option "220. בדיקה"
+  - option "231. בדיקת אירוע מקושר לפי הערות לילך 18/02"
+  - option "234. בדיקה גדוד 11 מקושר לחטיבה 1 49552 אוגדה 1 פיקוד 5"
+  - option "239. פלוגה 121 בגדוד 12 חטיבה 1 אוגדה 1 פיקוד 5"
+- listbox:
+  - searchbox "Search"
+  - option "חישוב האחוזונים (אוכלוסיית ההשוואה) לפי המשתתפים באירוע" [selected]
+  - option "חישוב האחוזונים (קבוצת ההשוואה) לפי הקבוצה באירוע"
+- listbox:
+  - searchbox "Search"
+  - option "1. כלל יחידתי - כולם על כולם" [selected]
+  - option "2. כלל יחידתי - קצינים ונגדים בנפרד"
+  - option "3. תת יחידתי כולם על כולם בתת היחידה"
+  - option "4. תת יחידתי - קצינים ונגדים בנפרד"
+  - option "5. קצינים בכלל האירוע"
+  - option "6. תת יחידתי - נגדים בנפרד"
+  - option "7. קצינים בקבוצות (תת היחידות)"
+  - option "8. נגדים באירוע"
+  - option "9. בחירה חופשית"
+- listbox:
+  - searchbox "Search"
+  - option "כולם" [selected]
+  - option "לאחר סינון"
+```
+
+# Test source
+
+```ts
+   1 | import { Page, Locator } from '@playwright/test';
+   2 |
+   3 | export class FlowPage {
+   4 |   readonly page: Page;
+   5 |   readonly loginInput: Locator;
+   6 |   readonly passwordInput: Locator;
+   7 |   readonly submitButton: Locator;
+   8 |   readonly surveyAdminLink: Locator;
+   9 |   readonly sociometricLink: Locator;
+  10 |   readonly modelingButton: Locator;  // כפתור הגדרת מודלי חישוב
+  11 |   readonly modelingButton1: Locator;
+  12 |   readonly list: Locator;
+  13 |
+  14 |   constructor(page: Page) {
+  15 |     this.page = page;
+  16 |     this.loginInput = page.locator('input[name="login"]');
+  17 |     this.passwordInput = page.locator('input[name="password"]');
+  18 |     this.submitButton = page.locator('input[type="submit"]');
+  19 |     this.surveyAdminLink = page.locator('a:has-text("ניהול הסקר")');
+  20 |     this.sociometricLink = page.locator('a:has-text("ניהול סוציומטרי")');
+  21 |     this.modelingButton =page.getByRole('button', { name: 'הגדרת מודלי חישוב' })
+  22 |     this.modelingButton1 =page.locator('div.ss-values')
+  23 |     this.list =page.locator('div.ss-list')
+  24 |   }
+  25 |
+  26 |   async goto() {
+  27 |     await this.page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+  28 |   }
+  29 |
+  30 |   async login(username: string, password: string) {
+  31 |     await this.loginInput.fill(username);
+  32 |     await this.passwordInput.fill(password);
+  33 |     await this.submitButton.click();
+  34 |     await this.page.waitForTimeout(1001);
+  35 |   }
+  36 |
+  37 |   async goToSociometricManagement() {
+  38 |     await this.surveyAdminLink.hover();
+  39 |     await this.sociometricLink.click();
+  40 |     await this.modelingButton.scrollIntoViewIfNeeded()
+  41 |     await this.modelingButton.click();
+  42 |     await this.modelingButton1.click();
+  43 |
+  44 |   }
+  45 |   async four() {
+  46 |     const options = this.list.locator('div.ss-option');
+  47 |   
+  48 |     for (let i = 1; i < 4; i++) {
+  49 |       await options.nth(i).click(); // לוחץ על האופציה ה-i
+  50 |       await this.page.waitForTimeout(500); // חכה 5 שניות אחרי כל לחיצה
+> 51 |       await this.modelingButton1.click();
+     |                                  ^ Error: locator.click: Error: strict mode violation: locator('div.ss-values') resolved to 4 elements:
+  52 |     }
+  53 |   }
+  54 |   
+  55 | }
+```

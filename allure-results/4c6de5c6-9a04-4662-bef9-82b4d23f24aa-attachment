@@ -1,0 +1,148 @@
+# Test info
+
+- Name: e2e+api
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:149:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 22
+Received: 0
+    at FlowPage.e2e (C:\Users\User\Documents\k6try\pages\FlowPage.ts:348:19)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:159:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:154:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/3987509BAB5A47ED816E"
+    - button ""
+  - text: 1.0.0.94
+- main:
+  - button "No-Text newEvent"
+- text: טוען...
+```
+
+# Test source
+
+```ts
+  248 |
+  249 |   await this.all.nth(3).click()
+  250 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  251 |   await expect(this.must5).toBeVisible()
+  252 |   await expect(this.must8).toBeVisible()
+  253 |   await this.must8.click()
+  254 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  255 |
+  256 |  
+  257 |  }
+  258 |  async ten() {
+  259 |
+  260 |   await this.all.nth(4).click()
+  261 |   await expect(this.must9).toBeVisible()
+  262 |   await this.must9.click()
+  263 |   const count = await this.must10.count();
+  264 |   await expect(count).toBe(24);
+  265 |   await expect(this.must11).toBeVisible()
+  266 |
+  267 |
+  268 |  
+  269 |  }
+  270 |  async ele() {
+  271 |   await this.all.nth(5).click();
+  272 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  273 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  274 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  275 |
+  276 |   // טען את תמונת ה-expected הקיימת
+  277 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  278 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  279 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  280 |
+  281 |   const { width, height } = expectedImage;
+  282 |   const diff = new PNG({ width, height });
+  283 |
+  284 |   // השווה בין התמונות
+  285 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  286 |
+  287 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  288 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  289 | };
+  290 | async compareScreenshots(start: number, end: number) {
+  291 |   for (let i = start; i <= end; i++) {
+  292 |     await this.all.nth(i).click();
+  293 |
+  294 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  295 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  296 |
+  297 |     const width = await this.page.evaluate(() => window.innerWidth);
+  298 |     const height = await this.page.evaluate(() => window.innerHeight);
+  299 |     
+  300 |     
+  301 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  302 |
+  303 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  304 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  305 |
+  306 |     const { width: w, height: h } = expectedImage;
+  307 |     const diff = new PNG({ width: w, height: h });
+  308 |
+  309 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  310 |
+  311 |     const TOLERANCE = 100;
+  312 |
+  313 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  314 |
+  315 |
+  316 |     await this.page.goBack();
+  317 |   }
+  318 | }
+  319 | async captureExpectedScreenshots(start: number, end: number) {
+  320 |   for (let i = start; i <= end; i++) {
+  321 |     await this.all.nth(i).click();
+  322 |
+  323 |     const width = await this.page.evaluate(() => window.innerWidth);
+  324 |     const height = await this.page.evaluate(() => window.innerHeight);
+  325 |
+  326 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  327 |
+  328 |     await this.page.screenshot({
+  329 |       path: screenshotPath,
+  330 |       clip: {
+  331 |         x: 0,
+  332 |         y: 0,
+  333 |         width,
+  334 |         height
+  335 |       }
+  336 |     });
+  337 |
+  338 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  339 |
+  340 |     await this.page.goBack();
+  341 |   }
+  342 | }
+  343 |
+  344 | async e2e() {
+  345 |   await this.eventManagementButton.click();
+  346 |   await this.page.waitForTimeout(1000); // אופציונלי לטעינת רכיבים
+  347 |   const counter = await this.tr1.count();
+> 348 |   expect(counter).toBe(22); // או .toBeGreaterThan(0) אם משתנה
+      |                   ^ Error: expect(received).toBe(expected) // Object.is equality
+  349 | }}
+  350 |
+  351 | // .click();
+  352 | // 
+  353 | // 
+  354 | // 
+```

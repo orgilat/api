@@ -1,0 +1,216 @@
+# Test info
+
+- Name: e2e+api2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:163:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: "בהכנה"
+Received: {"_frame": {"_guid": "frame@c5ef2dce569786b0ee7bc103a51c72e7", "_type": "Frame"}, "_selector": "td[aria-describedby=\"dx-col-2\"][role=\"gridcell\"][aria-colindex=\"2\"]", Symbol(nodejs.util.inspect.custom): [Function anonymous]}
+    at FlowPage.e2eAddEventAndCheckItAppears (C:\Users\User\Documents\k6try\pages\FlowPage.ts:452:17)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:173:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:168:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/B7AB5F091DE44AE3926A"
+    - button ""
+  - text: 1.0.0.94
+- main:
+  - text: מספר האירועים שהוקמו 1
+  - grid "טבלת נתונים":
+    - toolbar "Data grid toolbar":
+      - button "בחירת עמודה": 
+    - row "טור לעריכה טור שם האירוע טור בחירת מודל טור תקופה טור יחידה טור סמכות טור מקים טור תפקיד המקים טור No-Text potentialActual טור סטטוס האירוע טור תאריך התחלה וסיום טור מחיקת אירוע":
+      - columnheader "טור לעריכה": לעריכה
+      - columnheader "טור שם האירוע": שם האירוע
+      - columnheader "טור בחירת מודל": בחירת מודל
+      - columnheader "טור תקופה": תקופה
+      - columnheader "טור יחידה": יחידה
+      - columnheader "טור סמכות": סמכות
+      - columnheader "טור מקים": מקים
+      - columnheader "טור תפקיד המקים": תפקיד המקים
+      - columnheader "טור No-Text potentialActual": No-Text potentialActual
+      - columnheader "טור סטטוס האירוע": סטטוס האירוע
+      - columnheader "טור תאריך התחלה וסיום": תאריך התחלה וסיום
+      - columnheader "טור מחיקת אירוע": מחיקת אירוע
+    - row "תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון":
+      - gridcell
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - spinbutton "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell
+    - row "Marina 2027 עונת 1 248. פיקוד 1 כללי ניהול פוטנציאל = 19343 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בהכנה 06/04/2025 28/04/2025 ":
+      - gridcell
+      - gridcell "Marina 2027"
+      - gridcell
+      - gridcell "עונת 1"
+      - gridcell "248. פיקוד 1"
+      - gridcell "כללי"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 19343 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בהכנה"
+      - gridcell "06/04/2025 28/04/2025"
+      - gridcell "":
+        - button ""
+  - button "להקמת אירוע חדש"
+```
+
+# Test source
+
+```ts
+  352 |   // 2. מחכים במקביל לתגובה מה-API
+  353 |   const [response] = await Promise.all([
+  354 |     this.page.waitForResponse(resp =>
+  355 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  356 |       resp.request().method() === 'POST' &&
+  357 |       resp.status() === 200 &&
+  358 |       (resp.request().postData() || '').length === 93
+  359 |     ),
+  360 |   ]);
+  361 |   
+  362 |   
+  363 |   const apiJson = await response.json();
+  364 |   const events = apiJson?.calls?.[0]?.callResult?.data ?? [];
+  365 |   const backendCount = Array.isArray(events)
+  366 |     ? events.filter(e => e.eventId !== undefined).length
+  367 |     : 0;
+  368 |   
+  369 |   console.log('Count from API:', backendCount);
+  370 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  371 |   const counter = await this.tr1.count();
+  372 |
+  373 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  374 |   await this.page2.click();
+  375 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  376 |   const counter2 = await this.tr1.count();
+  377 |
+  378 |
+  379 |   const sum = 6 * counter + counter2;
+  380 |   console.log('Count from UI:', sum);
+  381 |
+  382 |   // 7. בדיקה שהמספרים שווים
+  383 |   expect(sum).toBe(backendCount);
+  384 | }
+  385 |
+  386 |
+  387 | async e2eAddEventAndCheckItAppears() {
+  388 |   // שלב 1: פתיחת העמוד שגורם ל־getList
+  389 | await this.eventManagementButton.click();
+  390 |
+  391 | await this.page.route('**/TPSMOH.API/api/servicecall', async (route, request) => {
+  392 |   if (
+  393 |     request.method() === 'POST' &&
+  394 |     (request.postData() || '').length === 93
+  395 |   ) {
+  396 |     const mockResponse = {
+  397 |       calls: [{
+  398 |         callResult: {
+  399 |           data: [
+  400 |             {
+  401 |               eventId: 501,
+  402 |               eventName: "Marina 2027",
+  403 |               status: 1,
+  404 |               statusDate: "28/04/2025",
+  405 |               statusName: "בהכנה",
+  406 |               startDepName: "248. פיקוד 1",
+  407 |               startDepCode: "248",
+  408 |               creator: null,
+  409 |               creatorRole: null,
+  410 |               actual: 0,
+  411 |               modelType: null,
+  412 |               period: 1,
+  413 |               periodName: "עונת 1",
+  414 |               pikud: 188,
+  415 |               pikudName: "כללי",
+  416 |               startDate: "06/04/2025",
+  417 |               endDate: "28/04/2025",
+  418 |               potential: 19343,
+  419 |               completed: 0,
+  420 |               suspected: 0,
+  421 |               disqualified: 0,
+  422 |               approved: 0,
+  423 |               id: 0,
+  424 |               code: null,
+  425 |               isActive: true,
+  426 |               isDeleted: false,
+  427 |               createdBy: null,
+  428 |               createdOn: "0001-01-01T00:00:00",
+  429 |               lastUpdateBy: null,
+  430 |               version: "0001-01-01T00:00:00"
+  431 |             }
+  432 |           ]
+  433 |         }
+  434 |       }]
+  435 |     };
+  436 |
+  437 |     await route.fulfill({
+  438 |       status: 200,
+  439 |       contentType: 'application/json',
+  440 |       body: JSON.stringify(mockResponse),
+  441 |     });
+  442 |   } else {
+  443 |     await route.continue();
+  444 |   }
+  445 | });
+  446 |
+  447 |
+  448 | const statusText = await this.page.textContent('//*[@id="statusNameSpan501"]');
+  449 | const element = await this.page.locator('td[aria-describedby="dx-col-2"][role="gridcell"][aria-colindex="2"]');
+  450 |
+  451 | expect(statusText).toBe("בהכנה")
+> 452 | expect(element).toBe("בהכנה")
+      |                 ^ Error: expect(received).toBe(expected) // Object.is equality
+  453 |
+  454 | }
+  455 | }
+  456 | // .click();
+  457 | // 
+  458 | // //*[@id="statusNameSpan501"]
+  459 | // 
+```

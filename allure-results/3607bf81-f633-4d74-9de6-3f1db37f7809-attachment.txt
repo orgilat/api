@@ -1,0 +1,242 @@
+[2025-06-21 21:14:01] info: הטסט התחיל
+{
+  calls: [
+    {
+      id: '00000000-0000-0000-0000-000000000000',
+      domainName: null,
+      methodName: 'getSingle',
+      parameters: {
+        forSm: true,
+        pageName: 'smClient',
+        language: 'he',
+        entityName: 'TInterfaceSingle'
+      },
+      callResult: {
+        data: {
+          debugInfo: true,
+          homePageURL: '/pms/MMDANEW/main.asp',
+          appName: 'MMDANEW',
+          isFiller: false,
+          interfaceTexts: [
+            { code: 'ModelName', text: 'שם המודל' },
+            { code: 'eventName', text: 'שם האירוע' },
+            { code: 'potential', text: 'ניהול פוטנציאל ' },
+            {
+              code: 'GROUPSBYPROPERTY',
+              text: 'צור קבוצות לפי המאפיין כשכל יחידה בפני עצמה '
+            },
+            { code: 'newfiltergroup', text: 'הוסף מסנן נוסף ' },
+            { code: 'okByList', text: 'פוטנציאל גולמי ' },
+            { code: 'okByFilters', text: 'עמידה בקריטריונים להשתתפות' },
+            { code: 'reason', text: 'סיבה לאישור ההחרגה ' },
+            { code: 'potentialRepondents', text: 'רשימת משתתפים ' },
+            { code: 'deletegroup', text: 'מחק קבוצה ' },
+            { code: 'No-Text statusActive', text: 'פעיל' },
+            { code: 'statusActive', text: 'פעיל' },
+            { code: 'description', text: 'תאור היחידה ' },
+            {
+              code: 'masterDepName',
+              text: 'שם יחידה הגבוהה ביותר באירוע '
+            },
+            { code: 'virtualDepName', text: 'שם היחידה הוירטואלית ' },
+            { code: 'descriprion', text: 'תאור היחידה ' },
+            {
+              code: 'newVirtualDepName',
+              text: 'שם  היחידה הוירטואלית '
+            },
+            {
+              code: 'virtualDepRepondents',
+              text: 'רשימת המצורפים ליחידה הוירטואלית '
+            },
+            {
+              code: 'NEWVIRTUALDEP',
+              text: 'צור יחידה וירטואלית חדשה '
+            },
+            {
+              code: 'FillingGroupDeps',
+              text: 'בחירת יחידות מאגדות של יחידות משנה להצגה בדוח המילוי '
+            },
+            { code: 'Column Chooser', text: 'סנן שדות ' },
+            { code: 'selectVirtualFep', text: 'בחר יחידה וירטואלית' },
+            {
+              code: 'addvirtualdepartment',
+              text: 'הוסף יחידה וירטואלית '
+            },
+            { code: 'AddDepartment', text: 'הוסף יחידה' },
+            { code: 'actualAbcenseDays', text: 'ימי העדרות בפועל ' },
+            {
+              code: 'reqDaysInDep',
+              text: 'הדרישה לרצף שהייה ביחידה לפני יום הארוע כפיצוי על ימי העדרות '
+            },
+            {
+              code: 'absenceDaysThres',
+              text: 'סף ימי העדרות לחישוב ימים נדרשים לשהייה ביחידה '
+            },
+            { code: 'CLOSE', text: 'סגירה ' },
+            {
+              code: 'rrespondentFilterStatus 4',
+              text: 'ניהול משתתפים בהתייחס למשך שהייה ביחידה וימי העדרות '
+            },
+            {
+              code: 'respondentFilterStatus 4',
+              text: 'ניהול משתתפים בהתייחס למשך שהייה ביחידה וימי העדרות '
+            },
+            { code: 'eventDepTypeSade', text: 'שדה ' },
+            { code: 'eventDepType', text: 'הגדרת סוג היחידה לאירוע ' },
+            {
+              code: 'selectFillingGroupDeps',
+              text: 'בחירת יחידות מאגדות להצגת דוח מילוי'
+            },
+            {
+              code: 'makeStarCenter',
+              text: 'סמן את הקבוצה כמרכז הכוכב '
+            },
+            { code: 'starCenter', text: 'מרכז הכוכב ' },
+            {
+              code: 'selectExclideDeps',
+              text: 'בחירת יחידות שאינן משתתפות באירוע'
+            },
+            { code: 'respondentsCount', text: 'כמות אנשים' },
+            { code: 'noData', text: 'אין מידע' },
+            {
+              code: 'matrixCalcSuccessful',
+              text: 'חישוב מטריצות הסתיים בהצלחה'
+            },
+            {
+              code: 'manageDepartmentsAtEvent',
+              text: 'בחירת יחידה ראשית'
+            },
+            { code: 'header', text: 'ניהול אירוע סוציומטרי' },
+            { code: 'eventedit', text: ' עריכת האירוע ' },
+            { code: 'filterLabel', text: 'מסנן' },
+            { code: 'evaluationmodel', text: 'מודל הערכה ' },
+            { code: 'totalSelected', text: 'סך הכל נבחר' },
+            { code: 'status', text: 'סטטוס האירוע' },
+            { code: 'season', text: 'בחר עונת הערכה' },
+            { code: 'startDate', text: 'תאריך התחלה ' },
+            { code: 'endDate', text: 'תאריך סיום ' },
+            { code: 'questions', text: 'שאלות' },
+            { code: 'showpotential', text: 'הצג פוטנציאל ' },
+            { code: 'ModelName', text: 'שם המודל' },
+            { code: 'modelType', text: 'בחירת מודל' },
+            { code: 'Star', text: 'מודל כוכב ' },
+            { code: 'AllOnAll', text: 'כלל יחידתי ' },
+            { code: 'subUnits', text: 'תת יחידתי ' },
+            {
+              code: 'propertyValue',
+              text: 'בחר מאפיין לפיו תיווצר הקבוצה  '
+            },
+            { code: 'newemptygroup', text: 'צור קבוצה למילוי  ' },
+            { code: 'deletemodel', text: 'מחק מודל הערכה ' },
+            { code: 'newmodel', text: 'בחר מודל הערכה חדש ' },
+            { code: 'startdepName', text: 'שם יחידה הגבוהה ביותר ' },
+            { code: 'creator', text: 'מקים ' },
+            { code: 'edit', text: 'לעריכה ' },
+            { code: 'newevent', text: 'להקמת אירוע חדש ' },
+            { code: 'filterall', text: 'הצג את כולם ' },
+            { code: 'filterselected', text: 'הצג את המשתתפים' },
+            { code: 'totalRows', text: 'סה`כ שורות' },
+            { code: 'All', text: 'הצג את כולם ' },
+            {
+              code: 'tooManyQuestions',
+              text: 'מספר מקסימלי של שאלות בחירה שניתן לבחור הוא'
+            },
+            { code: 'mandatoryQuestions', text: 'שאלות חובה' },
+            {
+              code: 'mandatoryQuestionsHelp',
+              text: 'שאלות אלו לא ניתנות לשינוי'
+            },
+            { code: 'optionalQuestions', text: 'שאלות בחירה' },
+            { code: 'CALCMATRIXES', text: 'חשב מטריצות' },
+            { code: 'confirm', text: 'אישור פעולה' },
+            {
+              code: 'addFromVirtualDeps',
+              text: 'בחירת משתתפים מקבוצה וירטואלית'
+            },
+            { code: 'yes', text: 'כן' },
+            { code: 'no', text: 'לא' },
+            { code: 'pageHelpTextHeader', text: 'מידע והנחיות' },
+            {
+              code: 'addOtherEventDep',
+              text: 'הוסף יחידות מאירוע אחר'
+            },
+            { code: 'selectEvent', text: 'בחר אירוע' },
+            { code: 'setAddReason', text: 'בחר סיבה להוספה' },
+            { code: 'RECALCPOTENTIAL', text: 'חשב פוטנציאל מחדש' },
+            { code: 'respEdit', text: 'ערוך פרטים' },
+            {
+              code: 'participantsCalcTime',
+              text: 'עדכון פוטנציאל אחרון התבצע ב-'
+            },
+            {
+              code: 'removedParticipants',
+              text: 'משתתפים שהוסרו בעדכון מאגר'
+            },
+            { code: 'FILL360SUBMIT', text: 'סיום' },
+            {
+              code: 'areYouSureSubmit',
+              text: 'האם לסיים ולהגיש את השאלון?'
+            },
+            { code: 'otherDepCount', text: 'כמות אנשים ביחידה' },
+            { code: 'noAccess', text: 'אין גישה' },
+            { code: 'potentialIncompleted', text: 'פוטנציאל לא הושלם' },
+            { code: 'mailsAlreadySent', text: 'מיילים כבר נשלחו' },
+            { code: 'printFill360', text: 'הדפסה' },
+            {
+              code: 'areYouSureDeleteEvent',
+              text: 'האם אתה בטוח שברצונך למחוק את האירוע?'
+            },
+            {
+              code: 'matrixEvaluators',
+              text: 'כמות משיבים במטריצת מעריכים'
+            },
+            { code: 'eventid', text: 'מספר אירוע' },
+            { code: 'department', text: 'יחידה' },
+            {
+              code: 'groupsbyproperties',
+              text: 'צור קבוצות לפי המאפיין כשכל יחידה בפני עצמה '
+            },
+            {
+              code: 'ONEGROUPBYPROPERTY',
+              text: 'אגד את כל היחידות עם אותו מאפיין לאשכול אחד '
+            },
+            { code: 'selectdepartment', text: 'בחר יחידה' },
+            { code: 'submit', text: 'שמירה' },
+            ... 86 more items
+          ],
+          interfaceOptions: [
+            { code: 'tableColorRed', text: '' },
+            { code: 'tableColorGreen', text: '' },
+            { code: '--navMainColor', text: '' },
+            { code: '--navTextMainColor', text: '' },
+            { code: 'mainFont', text: '' },
+            { code: 'hideDepDetails', text: '0' },
+            { code: 'hideDemographic', text: '0' },
+            { code: '--inactiveOptionBg', text: '' },
+            { code: 'answerNavigation', text: '0' },
+            { code: 'hideSeveralAll', text: '0' },
+            { code: 'version', text: '1.0.0.94' },
+            { code: 'SMVirtualDepsViewOnly', text: '1' }
+          ],
+          id: 0,
+          code: null,
+          isActive: true,
+          isDeleted: false,
+          createdBy: null,
+          createdOn: '0001-01-01T00:00:00',
+          lastUpdateBy: null,
+          version: '0001-01-01T00:00:00'
+        }
+      },
+      msgs: {
+        msgs: [],
+        hasLogicalErrors: false,
+        hasInfo: false,
+        hasErrors: false,
+        hasAnyError: false
+      },
+      isSuccess: true
+    }
+  ],
+  recivedStamp: '2025-06-21T21:14:05.8954307+03:00'
+}

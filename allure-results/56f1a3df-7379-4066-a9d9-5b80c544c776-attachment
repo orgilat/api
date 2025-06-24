@@ -1,0 +1,355 @@
+# Test info
+
+- Name: e2e+api2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:163:6
+
+# Error details
+
+```
+Error: expect(received).toContain(expected) // indexOf
+
+Expected value: "מרינה באנגלית"
+Received array: ["179. בדיקת שאלון עזר לחישובים", "181. בדיקת מודל כלל יחידתי***", "182. בדיקת מודל תת יחידתי", "183. בדיקת מודל כוכב", "189. בדיקת אירוע מקושר", "190. בדיקת הרשאות", "201. בדיקה 1 1/7/2024", "202. בדיקה 2 1/7/2024", "203. בדיקה 3 1/7/2024", "207. אירוע תת יחידתי", …]
+    at FlowPage.e2eAddEventAndCheckItAppears (C:\Users\User\Documents\k6try\pages\FlowPage.ts:467:22)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:173:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:168:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/10D4F505E76848EF8544"
+    - button ""
+  - text: 1.0.0.94
+- main:
+  - text: מספר האירועים שהוקמו 64
+  - grid "טבלת נתונים":
+    - toolbar "Data grid toolbar":
+      - button "בחירת עמודה": 
+    - row "טור לעריכה טור שם האירוע טור בחירת מודל טור תקופה טור יחידה טור סמכות טור מקים טור תפקיד המקים טור No-Text potentialActual טור סטטוס האירוע טור תאריך התחלה וסיום טור מחיקת אירוע":
+      - columnheader "טור לעריכה": לעריכה
+      - columnheader "טור שם האירוע": שם האירוע
+      - columnheader "טור בחירת מודל": בחירת מודל
+      - columnheader "טור תקופה": תקופה
+      - columnheader "טור יחידה": יחידה
+      - columnheader "טור סמכות": סמכות
+      - columnheader "טור מקים": מקים
+      - columnheader "טור תפקיד המקים": תפקיד המקים
+      - columnheader "טור No-Text potentialActual": No-Text potentialActual
+      - columnheader "טור סטטוס האירוע": סטטוס האירוע
+      - columnheader "טור תאריך התחלה וסיום": תאריך התחלה וסיום
+      - columnheader "טור מחיקת אירוע": מחיקת אירוע
+    - row "תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון":
+      - gridcell
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - spinbutton "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell
+    - row "179. בדיקת שאלון עזר לחישובים כלל יחידתי עונת 1 49439. גדוד 21 כללי ניהול פוטנציאל = 306 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 1 (0%) בביצוע 31/03/2024 31/05/2024 ":
+      - gridcell
+      - gridcell "179. בדיקת שאלון עזר לחישובים"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "49439. גדוד 21"
+      - gridcell "כללי"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 306 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 1 (0%)"
+      - gridcell "בביצוע"
+      - gridcell "31/03/2024 31/05/2024"
+      - gridcell "":
+        - button ""
+    - row "181. בדיקת מודל כלל יחידתי*** כלל יחידתי עונת 1 51036. רפואה חיל אויר ניהול פוטנציאל = 24 מעריכים בפועל = 23 (96%) מעריכים לא תקינים = 1 (4%) מעריכים פסולים = 1 (4%) שאלונים מאושרים = 2 (8%) בביצוע 31/07/2024 30/09/2024 ":
+      - gridcell
+      - gridcell "181. בדיקת מודל כלל יחידתי***"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "51036. רפואה"
+      - gridcell "חיל אויר"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 24 מעריכים בפועל = 23 (96%) מעריכים לא תקינים = 1 (4%) מעריכים פסולים = 1 (4%) שאלונים מאושרים = 2 (8%)"
+      - gridcell "בביצוע"
+      - gridcell "31/07/2024 30/09/2024"
+      - gridcell "":
+        - button "" [disabled]
+    - row "182. בדיקת מודל תת יחידתי תת יחידתי עונת 1 51793. מפקדת אוגדה 1 ניהול פוטנציאל = 60 מעריכים בפועל = 7 (12%) מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 1 (2%) בביצוע 26/06/2024 01/08/2024 ":
+      - gridcell
+      - gridcell "182. בדיקת מודל תת יחידתי"
+      - gridcell "תת יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "51793. מפקדת אוגדה 1"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 60 מעריכים בפועל = 7 (12%) מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 1 (2%)"
+      - gridcell "בביצוע"
+      - gridcell "26/06/2024 01/08/2024"
+      - gridcell "":
+        - button "" [disabled]
+    - row "183. בדיקת מודל כוכב מודל כוכב עונת 1 49915. גדוד 21 ניהול פוטנציאל = 305 מעריכים בפועל = 7 (2%) מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 1 (0%) בביצוע 01/04/2024 14/08/2026 ":
+      - gridcell
+      - gridcell "183. בדיקת מודל כוכב"
+      - gridcell "מודל כוכב"
+      - gridcell "עונת 1"
+      - gridcell "49915. גדוד 21"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 305 מעריכים בפועל = 7 (2%) מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 1 (0%)"
+      - gridcell "בביצוע"
+      - gridcell "01/04/2024 14/08/2026"
+      - gridcell "":
+        - button ""
+    - row "189. בדיקת אירוע מקושר כלל יחידתי עונת 1 49798. גדוד 23 ניהול פוטנציאל = 256 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בביצוע 15/04/2024 31/05/2024 ":
+      - gridcell
+      - gridcell "189. בדיקת אירוע מקושר"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "49798. גדוד 23"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 256 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בביצוע"
+      - gridcell "15/04/2024 31/05/2024"
+      - gridcell "":
+        - button "" [disabled]
+    - row "190. בדיקת הרשאות כלל יחידתי עונת 1 27. פלוגה 131 ניהול פוטנציאל = 34 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 16/04/2024 01/12/2024 ":
+      - gridcell
+      - gridcell "190. בדיקת הרשאות"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "27. פלוגה 131"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 34 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell
+      - gridcell "16/04/2024 01/12/2024"
+      - gridcell "":
+        - button ""
+    - row "201. בדיקה 1 1/7/2024 כלל יחידתי עונת 1 53394. טסט1 ניהול פוטנציאל = 0 בהכנה 01/07/2024 31/07/2024 ":
+      - gridcell
+      - gridcell "201. בדיקה 1 1/7/2024"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "53394. טסט1"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell "01/07/2024 31/07/2024"
+      - gridcell "":
+        - button ""
+    - row "202. בדיקה 2 1/7/2024 כלל יחידתי עונת 1 53394. טסט1 ניהול פוטנציאל = 2 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בביצוע 01/07/2024 31/07/2024 ":
+      - gridcell
+      - gridcell "202. בדיקה 2 1/7/2024"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "53394. טסט1"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 2 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בביצוע"
+      - gridcell "01/07/2024 31/07/2024"
+      - gridcell "":
+        - button "" [disabled]
+    - row "203. בדיקה 3 1/7/2024 תת יחידתי עונת 1 53394. טסט1 ניהול פוטנציאל = 3 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בהכנה 01/07/2024 31/07/2024 ":
+      - gridcell
+      - gridcell "203. בדיקה 3 1/7/2024"
+      - gridcell "תת יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "53394. טסט1"
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 3 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בהכנה"
+      - gridcell "01/07/2024 31/07/2024"
+      - gridcell "":
+        - button ""
+    - row "207. אירוע תת יחידתי כלל יחידתי עונת 1 51223. גדוד 13 פיקוד העורף ניהול פוטנציאל = 126 מעריכים בפועל = 2 (2%) מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בביצוע 01/07/2024 31/07/2024 ":
+      - gridcell
+      - gridcell "207. אירוע תת יחידתי"
+      - gridcell "כלל יחידתי"
+      - gridcell "עונת 1"
+      - gridcell "51223. גדוד 13"
+      - gridcell "פיקוד העורף"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 126 מעריכים בפועל = 2 (2%) מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בביצוע"
+      - gridcell "01/07/2024 31/07/2024"
+      - gridcell "":
+        - button "" [disabled]
+    - button "Page 7": "7"
+    - button "Page 6": "6"
+    - button "Page 5": "5"
+    - button "Page 4": "4"
+    - button "Page 3": "3"
+    - button "Page 2": "2"
+    - button "Page 1": "1"
+  - button "להקמת אירוע חדש"
+```
+
+# Test source
+
+```ts
+  367 |     : 0;
+  368 |   
+  369 |   console.log('Count from API:', backendCount);
+  370 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  371 |   const counter = await this.tr1.count();
+  372 |
+  373 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  374 |   await this.page2.click();
+  375 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  376 |   const counter2 = await this.tr1.count();
+  377 |
+  378 |
+  379 |   const sum = 6 * counter + counter2;
+  380 |   console.log('Count from UI:', sum);
+  381 |
+  382 |   // 7. בדיקה שהמספרים שווים
+  383 |   expect(sum).toBe(backendCount);
+  384 | }
+  385 |
+  386 |
+  387 |
+  388 |
+  389 |
+  390 |
+  391 | async e2eAddEventAndCheckItAppears() {
+  392 |   // שלב 1: פתיחת העמוד שגורם ל־getList
+  393 |   await this.eventManagementButton.click();
+  394 |
+  395 |   // שלב 2: המתנה ל־getList עם אורך postData של 93
+  396 |   const [getListResponse] = await Promise.all([
+  397 |     this.page.waitForResponse(resp =>
+  398 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  399 |       resp.request().method() === 'POST' &&
+  400 |       resp.status() === 200 &&
+  401 |       (resp.request().postData() || '').length === 93
+  402 |     ),
+  403 |   ]);
+  404 |
+  405 |   const apiJson = await getListResponse.json();
+  406 |   const currentEventCount = apiJson?.calls?.[0]?.callResult?.data?.length ?? 0;
+  407 |
+  408 |   // שלב 3: הוספת אירוע חדש דרך evaluate
+  409 |   await this.page.evaluate(async () => {
+  410 |     await fetch('/TPSMOH.API/api/servicecall', {
+  411 |       method: 'POST',
+  412 |       headers: { 'Content-Type': 'application/json' },
+  413 |       body: JSON.stringify({
+  414 |         calls: [{
+  415 |           methodName: "create",
+  416 |           parameters: {
+  417 |             entityName: "TSmEventsList",
+  418 |             data: {
+  419 |               eventId: 999,
+  420 |               eventName: "מרינה באנגלית",
+  421 |               status: 1,
+  422 |               statusDate: "24/04/2025",
+  423 |               statusName: "בהכנה",
+  424 |               startDepName: "999. מחלקה לדוגמה",
+  425 |               startDepCode: "999",
+  426 |               actual: 0,
+  427 |               modelType: "כלל יחידתי ",
+  428 |               period: 1,
+  429 |               periodName: "עונת 1",
+  430 |               pikud: 1,
+  431 |               pikudName: "פיקוד מרכז",
+  432 |               startDate: "01/01/2025",
+  433 |               endDate: "31/01/2025",
+  434 |               potential: 100,
+  435 |               completed: 0,
+  436 |               suspected: 0,
+  437 |               disqualified: 0,
+  438 |               approved: 0,
+  439 |               isActive: true,
+  440 |               isDeleted: false
+  441 |             }
+  442 |           }
+  443 |         }]
+  444 |       })
+  445 |     });
+  446 |   });
+  447 |
+  448 |   // שלב 4: טריגר שיבצע שוב getList
+  449 |   await this.page.reload();
+  450 |
+  451 |
+  452 |   // שלב 5: שוב מחכים לתגובה עם אורך 93
+  453 |   const [getListAfterResponse] = await Promise.all([
+  454 |     this.page.waitForResponse(resp =>
+  455 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  456 |       resp.request().method() === 'POST' &&
+  457 |       resp.status() === 200 &&
+  458 |       (resp.request().postData() || '').length === 93
+  459 |     ),
+  460 |   ]);
+  461 |
+  462 |   const newApiJson = await getListAfterResponse.json();
+  463 |   const newEvents = newApiJson?.calls?.[0]?.callResult?.data ?? [];
+  464 |
+  465 |   // שלב 6: בדיקה שהאירוע החדש קיים לפי שם
+  466 |   const eventNames = newEvents.map(e => e.eventName);
+> 467 |   expect(eventNames).toContain("מרינה באנגלית");
+      |                      ^ Error: expect(received).toContain(expected) // indexOf
+  468 | }
+  469 |
+  470 |   
+  471 |
+  472 |
+  473 | }
+  474 |
+  475 | // .click();
+  476 | // 
+  477 | // 
+  478 | // 
+```

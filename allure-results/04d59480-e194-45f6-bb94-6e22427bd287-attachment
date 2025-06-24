@@ -1,0 +1,268 @@
+# Test info
+
+- Name: e2e+api
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:149:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 70
+Received: 64
+    at FlowPage.e2e (C:\Users\User\Documents\k6try\pages\FlowPage.ts:352:15)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:159:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:154:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/7B30DACA9F634CB49AD0"
+    - button ""
+  - text: 1.0.0.94
+- main:
+  - text: מספר האירועים שהוקמו 64
+  - grid "טבלת נתונים":
+    - toolbar "Data grid toolbar":
+      - button "בחירת עמודה": 
+    - row "טור לעריכה טור שם האירוע טור בחירת מודל טור תקופה טור יחידה טור סמכות טור מקים טור תפקיד המקים טור No-Text potentialActual טור סטטוס האירוע טור תאריך התחלה וסיום טור מחיקת אירוע":
+      - columnheader "טור לעריכה": לעריכה
+      - columnheader "טור שם האירוע": שם האירוע
+      - columnheader "טור בחירת מודל": בחירת מודל
+      - columnheader "טור תקופה": תקופה
+      - columnheader "טור יחידה": יחידה
+      - columnheader "טור סמכות": סמכות
+      - columnheader "טור מקים": מקים
+      - columnheader "טור תפקיד המקים": תפקיד המקים
+      - columnheader "טור No-Text potentialActual": No-Text potentialActual
+      - columnheader "טור סטטוס האירוע": סטטוס האירוע
+      - columnheader "טור תאריך התחלה וסיום": תאריך התחלה וסיום
+      - columnheader "טור מחיקת אירוע": מחיקת אירוע
+    - row "תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון":
+      - gridcell
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - spinbutton "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell
+    - row "540. מרינה 2025 עונת 1 248. פיקוד 1 כללי ניהול פוטנציאל = 0 בהכנה 26/05/2025 26/05/2025 ":
+      - gridcell
+      - gridcell "540. מרינה 2025"
+      - gridcell
+      - gridcell "עונת 1"
+      - gridcell "248. פיקוד 1"
+      - gridcell "כללי"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell "26/05/2025 26/05/2025"
+      - gridcell "":
+        - button ""
+    - row "541. מרינה 2025 עונת 1 248. פיקוד 1 כללי ניהול פוטנציאל = 19343 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בהכנה 26/05/2025 26/05/2025 ":
+      - gridcell
+      - gridcell "541. מרינה 2025"
+      - gridcell
+      - gridcell "עונת 1"
+      - gridcell "248. פיקוד 1"
+      - gridcell "כללי"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 19343 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בהכנה"
+      - gridcell "26/05/2025 26/05/2025"
+      - gridcell "":
+        - button ""
+    - 'row "542. מרינה 2025 0 2. צה`ל ניהול פוטנציאל = 0 בהכנה "':
+      - gridcell
+      - gridcell "542. מרינה 2025"
+      - gridcell
+      - gridcell "0"
+      - 'gridcell "2. צה`ל"'
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell
+      - gridcell "":
+        - button ""
+    - 'row "543. 0 2. צה`ל ניהול פוטנציאל = 0 בהכנה "':
+      - gridcell
+      - gridcell "543."
+      - gridcell
+      - gridcell "0"
+      - 'gridcell "2. צה`ל"'
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell
+      - gridcell "":
+        - button ""
+    - button "Page 7": "7"
+    - button "Page 6": "6"
+    - button "Page 5": "5"
+    - button "Page 4": "4"
+    - button "Page 3": "3"
+    - button "Page 2": "2"
+    - button "Page 1": "1"
+  - button "להקמת אירוע חדש"
+```
+
+# Test source
+
+```ts
+  252 |   await expect(this.must5).toBeVisible()
+  253 |   await expect(this.must8).toBeVisible()
+  254 |   await this.must8.click()
+  255 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  256 |
+  257 |  
+  258 |  }
+  259 |  async ten() {
+  260 |
+  261 |   await this.all.nth(4).click()
+  262 |   await expect(this.must9).toBeVisible()
+  263 |   await this.must9.click()
+  264 |   const count = await this.must10.count();
+  265 |   await expect(count).toBe(24);
+  266 |   await expect(this.must11).toBeVisible()
+  267 |
+  268 |
+  269 |  
+  270 |  }
+  271 |  async ele() {
+  272 |   await this.all.nth(5).click();
+  273 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  274 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  275 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  276 |
+  277 |   // טען את תמונת ה-expected הקיימת
+  278 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  279 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  280 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  281 |
+  282 |   const { width, height } = expectedImage;
+  283 |   const diff = new PNG({ width, height });
+  284 |
+  285 |   // השווה בין התמונות
+  286 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  287 |
+  288 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  289 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  290 | };
+  291 | async compareScreenshots(start: number, end: number) {
+  292 |   for (let i = start; i <= end; i++) {
+  293 |     await this.all.nth(i).click();
+  294 |
+  295 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  296 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  297 |
+  298 |     const width = await this.page.evaluate(() => window.innerWidth);
+  299 |     const height = await this.page.evaluate(() => window.innerHeight);
+  300 |     
+  301 |     
+  302 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  303 |
+  304 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  305 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  306 |
+  307 |     const { width: w, height: h } = expectedImage;
+  308 |     const diff = new PNG({ width: w, height: h });
+  309 |
+  310 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  311 |
+  312 |     const TOLERANCE = 100;
+  313 |
+  314 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  315 |
+  316 |
+  317 |     await this.page.goBack();
+  318 |   }
+  319 | }
+  320 | async captureExpectedScreenshots(start: number, end: number) {
+  321 |   for (let i = start; i <= end; i++) {
+  322 |     await this.all.nth(i).click();
+  323 |
+  324 |     const width = await this.page.evaluate(() => window.innerWidth);
+  325 |     const height = await this.page.evaluate(() => window.innerHeight);
+  326 |
+  327 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  328 |
+  329 |     await this.page.screenshot({
+  330 |       path: screenshotPath,
+  331 |       clip: {
+  332 |         x: 0,
+  333 |         y: 0,
+  334 |         width,
+  335 |         height
+  336 |       }
+  337 |     });
+  338 |
+  339 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  340 |
+  341 |     await this.page.goBack();
+  342 |   }
+  343 | }
+  344 |
+  345 | async e2e() {
+  346 |   await this.eventManagementButton.click();
+  347 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  348 |   const counter = await this.tr1.count();
+  349 |   await this.page2.click()
+  350 |   const counter2 = await this.tr1.count();
+  351 |   const sum= 6*counter+counter2
+> 352 |   expect(sum).toBe(70)
+      |               ^ Error: expect(received).toBe(expected) // Object.is equality
+  353 |   
+  354 | }
+  355 | }
+  356 |
+  357 | // .click();
+  358 | // 
+  359 | // 
+  360 | // 
+```

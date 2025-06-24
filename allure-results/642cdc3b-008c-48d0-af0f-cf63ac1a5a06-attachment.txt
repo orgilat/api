@@ -1,0 +1,17 @@
+[2025-06-21 21:35:02] info: הטסט התחיל
+{
+  calls: [
+    {
+      id: '00000000-0000-0000-0000-000000000000',
+      domainName: null,
+      methodName: 'getSingle',
+      parameters: [Object],
+      callResult: [Object],
+      msgs: [Object],
+      isSuccess: true
+    }
+  ],
+  recivedStamp: '2025-06-21T21:35:06.7770443+03:00'
+}
+Count from API: 0
+Count from UI: 64

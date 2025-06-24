@@ -1,0 +1,136 @@
+# Test info
+
+- Name: e2e+api2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:163:6
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('input[value="1  ניהול אירועים"]')
+    - waiting for navigation to finish...
+    - navigated to "https://www.survey.co.il/SMclient/#/eventsList/7576C36A8EDD4FA2836E/"
+
+    at FlowPage.e2eAddEventAndCheckItAppears (C:\Users\User\Documents\k6try\pages\FlowPage.ts:448:34)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:173:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:168:3
+```
+
+# Test source
+
+```ts
+  348 | async e2e() { //בודק שהכמות איברים בפרונט זהה לבק
+  349 |   // 1. פותחים את העמוד (שגורם לקריאת ה-API)
+  350 |   await this.eventManagementButton.click();
+  351 |
+  352 |   // 2. מחכים במקביל לתגובה מה-API
+  353 |   const [response] = await Promise.all([
+  354 |     this.page.waitForResponse(resp =>
+  355 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  356 |       resp.request().method() === 'POST' &&
+  357 |       resp.status() === 200 &&
+  358 |       (resp.request().postData() || '').length === 93
+  359 |     ),
+  360 |   ]);
+  361 |   
+  362 |   
+  363 |   const apiJson = await response.json();
+  364 |   const events = apiJson?.calls?.[0]?.callResult?.data ?? [];
+  365 |   const backendCount = Array.isArray(events)
+  366 |     ? events.filter(e => e.eventId !== undefined).length
+  367 |     : 0;
+  368 |   
+  369 |   console.log('Count from API:', backendCount);
+  370 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  371 |   const counter = await this.tr1.count();
+  372 |
+  373 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  374 |   await this.page2.click();
+  375 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  376 |   const counter2 = await this.tr1.count();
+  377 |
+  378 |
+  379 |   const sum = 6 * counter + counter2;
+  380 |   console.log('Count from UI:', sum);
+  381 |
+  382 |   // 7. בדיקה שהמספרים שווים
+  383 |   expect(sum).toBe(backendCount);
+  384 | }
+  385 |
+  386 |
+  387 | async e2eAddEventAndCheckItAppears() {
+  388 |   // שלב 1: פתיחת העמוד שגורם ל־getList
+  389 | await this.eventManagementButton.click();
+  390 |   // קודם מגדירים את המוק לפני הלחיצה
+  391 | await this.page.route('**/TPSMOH.API/api/servicecall', async (route, request) => {
+  392 |   if (
+  393 |     request.method() === 'POST' &&
+  394 |     (request.postData() || '').length === 93
+  395 |   ) {
+  396 |     const mockResponse = {
+  397 |       calls: [{
+  398 |         callResult: {
+  399 |           data: [
+  400 |             {
+  401 |               eventId: 501,
+  402 |               eventName: "501. מרינה 2027",
+  403 |               status: 1,
+  404 |               statusDate: "28/04/2025",
+  405 |               statusName: "בהכנה",
+  406 |               startDepName: "248. פיקוד 1",
+  407 |               startDepCode: "248",
+  408 |               creator: null,
+  409 |               creatorRole: null,
+  410 |               actual: 0,
+  411 |               modelType: null,
+  412 |               period: 1,
+  413 |               periodName: "עונת 1",
+  414 |               pikud: 188,
+  415 |               pikudName: "כללי",
+  416 |               startDate: "06/04/2025",
+  417 |               endDate: "28/04/2025",
+  418 |               potential: 19343,
+  419 |               completed: 0,
+  420 |               suspected: 0,
+  421 |               disqualified: 0,
+  422 |               approved: 0,
+  423 |               id: 0,
+  424 |               code: null,
+  425 |               isActive: true,
+  426 |               isDeleted: false,
+  427 |               createdBy: null,
+  428 |               createdOn: "0001-01-01T00:00:00",
+  429 |               lastUpdateBy: null,
+  430 |               version: "0001-01-01T00:00:00"
+  431 |             }
+  432 |           ]
+  433 |         }
+  434 |       }]
+  435 |     };
+  436 |
+  437 |     await route.fulfill({
+  438 |       status: 200,
+  439 |       contentType: 'application/json',
+  440 |       body: JSON.stringify(mockResponse),
+  441 |     });
+  442 |   } else {
+  443 |     await route.continue();
+  444 |   }
+  445 | });
+  446 |
+  447 | // עכשיו אפשר ללחוץ, והקריאה תיתפס על ידי המוק
+> 448 | await this.eventManagementButton.click();
+      |                                  ^ Error: locator.click: Target page, context or browser has been closed
+  449 |
+  450 | // במידת הצורך, להמתין אחרי הלחיצה
+  451 | await this.page.waitForTimeout(30000);  // 30 שניות אם אתה רוצה
+  452 |
+  453 |
+  454 | }
+  455 | }
+  456 | // .click();
+  457 | // 
+  458 | // 
+  459 | // 
+```

@@ -1,0 +1,228 @@
+# Test info
+
+- Name: u,תFbfffzzfffתvvvcccccccccת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:194:16
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible()
+
+Locator: locator('.optionsqdesign-table')
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  - expect.toBeVisible with timeout 190000ms
+  - waiting for locator('.optionsqdesign-table')
+
+    at FlowPage.eleven14 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:437:30)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:200:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:199:5
+```
+
+# Test source
+
+```ts
+  337 |    await expect(this.must3).toContainText("סיבות להוספת או הסרת משתתפים באירוע סוציומטרי")
+  338 |    await expect(this.table).toBeVisible()
+  339 |    await expect(this.submitButton).toBeVisible()
+  340 |  
+  341 |  }
+  342 | async eleven7() {
+  343 |    await this.all.nth(10).click()
+  344 |    await expect(this.must3).toContainText("כמות היגדים נדרשים למילוי כתלות בתשובה בהיגד ספציפי כגון מידת היכרות")
+  345 |    await expect(this.table).toBeVisible()
+  346 |
+  347 |  }
+  348 | async eleven8() {
+  349 |    await this.all.nth(11).click()
+  350 |    await expect(this.must3).toContainText("רשימת אשכולות")
+  351 |    const a = await this.kpi.inputValue();
+  352 |    expect(a).toContain("אשכולות");
+  353 |    const ab = await this.kpi2.inputValue();
+  354 |    expect(ab).toContain("הגדרת מענה");
+  355 |    await expect(this.table3).toBeVisible()
+  356 |    await expect(this.table4).toBeVisible()
+  357 |    const abc = await this.table4.inputValue();
+  358 |    expect(abc).toContain("אשכול חדש");
+  359 |
+  360 |
+  361 |  }
+  362 |
+  363 |  async eleven9() {
+  364 |    await this.all.nth(12).click()
+  365 |    await expect(this.must3).toContainText("העברת משיבים ממאגר פוטנציאלי למאגר פעיל ולהיפך")
+  366 |    await expect(this.all).toBeVisible()
+  367 |    const a=await this.table5.count()
+  368 |    expect(a).toBe(46)
+  369 |    await expect(this.must4).toBeVisible()
+  370 |
+  371 |  }
+  372 |   async eleven10() {
+  373 |    await this.all.nth(13).click()
+  374 |    await expect(this.must3).toContainText("ניהול הרשאות משתמשים")
+  375 |    await expect(this.all).toBeVisible()
+  376 |    const a=await this.table5.count()
+  377 |    expect(a).toBe(46)
+  378 |    await expect(this.must4).toBeVisible()
+  379 |
+  380 |  }
+  381 |
+  382 |   async eleven11() {
+  383 |    await this.all.nth(14).click()
+  384 |  
+  385 |    await expect(this.submitButton).toBeVisible()
+  386 |    await expect(this.all).toBeVisible()
+  387 |    // ניגש לאלמנט לפי ID (כמו בדוגמה שלך)
+  388 |    const dateInput = this.page.locator('#dateFrom');
+  389 |    const dateTo = await this.page.locator('#dateTo').inputValue();
+  390 |
+  391 | // קולטים את הערך מתוך השדה
+  392 |     const inputValue = await dateInput.inputValue();
+  393 |
+  394 | // מייצרים את התאריך של היום בפורמט dd/MM/yyyy
+  395 | const today = new Date();
+  396 | const day = String(today.getDate()).padStart(2, '0');
+  397 | const month = String(today.getMonth() + 1).padStart(2, '0');
+  398 | const year = today.getFullYear();
+  399 | const todayFormatted = `${day}/${month}/${year}`;
+  400 |
+  401 | // משווים בין התאריך שבשדה לתאריך של היום
+  402 | expect(inputValue).toBe(todayFormatted);
+  403 | expect(dateTo).toBe(todayFormatted);
+  404 |
+  405 |
+  406 |  }
+  407 |
+  408 |
+  409 | async eleven12() {
+  410 |    await this.all.nth(15).click()
+  411 |    await expect(this.must3).toContainText("הגדרת חוקי העתקה של נתונים מחושבים לשאלון העזר")
+  412 |    await expect(this.must4).toBeVisible()
+  413 |    // קולט את כל הלייבלים שבתוך הטופס
+  414 |     const labels = this.page.locator("//form[@name='sm_precalcrules']//label");
+  415 |     const count1 = await labels.count();
+  416 |     expect(count1).toBe(5);
+  417 | }
+  418 |
+  419 | async eleven13() {
+  420 |    await this.all.nth(16).click()
+  421 |    await expect(this.must3).toContainText("הגדרת כללים לחוקות חישוב ואוכלוסיות למודל חישוב")
+  422 |    await expect(this.submitButton).toBeVisible()
+  423 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  424 |    const table = this.page.locator("(//table[@cellpadding='0'])");
+  425 |
+  426 | // סופר את מספר השורות
+  427 | const rowCount = await table.count();
+  428 |
+  429 | // בודק שיש בדיוק 2
+  430 | expect(rowCount).toBe(2);
+  431 |
+  432 | }
+  433 |
+  434 | async eleven14() {
+  435 |    await this.all.nth(17).click()
+  436 |    await expect(this.must3).toContainText("רשימת שדות עבור המאגר: מאגר עדכני")
+> 437 |    await expect(this.table2).toBeVisible()
+      |                              ^ Error: expect(locator).toBeVisible()
+  438 |    await expect(this.table3).toBeVisible()
+  439 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  440 |     const table2 = this.page.locator(".mtableedit-table");
+  441 |    const table = this.page.locator("input[fdprocessedid='x28mb']");
+  442 | const table3 = this.page.locator("input[value='הוסף שדה חדש']");
+  443 | // סופר את מספר השורות
+  444 | const rowCount = await table.count();
+  445 |
+  446 | // בודק שיש בדיוק 2
+  447 | expect(rowCount).toBe(7);
+  448 |
+  449 | }
+  450 |
+  451 |
+  452 |
+  453 |
+  454 |
+  455 |
+  456 |
+  457 |
+  458 |
+  459 |
+  460 |
+  461 |
+  462 |
+  463 |
+  464 |
+  465 |
+  466 |
+  467 |
+  468 |
+  469 |
+  470 |
+  471 |
+  472 |
+  473 |
+  474 |
+  475 |
+  476 |
+  477 |
+  478 |
+  479 |
+  480 |
+  481 |
+  482 |
+  483 |
+  484 |
+  485 |
+  486 |
+  487 |
+  488 |
+  489 |
+  490 |
+  491 |
+  492 |  async ele() {
+  493 |   await this.all.nth(5).click();
+  494 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  495 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  496 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  497 |
+  498 |   // טען את תמונת ה-expected הקיימת
+  499 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  500 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  501 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  502 |
+  503 |   const { width, height } = expectedImage;
+  504 |   const diff = new PNG({ width, height });
+  505 |
+  506 |   // השווה בין התמונות
+  507 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  508 |
+  509 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  510 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  511 | };
+  512 | async compareScreenshots(start: number, end: number) {
+  513 |   for (let i = start; i <= end; i++) {
+  514 |     await this.all.nth(i).click();
+  515 |
+  516 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  517 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  518 |
+  519 |     const width = await this.page.evaluate(() => window.innerWidth);
+  520 |     const height = await this.page.evaluate(() => window.innerHeight);
+  521 |     
+  522 |     
+  523 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  524 |
+  525 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  526 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  527 |
+  528 |     const { width: w, height: h } = expectedImage;
+  529 |     const diff = new PNG({ width: w, height: h });
+  530 |
+  531 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  532 |
+  533 |     const TOLERANCE = 100;
+  534 |
+  535 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  536 |
+  537 |
+```

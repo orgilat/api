@@ -1,0 +1,2879 @@
+# Test info
+
+- Name: בדיקה פלואו- בחירת מודל חישוב 
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:5:5
+
+# Error details
+
+```
+Error: Playwright Test did not expect test() to be called here.
+Most common reasons include:
+- You are calling test() in a configuration file.
+- You are calling test() in a file that is imported by the configuration file.
+- You have two different versions of @playwright/test. This usually happens
+  when one of the dependencies in your package.json depends on @playwright/test.
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:19:7
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=reportslist
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem: רשימת תצוגת תוצאות
+  - listitem:
+    - img
+- text: רשימת תצוגת התוצאות
+- combobox:
+  - option "1. שאלון סוציומטרי" [selected]
+  - option "2. מעקב תכולת עבודה"
+  - option "4. סוציומטריה יחידתית-בדיקה"
+  - option "5. סוציומטריה-מטה"
+  - option "6. שאלון סוציומטרי מאסטר לא לגעת"
+  - option "7. ניהול חריגים"
+  - option "9. נושאים שצריך לקבל תשובות מהצבא"
+  - option "10. תקלות במערכת"
+  - option "11. שאלון עזר לתוצאות המחושבות עבור כל משתתף"
+  - option "15. שאלון עזר לחישוב תוצאות"
+- table:
+  - rowgroup:
+    - row "ניהול תקופות קטגוריות אשכולות השווה אשכולות *לא פעיל*":
+      - cell "ניהול תקופות":
+        - button "ניהול תקופות"
+      - cell "קטגוריות":
+        - button "קטגוריות"
+      - cell "אשכולות":
+        - button "אשכולות"
+      - cell "השווה אשכולות *לא פעיל*":
+        - button "השווה אשכולות *לא פעיל*"
+    - row "יחידות באשכול טבלאות אינטגרציה התפלגות רצויה טבלת קידום":
+      - cell "יחידות באשכול":
+        - button "יחידות באשכול"
+      - cell "טבלאות אינטגרציה":
+        - button "טבלאות אינטגרציה"
+      - cell "התפלגות רצויה":
+        - button "התפלגות רצויה"
+      - cell "טבלת קידום":
+        - button "טבלת קידום"
+    - row "סדר חישוב דוחות שינויים באמצעות דוח שיוך ציון למשקל אינטגרציה לממשקים":
+      - cell "סדר חישוב דוחות":
+        - button "סדר חישוב דוחות"
+      - cell "שינויים באמצעות דוח":
+        - button "שינויים באמצעות דוח"
+      - cell "שיוך ציון למשקל":
+        - button "שיוך ציון למשקל"
+      - cell "אינטגרציה לממשקים":
+        - button "אינטגרציה לממשקים"
+    - row "התפלגות נורמאלית מאפיינים לדוחות קביעת פוטנציאל (שמור )למטריצת 360 הגדרת כללים למטריצת 360":
+      - cell "התפלגות נורמאלית":
+        - button "התפלגות נורמאלית"
+      - cell "מאפיינים לדוחות":
+        - button "מאפיינים לדוחות"
+      - cell "קביעת פוטנציאל (שמור )למטריצת 360":
+        - button "קביעת פוטנציאל (שמור )למטריצת 360"
+      - cell "הגדרת כללים למטריצת 360":
+        - button "הגדרת כללים למטריצת 360"
+    - row "חישוב מחדש של מעגלים בתהליך 360 (הכנסת הערך לשאלה בשאלון) שחרור מנעילה טפסי 360 שהוגשו שכפול דוחות קישור בין דוחות":
+      - cell "חישוב מחדש של מעגלים בתהליך 360 (הכנסת הערך לשאלה בשאלון)":
+        - button "חישוב מחדש של מעגלים בתהליך 360 (הכנסת הערך לשאלה בשאלון)"
+      - cell "שחרור מנעילה טפסי 360 שהוגשו":
+        - button "שחרור מנעילה טפסי 360 שהוגשו"
+      - cell "שכפול דוחות":
+        - button "שכפול דוחות"
+      - cell "קישור בין דוחות":
+        - button "קישור בין דוחות"
+    - row "הצגת דוחות לשאלון לפי מאפייני הדוח הגדרת כללים למטריצות 360 לפי המבנה הארגוני כללים להזמנת ממשקים 360 כללים למטריצות 360 לפי היררכיה ניהולית":
+      - cell "הצגת דוחות לשאלון לפי מאפייני הדוח":
+        - button "הצגת דוחות לשאלון לפי מאפייני הדוח"
+      - cell "הגדרת כללים למטריצות 360 לפי המבנה הארגוני":
+        - button "הגדרת כללים למטריצות 360 לפי המבנה הארגוני"
+      - cell "כללים להזמנת ממשקים 360":
+        - button "כללים להזמנת ממשקים 360"
+      - cell "כללים למטריצות 360 לפי היררכיה ניהולית":
+        - button "כללים למטריצות 360 לפי היררכיה ניהולית"
+    - row "הגדרת מינ/ מקס בחירות בדוח 16 לשאלת מולטי לפי שאלת מאסטר":
+      - cell "הגדרת מינ/ מקס בחירות בדוח 16 לשאלת מולטי לפי שאלת מאסטר":
+        - button "הגדרת מינ/ מקס בחירות בדוח 16 לשאלת מולטי לפי שאלת מאסטר"
+- table:
+  - rowgroup:
+    - row "שם דוח סוג תצוגה סטאטוס טסט הסבה N מינימאלי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה הזז מחק":
+      - cell
+      - cell "שם דוח"
+      - cell "סוג תצוגה"
+      - cell "סטאטוס"
+      - cell "טסט"
+      - cell "הסבה"
+      - cell "N מינימאלי"
+      - cell "עריכת שם"
+      - cell "מאפייני הדוח"
+      - cell "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים"
+      - cell "שכפול"
+      - cell "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה"
+      - cell "הזז"
+      - cell "מחק"
+    - row "ללא סינון ללא סינון ללא סינון ללא סינון":
+      - cell
+      - cell
+      - cell "ללא סינון":
+        - combobox:
+          - option "ללא סינון" [selected]
+      - cell "ללא סינון":
+        - combobox:
+          - option "ללא סינון" [selected]
+      - cell "ללא סינון":
+        - combobox:
+          - option "ללא סינון" [selected]
+          - option "דוחות המפרט"
+      - cell "ללא סינון":
+        - combobox:
+          - option "ללא סינון" [selected]
+          - option "סודי/אישי"
+          - option "טסט - מערכת חדשה"
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell
+  - rowgroup:
+    - row "1 39. דוחות התקדמות לפי מעריכים ולפי מוערכים דוחות המפרט עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "1":
+        - combobox:
+          - option "1" [selected]
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "39. דוחות התקדמות לפי מעריכים ולפי מוערכים"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "2 41. דוח התקדמות לפי מעריכים דוחות המפרט עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "2":
+        - combobox:
+          - option "1"
+          - option "2" [selected]
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "41. דוח התקדמות לפי מעריכים"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "3 60. פלט סוציומטריה אישי - תצוגת PDF דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח למעלה למטה מחק":
+      - cell "3":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3" [selected]
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "60. פלט סוציומטריה אישי - תצוגת PDF"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "4 59. משוב סוציומטרי אישי למוערך דוחות המפרט סודי/אישי 5 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח למעלה למטה מחק":
+      - cell "4":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4" [selected]
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "59. משוב סוציומטרי אישי למוערך"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "5":
+        - textbox: "5"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "5 38. תיאור גרפי של הממוצעים (דוח 11) דוחות המפרט סודי/אישי 5 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "5":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5" [selected]
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "38. תיאור גרפי של הממוצעים (דוח 11)"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "5":
+        - textbox: "5"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "6 46. תוצאות הערכה דוחות המפרט עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "6":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6" [selected]
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "46. תוצאות הערכה"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "7 20. דוח לפי ציון מסכם דוחות המפרט סודי/אישי 5 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "7":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7" [selected]
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "20. דוח לפי ציון מסכם"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "5":
+        - textbox: "5"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "8 47. דוח לפי ציון מסכם ממוין לפי דרגה דוחות המפרט סודי/אישי 5 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "8":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8" [selected]
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "47. דוח לפי ציון מסכם ממוין לפי דרגה"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "5":
+        - textbox: "5"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "9 48. דוח לפי ציון מסכם ממוין לפי תת יחידה דוחות המפרט סודי/אישי 5 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "9":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9" [selected]
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "48. דוח לפי ציון מסכם ממוין לפי תת יחידה"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "5":
+        - textbox: "5"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "10 32. תיאור גרפי של הממוצעים דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "10":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10" [selected]
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "32. תיאור גרפי של הממוצעים"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "11 49. דוח חתך פנים חוץ דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "11":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11" [selected]
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "49. דוח חתך פנים חוץ"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "12 50. דוח חתך פנים חוץ ממוין לפי תת יחידה דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "12":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12" [selected]
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "50. דוח חתך פנים חוץ ממוין לפי תת יחידה"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "13 51. דוח חתך רמת מעריך דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "13":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13" [selected]
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "51. דוח חתך רמת מעריך"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "14 52. דוח חתך רמת מעריך, ממוין לפי תת יחידה דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "14":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14" [selected]
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "52. דוח חתך רמת מעריך, ממוין לפי תת יחידה"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "15 53. דוח חתך אוכלוסייה ממוין לפי תת יחידה דוחות המפרט סודי/אישי 5 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "15":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15" [selected]
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "53. דוח חתך אוכלוסייה ממוין לפי תת יחידה"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "5":
+        - textbox: "5"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "16 54. דוח אקטוארי דוחות המפרט סודי/אישי 4 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "16":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16" [selected]
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "54. דוח אקטוארי"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "4":
+        - textbox: "4"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "17 34. דוח התפלגות אוכלוסיות דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "17":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17" [selected]
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "34. דוח התפלגות אוכלוסיות"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "18 55. דוח פירסון למדד הצלחה במילוי התפקיד דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "18":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18" [selected]
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "55. דוח פירסון למדד הצלחה במילוי התפקיד"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "19 61. דוח פירסון למדד פוטנציאל לקידום דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח למעלה למטה מחק":
+      - cell "19":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19" [selected]
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "61. דוח פירסון למדד פוטנציאל לקידום"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "20 56. דוח היסטורי טבלאי דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "20":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20" [selected]
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "56. דוח היסטורי טבלאי"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "21 44. פלט סוציומטריה אישי דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "21":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21" [selected]
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "44. פלט סוציומטריה אישי"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "22 57. דוח חסרי ציון מסכם דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "22":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22" [selected]
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "57. דוח חסרי ציון מסכם"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "23 58. דוח חסרי ציון למפקד דוחות המפרט סודי/אישי 8 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "23":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23" [selected]
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "58. דוח חסרי ציון למפקד"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell "8":
+        - textbox: "8"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "24 1. fill עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "24":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24" [selected]
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "1. fill"
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "25 3. דוח 16 לניהול הפוטנציאל 9 עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "25":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25" [selected]
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "3. דוח 16 לניהול הפוטנציאל"
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell "9":
+        - textbox: "9"
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "26 4. דוח מעקב שינויים בפרטי אנשים עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "26":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26" [selected]
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "4. דוח מעקב שינויים בפרטי אנשים"
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "27 8. כלל השאלונים באירוע - אחוז שאלונים מוזנים עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "27":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27" [selected]
+          - option "28"
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "8. כלל השאלונים באירוע - אחוז שאלונים מוזנים"
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "28 9. דוח גישה לתיקיית עובד דוחות המפרט סודי/אישי עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "28":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28" [selected]
+          - option "29"
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "9. דוח גישה לתיקיית עובד"
+      - cell
+      - cell
+      - cell "דוחות המפרט"
+      - cell "סודי/אישי"
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "29 12. דוח נתוני שאלון עריכת שם מאפייני הדוח שיוך אשכולות הפרדה בין מקושרים שכפול הסתרת אופציות בדוח תצוגה מקדימה למעלה למטה מחק":
+      - cell "29":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29" [selected]
+          - option "30"
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+          - option "53"
+          - option "54"
+          - option "55"
+          - option "56"
+          - option "57"
+          - option "58"
+          - option "59"
+          - option "60"
+          - option "61"
+      - cell "12. דוח נתוני שאלון"
+      - cell
+      - cell
+      - cell
+      - cell
+      - cell:
+        - textbox
+      - cell "עריכת שם":
+        - img "עריכת שם"
+      - cell "מאפייני הדוח":
+        - img "מאפייני הדוח"
+      - cell "שיוך אשכולות":
+        - img "שיוך אשכולות"
+      - cell "הפרדה בין מקושרים":
+        - img "הפרדה בין מקושרים"
+      - cell "שכפול":
+        - img "שכפול"
+      - cell "הסתרת אופציות בדוח":
+        - img "הסתרת אופציות בדוח"
+      - cell "תצוגה מקדימה":
+        - img "תצוגה מקדימה"
+      - cell "למעלה למטה":
+        - img "למעלה"
+        - img "למטה"
+      - cell "מחק":
+        - img "מחק"
+    - row "30":
+      - cell "30":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+          - option "9"
+          - option "10"
+          - option "11"
+          - option "12"
+          - option "13"
+          - option "14"
+          - option "15"
+          - option "16"
+          - option "17"
+          - option "18"
+          - option "19"
+          - option "20"
+          - option "21"
+          - option "22"
+          - option "23"
+          - option "24"
+          - option "25"
+          - option "26"
+          - option "27"
+          - option "28"
+          - option "29"
+          - option "30" [selected]
+          - option "31"
+          - option "32"
+          - option "33"
+          - option "34"
+          - option "35"
+          - option "36"
+          - option "37"
+          - option "38"
+          - option "39"
+          - option "40"
+          - option "41"
+          - option "42"
+          - option "43"
+          - option "44"
+          - option "45"
+          - option "46"
+          - option "47"
+          - option "48"
+          - option "49"
+          - option "50"
+          - option "51"
+          - option "52"
+```
+
+# Test source
+
+```ts
+   1 | import { test, expect } from './fixtures';  // ייבוא מה־fixture שהכנת
+   2 | import { allure } from 'allure-playwright'; // אם יש שגיאה תחת זאת, תוודא שהתקנת את allure-playwright
+   3 | import { logger } from '../Logger';
+   4 |
+   5 | test('בדיקה פלואו- בחירת מודל חישוב ', async ({ flowpage }) => {
+   6 |   allure.description("The test case navigates to survey management and then to seasons screen");
+   7 |   allure.owner("or gilat");
+   8 |
+   9 |   allure.severity('critical');
+  10 |
+  11 |   await allure.step('מעבר לעמוד ניהול הסקר', async () => {
+  12 |     logger.info('הטסט התחיל');
+  13 |     await flowpage.goto(); // ודא שזו מתודה קיימת אצלך ב־FlowPage
+  14 |     await flowpage.login('MARINAS', 'Ms123456');
+  15 |     await flowpage.goToSociometricManagement(); // גם זו צריכה להיות קיימת במחלקת FlowPage
+  16 |     await flowpage.four(); 
+  17 |   });
+  18 |
+> 19 |   test('בדיקה פלואו: מעבר לניהול הסקר ואז למסך עונות', async ({ flowpage }) => {
+     |       ^ Error: Playwright Test did not expect test() to be called here.
+  20 |     allure.description("The test case navigates to survey management and then to seasons screen");
+  21 |     allure.owner("or gilat");
+  22 |   
+  23 |     allure.severity('critical');
+  24 |   
+  25 |     await allure.step('מעבר לעמוד ניהול הסקר', async () => {
+  26 |       logger.info('הטסט התחיל');
+  27 |       await flowpage.goto(); // ודא שזו מתודה קיימת אצלך ב־FlowPage
+  28 |       await flowpage.login('MARINAS', 'Ms123456');
+  29 |   
+  30 |     });
+  31 |
+  32 | });
+  33 |
+  34 | });
+  35 |
+  36 |
+```

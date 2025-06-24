@@ -1,0 +1,138 @@
+# Test info
+
+- Name: תתת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:79:6
+
+# Error details
+
+```
+Error: expect(locator).toContainText(expected)
+
+Locator: locator('//div[@class="page-title"]//span[1]')
+Expected string: "קביעת חוקים לבדיקת שאלונים לא תקינים: "
+Received string: "שדות לניהול פוטנציאל"
+Call log:
+  - expect.toContainText with timeout 190000ms
+  - waiting for locator('//div[@class="page-title"]//span[1]')
+    6 × locator resolved to <span title="">שדות לניהול פוטנציאל</span>
+      - unexpected value "שדות לניהול פוטנציאל"
+
+    at FlowPage.nine (C:\Users\User\Documents\k6try\pages\FlowPage.ts:231:28)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:89:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:84:3
+```
+
+# Test source
+
+```ts
+  131 |   async goToSociometricManagement() {
+  132 |     await this.surveyAdminLink.hover();
+  133 |     await this.sociometricLink.click();
+  134 |    
+  135 |
+  136 |   }
+  137 |   async four() {
+  138 |     await this.modelingButton.scrollIntoViewIfNeeded()
+  139 |     await this.modelingButton.click();
+  140 |     await this.modelingButton1.click();
+  141 |     await this.list.locator('div.ss-option').nth(1).click();
+  142 |    await this.list1.hover()
+  143 |    await this.list2.click()
+  144 |    
+  145 |   
+  146 |   }
+  147 |   async five() {
+  148 |     await this.eventManagementButton.click();
+  149 |     await this.createNewEventButton.click();
+  150 |     await this.eventNameInput.waitFor({ state: 'visible' });
+  151 |     await this.eventNameInput.click({ force: true });
+  152 |     await this.page.waitForTimeout(200); // זמן קטן לייצוב
+  153 |     await this.eventNameInput.fill(''); // לנקות את השדה
+  154 |     await this.page.waitForTimeout(200); // עוד זמן קטן
+  155 |     await this.page.keyboard.type('מרינה 2025', { delay: 150 });
+  156 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  157 |
+  158 |
+  159 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  160 |
+  161 |
+  162 |     await this.seasonDropdown.click();
+  163 |     await this.seasonOption.click();
+  164 |     // הוספת בחירת עונה כאן אם צריך
+  165 |
+  166 |     // בחירת תאריך התחלה
+  167 |     await this.startDateButton.click();
+  168 |     await this.page.keyboard.press('Enter');   // בחירת תאריך סיום
+  169 |     await this.endDateButton.click();
+  170 |     await this.page.keyboard.press('Enter');
+  171 |     await this.recruit.click();
+  172 |     await this.recruitOption.click();
+  173 |     logger.info('we came to the end');
+  174 |     await this.mateS.click();
+  175 |     logger.info('worked');
+  176 |     await this.mateC.click();
+  177 |     await this.pikud1.click();
+  178 |     logger.info('פיקוד אחד נלחץ');
+  179 |     await this.page.waitForTimeout(2000)
+  180 |     await this.page.locator('div:nth-child(18) > .dx-treeview-with-search > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container > .dx-scrollable-content > ul > li > .dx-treeview-node-container > li > .dx-widget').first().click();
+  181 |     logger.info('אוגדה 1 נלחצה');
+  182 |     await this.page.waitForTimeout(2500);
+  183 |     await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  184 |     await this.end1.click({ force: true });
+  185 |     await this.page.waitForTimeout(2500);
+  186 |   
+  187 |     await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  188 |     await this.end3.click({ force: true });
+  189 |     await this.page.waitForTimeout(2500);
+  190 |     await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  191 |     await this.final.click({ force: true });
+  192 |     await this.page.waitForTimeout(2500);
+  193 |     await this.calculate.click();
+  194 |     await this.show.click();
+  195 |     await this.f1.waitFor({ state: 'visible' });
+  196 |     await this.f1.click();
+  197 |     await this.f2.waitFor({ state: 'visible' });
+  198 |     await this.f2.click();
+  199 |     await this.f4.waitFor({ state: 'visible' });
+  200 |     await this.f4.click();
+  201 |     await this.show1.waitFor({ state: 'visible' });
+  202 |     await this.show1.click();
+  203 |   }
+  204 |   async six() {
+  205 |
+  206 |  await this.all.nth(0).click()
+  207 |  await expect(this.must).toBeVisible()
+  208 |  await expect(this.must2).toBeVisible()
+  209 |
+  210 | }
+  211 | async seven() {
+  212 |
+  213 |   await this.all.nth(1).click()
+  214 |   await expect(this.must3).toBeVisible()
+  215 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  216 |   await expect(this.must4).toBeVisible()
+  217 |   await expect(this.must5).toBeVisible()
+  218 |  }
+  219 |  async eight() {
+  220 |
+  221 |   await this.all.nth(2).click()
+  222 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  223 |   await expect(this.must6).toBeVisible()
+  224 |   await expect(this.must6).toContainText("סוציומטרי")
+  225 |   await expect(this.must7).toContainText("מספר אישי")
+  226 |  
+  227 | }
+  228 |  async nine() {
+  229 |
+  230 |   await this.all.nth(2).click()
+> 231 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+      |                            ^ Error: expect(locator).toContainText(expected)
+  232 |   await expect(this.must5).toBeVisible()
+  233 |   await expect(this.must8).toBeVisible()
+  234 |   await this.must8.click()
+  235 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  236 |
+  237 |  
+  238 |  }}
+  239 | // .click();
+```

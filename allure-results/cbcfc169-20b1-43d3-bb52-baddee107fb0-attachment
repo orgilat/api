@@ -1,0 +1,514 @@
+# Test info
+
+- Name: pic 2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:104:9
+
+# Error details
+
+```
+Error: יש הבדל של 52347 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 11
+
+expect(received).toBeLessThanOrEqual(expected)
+
+Expected: <= 100
+Received:    52347
+    at FlowPage.compareScreenshots (C:\Users\User\Documents\k6try\pages\FlowPage.ts:317:101)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:110:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:109:5
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=clustersorder
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "רשימת תצוגת תוצאות":
+      - /url: reportslist.asp
+  - listitem: ">>"
+  - listitem: רשימת אשכולות
+  - listitem:
+    - img
+- text: רשימת אשכולות
+- button "הגדרת מענה מינ´ ומקס´ לשאלות באשכול"
+- button "אשכולות KPI"
+- text: הצג הכל
+- checkbox
+- text: "-3"
+- table:
+  - rowgroup:
+    - row "אשכול שינוי סדר מאפיין AA הצג הכל מאפיין BB הצג הכל עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות מחיקה":
+      - cell
+      - cell "אשכול":
+        - link "אשכול":
+          - /url: clustersorder.asp?Sorttype=-1
+      - cell "שינוי סדר":
+        - link "שינוי סדר":
+          - /url: clustersorder.asp?Sorttype=0
+      - cell "מאפיין AA הצג הכל":
+        - link "מאפיין AA":
+          - /url: clustersorder.asp?Sorttype=1
+        - combobox:
+          - option "הצג הכל" [selected]
+      - cell "מאפיין BB הצג הכל":
+        - link "מאפיין BB":
+          - /url: clustersorder.asp?Sorttype=2
+        - combobox:
+          - option "הצג הכל" [selected]
+      - cell "עריכת שם"
+      - cell "השאלות באשכול"
+      - cell "קישור לאשכולות"
+      - cell "הקמת שאלות"
+      - cell "מחיקה"
+    - row "1 1. שאלות חובה 1 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "1"
+      - cell "1. שאלות חובה"
+      - cell "1":
+        - combobox:
+          - option "1" [selected]
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=1
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "2 2. שאלות בחירה 2 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "2"
+      - cell "2. שאלות בחירה"
+      - cell "2":
+        - combobox:
+          - option "1"
+          - option "2" [selected]
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=2
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "3 9. שאלת מידת היכרות 3 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "3"
+      - cell "9. שאלת מידת היכרות"
+      - cell "3":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3" [selected]
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=9
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "4 8. כל השאלות 4 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "4"
+      - cell "8. כל השאלות"
+      - cell "4":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4" [selected]
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=8
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "5 10. שאלות ציון מסכם ממוצע 5 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "5"
+      - cell "10. שאלות ציון מסכם ממוצע"
+      - cell "5":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5" [selected]
+          - option "6"
+          - option "7"
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=10
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "6 11. שאלות סטיית תקן 6 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "6"
+      - cell "11. שאלות סטיית תקן"
+      - cell "6":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6" [selected]
+          - option "7"
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=11
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "7 12. שאלות אחוזון 7 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "7"
+      - cell "12. שאלות אחוזון"
+      - cell "7":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7" [selected]
+          - option "8"
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=12
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+    - row "8 13. שאלות N 8 עריכת שם השאלות באשכול קישור לאשכולות הקמת שאלות שינוי סדר":
+      - cell "8"
+      - cell "13. שאלות N"
+      - cell "8":
+        - combobox:
+          - option "1"
+          - option "2"
+          - option "3"
+          - option "4"
+          - option "5"
+          - option "6"
+          - option "7"
+          - option "8" [selected]
+      - cell
+      - cell
+      - cell "עריכת שם":
+        - button "עריכת שם"
+      - cell "השאלות באשכול":
+        - button "השאלות באשכול"
+      - cell "קישור לאשכולות":
+        - button "קישור לאשכולות"
+      - cell "הקמת שאלות":
+        - link "הקמת שאלות":
+          - /url: qeditor.asp?rid=&ClusterID=13
+      - cell "שינוי סדר":
+        - button "שינוי סדר"
+- button "אשכול חדש"
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+```
+
+# Test source
+
+```ts
+  217 |     await this.show.click();
+  218 |     await this.f1.waitFor({ state: 'visible' });
+  219 |     await this.f1.click();
+  220 |     await this.f2.waitFor({ state: 'visible' });
+  221 |     await this.f2.click();
+  222 |     await this.f4.waitFor({ state: 'visible' });
+  223 |     await this.f4.click();
+  224 |     await this.show1.waitFor({ state: 'visible' });
+  225 |     await this.show1.click();
+  226 |   }
+  227 |   async six() {
+  228 |
+  229 |  await this.all.nth(0).click()
+  230 |  await expect(this.must).toBeVisible()
+  231 |  await expect(this.must2).toBeVisible()
+  232 |
+  233 | }
+  234 | async seven() {
+  235 |
+  236 |   await this.all.nth(1).click()
+  237 |   await expect(this.must3).toBeVisible()
+  238 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  239 |   await expect(this.must4).toBeVisible()
+  240 |   await expect(this.must5).toBeVisible()
+  241 |  }
+  242 |  async eight() {
+  243 |
+  244 |   await this.all.nth(2).click()
+  245 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  246 |   await expect(this.must6).toBeVisible()
+  247 |   await expect(this.must6).toContainText("סוציומטרי")
+  248 |   await expect(this.must7).toContainText("מספר אישי")
+  249 |  
+  250 | }
+  251 |  async nine() {
+  252 |
+  253 |   await this.all.nth(3).click()
+  254 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  255 |   await expect(this.must5).toBeVisible()
+  256 |   await expect(this.must8).toBeVisible()
+  257 |   await this.must8.click()
+  258 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  259 |
+  260 |  
+  261 |  }
+  262 |  async ten() {
+  263 |
+  264 |   await this.all.nth(4).click()
+  265 |   await expect(this.must9).toBeVisible()
+  266 |   await this.must9.click()
+  267 |   const count = await this.must10.count();
+  268 |   await expect(count).toBe(24);
+  269 |   await expect(this.must11).toBeVisible()
+  270 |
+  271 |
+  272 |  
+  273 |  }
+  274 |  async ele() {
+  275 |   await this.all.nth(5).click();
+  276 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  277 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  278 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  279 |
+  280 |   // טען את תמונת ה-expected הקיימת
+  281 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  282 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  283 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  284 |
+  285 |   const { width, height } = expectedImage;
+  286 |   const diff = new PNG({ width, height });
+  287 |
+  288 |   // השווה בין התמונות
+  289 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  290 |
+  291 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  292 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  293 | };
+  294 | async compareScreenshots(start: number, end: number) {
+  295 |   for (let i = start; i <= end; i++) {
+  296 |     await this.all.nth(i).click();
+  297 |
+  298 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  299 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  300 |
+  301 |     const width = await this.page.evaluate(() => window.innerWidth);
+  302 |     const height = await this.page.evaluate(() => window.innerHeight);
+  303 |     
+  304 |     
+  305 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  306 |
+  307 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  308 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  309 |
+  310 |     const { width: w, height: h } = expectedImage;
+  311 |     const diff = new PNG({ width: w, height: h });
+  312 |
+  313 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  314 |
+  315 |     const TOLERANCE = 100;
+  316 |
+> 317 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+      |                                                                                                     ^ Error: יש הבדל של 52347 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 11
+  318 |
+  319 |
+  320 |     await this.page.goBack();
+  321 |   }
+  322 | }
+  323 | async captureExpectedScreenshots(start: number, end: number) {
+  324 |   for (let i = start; i <= end; i++) {
+  325 |     await this.all.nth(i).click();
+  326 |
+  327 |     const width = await this.page.evaluate(() => window.innerWidth);
+  328 |     const height = await this.page.evaluate(() => window.innerHeight);
+  329 |
+  330 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  331 |
+  332 |     await this.page.screenshot({
+  333 |       path: screenshotPath,
+  334 |       clip: {
+  335 |         x: 0,
+  336 |         y: 0,
+  337 |         width,
+  338 |         height
+  339 |       }
+  340 |     });
+  341 |
+  342 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  343 |
+  344 |     await this.page.goBack();
+  345 |   }
+  346 | }
+  347 |
+  348 | async e2e() { //בודק שהכמות איברים בפרונט זהה לבק
+  349 |   // 1. פותחים את העמוד (שגורם לקריאת ה-API)
+  350 |   await this.eventManagementButton.click();
+  351 |
+  352 |   // 2. מחכים במקביל לתגובה מה-API
+  353 |   const [response] = await Promise.all([
+  354 |     this.page.waitForResponse(resp =>
+  355 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  356 |       resp.request().method() === 'POST' &&
+  357 |       resp.status() === 200 &&
+  358 |       (resp.request().postData() || '').length === 93
+  359 |     ),
+  360 |   ]);
+  361 |   
+  362 |   
+  363 |   const apiJson = await response.json();
+  364 |   const events = apiJson?.calls?.[0]?.callResult?.data ?? [];
+  365 |   const backendCount = Array.isArray(events)
+  366 |     ? events.filter(e => e.eventId !== undefined).length
+  367 |     : 0;
+  368 |   
+  369 |   console.log('Count from API:', backendCount);
+  370 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  371 |   const counter = await this.tr1.count();
+  372 |
+  373 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  374 |   await this.page2.click();
+  375 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  376 |   const counter2 = await this.tr1.count();
+  377 |
+  378 |
+  379 |   const sum = 6 * counter + counter2;
+  380 |   console.log('Count from UI:', sum);
+  381 |
+  382 |   // 7. בדיקה שהמספרים שווים
+  383 |   expect(sum).toBe(backendCount);
+  384 | }
+  385 |
+  386 |
+  387 | async e2eAddEventAndCheckItAppears() {
+  388 |   // שלב 1: הגדרת המוק מראש כדי להשתמש בו גם בבדיקות בהמשך
+  389 |   const mockEvent = {
+  390 |     eventId: 501,
+  391 |     eventName: "Marina 2027",
+  392 |     status: 1,
+  393 |     statusDate: "28/04/2025",
+  394 |     statusName: "בהכנה",
+  395 |     startDepName: "248. פיקוד 1",
+  396 |     startDepCode: "248",
+  397 |     creator: null,
+  398 |     creatorRole: null,
+  399 |     actual: 0,
+  400 |     modelType: null,
+  401 |     period: 1,
+  402 |     periodName: "עונת 1",
+  403 |     pikud: 188,
+  404 |     pikudName: "כללי",
+  405 |     startDate: "06/04/2025",
+  406 |     endDate: "28/04/2025",
+  407 |     potential: 19343,
+  408 |     completed: 0,
+  409 |     suspected: 0,
+  410 |     disqualified: 0,
+  411 |     approved: 0,
+  412 |     id: 0,
+  413 |     code: null,
+  414 |     isActive: true,
+  415 |     isDeleted: false,
+  416 |     createdBy: null,
+  417 |     createdOn: "0001-01-01T00:00:00",
+```

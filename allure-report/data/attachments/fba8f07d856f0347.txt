@@ -1,0 +1,2 @@
+[2025-06-18 15:29:53] info: הטסט התחיל
+✔️ נשמרה התמונה הצפויה לעמוד 11 ב: C:\Users\User\Documents\k6try\screenshots\twohalve_11.png

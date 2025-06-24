@@ -1,0 +1,269 @@
+# Test info
+
+- Name: e2e+api
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:149:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 0
+Received: 64
+    at FlowPage.e2e (C:\Users\User\Documents\k6try\pages\FlowPage.ts:386:15)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:159:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:154:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/8A0856EB2A1C4B9FB67B"
+    - button ""
+  - text: 1.0.0.94
+- main:
+  - text: מספר האירועים שהוקמו 64
+  - grid "טבלת נתונים":
+    - toolbar "Data grid toolbar":
+      - button "בחירת עמודה": 
+    - row "טור לעריכה טור שם האירוע טור בחירת מודל טור תקופה טור יחידה טור סמכות טור מקים טור תפקיד המקים טור No-Text potentialActual טור סטטוס האירוע טור תאריך התחלה וסיום טור מחיקת אירוע":
+      - columnheader "טור לעריכה": לעריכה
+      - columnheader "טור שם האירוע": שם האירוע
+      - columnheader "טור בחירת מודל": בחירת מודל
+      - columnheader "טור תקופה": תקופה
+      - columnheader "טור יחידה": יחידה
+      - columnheader "טור סמכות": סמכות
+      - columnheader "טור מקים": מקים
+      - columnheader "טור תפקיד המקים": תפקיד המקים
+      - columnheader "טור No-Text potentialActual": No-Text potentialActual
+      - columnheader "טור סטטוס האירוע": סטטוס האירוע
+      - columnheader "טור תאריך התחלה וסיום": תאריך התחלה וסיום
+      - columnheader "טור מחיקת אירוע": מחיקת אירוע
+    - row "תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון תא סינון":
+      - gridcell
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - spinbutton "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell "תא סינון":
+        - menubar:
+          - menuitem ""
+        - textbox "תא סינון"
+      - gridcell
+    - row "540. מרינה 2025 עונת 1 248. פיקוד 1 כללי ניהול פוטנציאל = 0 בהכנה 26/05/2025 26/05/2025 ":
+      - gridcell
+      - gridcell "540. מרינה 2025"
+      - gridcell
+      - gridcell "עונת 1"
+      - gridcell "248. פיקוד 1"
+      - gridcell "כללי"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell "26/05/2025 26/05/2025"
+      - gridcell "":
+        - button ""
+    - row "541. מרינה 2025 עונת 1 248. פיקוד 1 כללי ניהול פוטנציאל = 19343 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0 בהכנה 26/05/2025 26/05/2025 ":
+      - gridcell
+      - gridcell "541. מרינה 2025"
+      - gridcell
+      - gridcell "עונת 1"
+      - gridcell "248. פיקוד 1"
+      - gridcell "כללי"
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 19343 מעריכים בפועל = 0 מעריכים לא תקינים = 0 מעריכים פסולים = 0 שאלונים מאושרים = 0"
+      - gridcell "בהכנה"
+      - gridcell "26/05/2025 26/05/2025"
+      - gridcell "":
+        - button ""
+    - 'row "542. מרינה 2025 0 2. צה`ל ניהול פוטנציאל = 0 בהכנה "':
+      - gridcell
+      - gridcell "542. מרינה 2025"
+      - gridcell
+      - gridcell "0"
+      - 'gridcell "2. צה`ל"'
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell
+      - gridcell "":
+        - button ""
+    - 'row "543. 0 2. צה`ל ניהול פוטנציאל = 0 בהכנה "':
+      - gridcell
+      - gridcell "543."
+      - gridcell
+      - gridcell "0"
+      - 'gridcell "2. צה`ל"'
+      - gridcell
+      - gridcell
+      - gridcell
+      - gridcell "ניהול פוטנציאל = 0"
+      - gridcell "בהכנה"
+      - gridcell
+      - gridcell "":
+        - button ""
+    - button "Page 7": "7"
+    - button "Page 6": "6"
+    - button "Page 5": "5"
+    - button "Page 4": "4"
+    - button "Page 3": "3"
+    - button "Page 2": "2"
+    - button "Page 1": "1"
+  - button "להקמת אירוע חדש"
+```
+
+# Test source
+
+```ts
+  286 |   const diff = new PNG({ width, height });
+  287 |
+  288 |   // השווה בין התמונות
+  289 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  290 |
+  291 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  292 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  293 | };
+  294 | async compareScreenshots(start: number, end: number) {
+  295 |   for (let i = start; i <= end; i++) {
+  296 |     await this.all.nth(i).click();
+  297 |
+  298 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  299 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  300 |
+  301 |     const width = await this.page.evaluate(() => window.innerWidth);
+  302 |     const height = await this.page.evaluate(() => window.innerHeight);
+  303 |     
+  304 |     
+  305 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  306 |
+  307 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  308 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  309 |
+  310 |     const { width: w, height: h } = expectedImage;
+  311 |     const diff = new PNG({ width: w, height: h });
+  312 |
+  313 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  314 |
+  315 |     const TOLERANCE = 100;
+  316 |
+  317 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  318 |
+  319 |
+  320 |     await this.page.goBack();
+  321 |   }
+  322 | }
+  323 | async captureExpectedScreenshots(start: number, end: number) {
+  324 |   for (let i = start; i <= end; i++) {
+  325 |     await this.all.nth(i).click();
+  326 |
+  327 |     const width = await this.page.evaluate(() => window.innerWidth);
+  328 |     const height = await this.page.evaluate(() => window.innerHeight);
+  329 |
+  330 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  331 |
+  332 |     await this.page.screenshot({
+  333 |       path: screenshotPath,
+  334 |       clip: {
+  335 |         x: 0,
+  336 |         y: 0,
+  337 |         width,
+  338 |         height
+  339 |       }
+  340 |     });
+  341 |
+  342 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  343 |
+  344 |     await this.page.goBack();
+  345 |   }
+  346 | }
+  347 |
+  348 | async e2e() {
+  349 |   // 1. פותחים את העמוד (שגורם לקריאת ה-API)
+  350 |   await this.eventManagementButton.click();
+  351 |
+  352 |   // 2. מחכים במקביל לתגובה מה-API
+  353 |   const [response] = await Promise.all([
+  354 |     this.page.waitForResponse(resp =>
+  355 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  356 |       resp.request().method() === 'POST' &&
+  357 |       resp.status() === 200
+  358 |     ),
+  359 |     // טריגר לפעולה שגורמת לקריאה - נגיד לחיצה על כפתור
+  360 |   ]);
+  361 |   
+  362 |   const apiJson = await response.json();
+  363 |   const events = apiJson.callResult?.data ?? []; // הגנה אם חסר
+  364 |   const backendCount = events.length;
+  365 |   
+  366 |   console.log('מספר האירועים שהתקבלו מה-API:', backendCount);
+  367 |   
+  368 |   
+  369 |  
+  370 |   
+  371 |   console.log('Count from API:', backendCount);
+  372 |   // 4. מחכים שהטבלה נטענת, סופרים ב-UI
+  373 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  374 |   const counter = await this.tr1.count();
+  375 |
+  376 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  377 |   await this.page2.click();
+  378 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  379 |   const counter2 = await this.tr1.count();
+  380 |
+  381 |   // 6. חישוב לפי הלוגיקה שלך
+  382 |   const sum = 6 * counter + counter2;
+  383 |   console.log('Count from UI:', sum);
+  384 |
+  385 |   // 7. בדיקה שהמספרים שווים
+> 386 |   expect(sum).toBe(backendCount);
+      |               ^ Error: expect(received).toBe(expected) // Object.is equality
+  387 | }
+  388 |
+  389 |
+  390 | }
+  391 |
+  392 | // .click();
+  393 | // 
+  394 | // 
+  395 | // 
+```

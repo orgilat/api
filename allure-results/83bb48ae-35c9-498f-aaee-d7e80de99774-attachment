@@ -1,0 +1,309 @@
+# Test info
+
+- Name: pic 2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:302:9
+
+# Error details
+
+```
+Error: יש הבדל של 522 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 14
+
+expect(received).toBeLessThanOrEqual(expected)
+
+Expected: <= 100
+Received:    522
+    at FlowPage.compareScreenshots (C:\Users\User\Documents\k6try\pages\FlowPage.ts:619:101)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:308:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:307:5
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=mmdapotentiallog
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem: דוח
+  - listitem:
+    - img
+- table:
+  - rowgroup:
+    - 'row "היחידה הנוכחית: צה`ל שינוי היחידה"':
+      - 'cell "היחידה הנוכחית: צה`ל שינוי היחידה"':
+        - text: "היחידה הנוכחית: צה`ל"
+        - button "שינוי היחידה"
+- table:
+  - rowgroup:
+    - row "מ... 23/06/2025":
+      - cell "מ..."
+      - cell "23/06/2025":
+        - textbox "שדה": 23/06/2025
+    - row "ל... 23/06/2025":
+      - cell "ל..."
+      - cell "23/06/2025":
+        - textbox "שדה": 23/06/2025
+    - row "שלח":
+      - cell "שלח":
+        - button "שלח"
+- text: SELECT p.*,Code.Strvalue as Code, mOld.strValue AS Name, [rank].strValue AS uRank, h.depname, h.depid,users.login as username FROM t_sm_potentialpool p LEFT JOIN [MMDA].dbo.t_mRespondentsStr mOld ON mOld.RespID=p.RespID AND mOld.mFieldID IN (SELECT mfieldid FROM [MMDA].dbo.t_mtableFormat WHERE mFieldType=4) LEFT JOIN [MMDA].dbo.t_mRespondentsStr Code ON Code.RespID=p.RespID AND Code.mFieldID IN (SELECT mfieldid FROM [MMDA].dbo.t_mtableFormat WHERE mFieldType=1) LEFT JOIN [MMDA].dbo.t_mRespondents UseRank ON UseRank.RespID=p.RespID AND UseRank.mFieldID IN (SELECT userRank FROM [MMDA].dbo.t_sm_suspectrules_fields) LEFT JOIN [MMDA].dbo.t_mFieldsValues [Rank] ON [Rank].mFieldID=UseRank.mFieldID AND [rank].iValue=UseRank.ivalue LEFT JOIN [MMDA].dbo.t_mRespondents department ON department.RespID=p.RespID AND department.mFieldID IN (SELECT mfieldid FROM [MMDA].dbo.t_mtableFormat WHERE mFieldType=2) LEFT JOIN [MMDA].dbo.t_hierarchy h ON h.depID=department.iValue LEFT JOIN [MMDA].dbo.t_users users ON users.userid=p.MovedBy AND p.MovedBy<>-1 WHERE p.time BETWEEN '2025-6-23' AND '2025-6-23' ORDER BY time, STATUS
+- table:
+  - rowgroup:
+    - row "שם  קוד זיהוי משיב קוד  דרגה  תאריך הועבר על ידי סטטוס":
+      - cell
+      - cell "שם ":
+        - text: שם 
+        - textbox "הקלד ערך"
+      - cell "קוד זיהוי משיב"
+      - cell "קוד ":
+        - text: קוד 
+        - textbox "הקלד ערך"
+      - cell "דרגה"
+      - cell "":
+        - text: 
+        - textbox "הקלד ערך"
+      - cell "תאריך"
+      - cell "הועבר על ידי"
+      - cell "סטטוס"
+  - rowgroup
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+```
+
+# Test source
+
+```ts
+  519 |     const message = dialog.message();
+  520 |     expect(message).toBe("MMDA Datalake2 -  הופעל"); 
+  521 |   
+  522 |   });
+  523 | }
+  524 |
+  525 | async eleven23() {
+  526 |   await this.all.nth(26).click();
+  527 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp?action=datalake3");
+  528 |     this.page.once('dialog', async dialog => {
+  529 |     const message = dialog.message();
+  530 |     expect(message).toBe("MMDA Datalake3 -  הופעל"); 
+  531 |   
+  532 |   });
+  533 | }
+  534 |
+  535 |
+  536 | async eleven24() {
+  537 |   await this.all.nth(27).click();
+  538 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm_noImportFields.asp");
+  539 |    await expect(this.must3).toContainText("הגדרת שדות בהם יוקפאו הערכים בעת טעינות לכלל המשתתפים שנמצאים בסטטוס ביצוע")
+  540 |   const allButtons = this.page.locator("(//button[@type='button'])");
+  541 |   const count = await allButtons.count();
+  542 |   await expect(this.must4).toBeVisible()
+  543 |   const allButtons2 = this.page.locator("(//form[@method='POST']//td)");
+  544 |   const count2 = await allButtons2.count();
+  545 |   expect(count).toBe(2);
+  546 |   expect(count2).toBe(6);
+  547 |   };
+  548 |
+  549 |
+  550 |
+  551 |
+  552 |
+  553 |
+  554 |
+  555 |
+  556 |
+  557 |
+  558 |
+  559 |
+  560 |
+  561 |
+  562 |
+  563 |
+  564 |
+  565 |
+  566 |
+  567 |
+  568 |
+  569 |
+  570 |
+  571 |
+  572 |
+  573 |
+  574 |
+  575 |
+  576 |  async ele() {
+  577 |   await this.all.nth(5).click();
+  578 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  579 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  580 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  581 |
+  582 |   // טען את תמונת ה-expected הקיימת
+  583 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  584 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  585 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  586 |
+  587 |   const { width, height } = expectedImage;
+  588 |   const diff = new PNG({ width, height });
+  589 |
+  590 |   // השווה בין התמונות
+  591 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  592 |
+  593 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  594 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  595 | };
+  596 | async compareScreenshots(start: number, end: number) {
+  597 |   for (let i = start; i <= end; i++) {
+  598 |     await this.all.nth(i).click();
+  599 |
+  600 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  601 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  602 |
+  603 |     const width = await this.page.evaluate(() => window.innerWidth);
+  604 |     const height = await this.page.evaluate(() => window.innerHeight);
+  605 |     
+  606 |     
+  607 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  608 |
+  609 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  610 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  611 |
+  612 |     const { width: w, height: h } = expectedImage;
+  613 |     const diff = new PNG({ width: w, height: h });
+  614 |
+  615 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  616 |
+  617 |     const TOLERANCE = 100;
+  618 |
+> 619 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+      |                                                                                                     ^ Error: יש הבדל של 522 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 14
+  620 |
+  621 |
+  622 |     await this.page.goBack();
+  623 |   }
+  624 | }
+  625 | async captureExpectedScreenshots(start: number, end: number) {
+  626 |   for (let i = start; i <= end; i++) {
+  627 |     await this.all.nth(i).click();
+  628 |
+  629 |     const width = await this.page.evaluate(() => window.innerWidth);
+  630 |     const height = await this.page.evaluate(() => window.innerHeight);
+  631 |
+  632 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  633 |
+  634 |     await this.page.screenshot({
+  635 |       path: screenshotPath,
+  636 |       clip: {
+  637 |         x: 0,
+  638 |         y: 0,
+  639 |         width,
+  640 |         height
+  641 |       }
+  642 |     });
+  643 |
+  644 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  645 |
+  646 |     await this.page.goBack();
+  647 |   }
+  648 | }
+  649 |
+  650 | async e2e() { //בודק שהכמות איברים בפרונט זהה לבק
+  651 |   // 1. פותחים את העמוד (שגורם לקריאת ה-API)
+  652 |   await this.eventManagementButton.click();
+  653 |
+  654 |   // 2. מחכים במקביל לתגובה מה-API
+  655 |   const [response] = await Promise.all([
+  656 |     this.page.waitForResponse(resp =>
+  657 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  658 |       resp.request().method() === 'POST' &&
+  659 |       resp.status() === 200 &&
+  660 |       (resp.request().postData() || '').length === 93
+  661 |     ),
+  662 |   ]);
+  663 |   
+  664 |   
+  665 |   const apiJson = await response.json();
+  666 |   const events = apiJson?.calls?.[0]?.callResult?.data ?? [];
+  667 |   const backendCount = Array.isArray(events)
+  668 |     ? events.filter(e => e.eventId !== undefined).length
+  669 |     : 0;
+  670 |   
+  671 |   console.log('Count from API:', backendCount);
+  672 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  673 |   const counter = await this.tr1.count();
+  674 |
+  675 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  676 |   await this.page2.click();
+  677 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  678 |   const counter2 = await this.tr1.count();
+  679 |
+  680 |
+  681 |   const sum = 6 * counter + counter2;
+  682 |   console.log('Count from UI:', sum);
+  683 |
+  684 |   // 7. בדיקה שהמספרים שווים
+  685 |   expect(sum).toBe(backendCount);
+  686 | }
+  687 |
+  688 |
+  689 | async e2eAddEventAndCheckItAppears() {
+  690 |   // שלב 1: הגדרת המוק מראש כדי להשתמש בו גם בבדיקות בהמשך
+  691 |   const mockEvent = {
+  692 |     eventId: 501,
+  693 |     eventName: "Marina 2027",
+  694 |     status: 1,
+  695 |     statusDate: "28/04/2025",
+  696 |     statusName: "בהכנה",
+  697 |     startDepName: "248. פיקוד 1",
+  698 |     startDepCode: "248",
+  699 |     creator: null,
+  700 |     creatorRole: null,
+  701 |     actual: 0,
+  702 |     modelType: null,
+  703 |     period: 1,
+  704 |     periodName: "עונת 1",
+  705 |     pikud: 188,
+  706 |     pikudName: "כללי",
+  707 |     startDate: "06/04/2025",
+  708 |     endDate: "28/04/2025",
+  709 |     potential: 19343,
+  710 |     completed: 0,
+  711 |     suspected: 0,
+  712 |     disqualified: 0,
+  713 |     approved: 0,
+  714 |     id: 0,
+  715 |     code: null,
+  716 |     isActive: true,
+  717 |     isDeleted: false,
+  718 |     createdBy: null,
+  719 |     createdOn: "0001-01-01T00:00:00",
+```

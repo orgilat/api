@@ -1,0 +1,13 @@
+[2025-06-18 15:34:37] info: הטסט התחיל
+✔️ נשמרה תמונת expected לעמוד 16: C:\Users\User\Documents\k6try\screenshots\twohalve_16.png
+✔️ נשמרה תמונת expected לעמוד 17: C:\Users\User\Documents\k6try\screenshots\twohalve_17.png
+✔️ נשמרה תמונת expected לעמוד 18: C:\Users\User\Documents\k6try\screenshots\twohalve_18.png
+✔️ נשמרה תמונת expected לעמוד 19: C:\Users\User\Documents\k6try\screenshots\twohalve_19.png
+✔️ נשמרה תמונת expected לעמוד 20: C:\Users\User\Documents\k6try\screenshots\twohalve_20.png
+✔️ נשמרה תמונת expected לעמוד 21: C:\Users\User\Documents\k6try\screenshots\twohalve_21.png
+✔️ נשמרה תמונת expected לעמוד 22: C:\Users\User\Documents\k6try\screenshots\twohalve_22.png
+✔️ נשמרה תמונת expected לעמוד 23: C:\Users\User\Documents\k6try\screenshots\twohalve_23.png
+✔️ נשמרה תמונת expected לעמוד 24: C:\Users\User\Documents\k6try\screenshots\twohalve_24.png
+✔️ נשמרה תמונת expected לעמוד 25: C:\Users\User\Documents\k6try\screenshots\twohalve_25.png
+✔️ נשמרה תמונת expected לעמוד 26: C:\Users\User\Documents\k6try\screenshots\twohalve_26.png
+✔️ נשמרה תמונת expected לעמוד 27: C:\Users\User\Documents\k6try\screenshots\twohalve_27.png

@@ -1,0 +1,64 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:5:5
+
+# Error details
+
+```
+Error: locator.scrollIntoViewIfNeeded: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('input[value="12  הגדרת מודלי חישוב"]')
+
+    at FlowPage.goToSociometricManagement (C:\Users\User\Documents\k6try\pages\FlowPage.ts:38:31)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:15:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:11:3
+```
+
+# Test source
+
+```ts
+   1 | import { Page, Locator } from '@playwright/test';
+   2 |
+   3 | export class FlowPage {
+   4 |   readonly page: Page;
+   5 |   readonly loginInput: Locator;
+   6 |   readonly passwordInput: Locator;
+   7 |   readonly submitButton: Locator;
+   8 |   readonly surveyAdminLink: Locator;
+   9 |   readonly sociometricLink: Locator;
+  10 |   readonly modelingButton: Locator;  // כפתור הגדרת מודלי חישוב
+  11 |
+  12 |
+  13 |   constructor(page: Page) {
+  14 |     this.page = page;
+  15 |     this.loginInput = page.locator('input[name="login"]');
+  16 |     this.passwordInput = page.locator('input[name="password"]');
+  17 |     this.submitButton = page.locator('input[type="submit"]');
+  18 |     this.surveyAdminLink = page.locator('a:has-text("ניהול הסקר")');
+  19 |     this.sociometricLink = page.locator('a:has-text("ניהול סוציומטרי")');
+  20 |     this.modelingButton = page.locator('input[value="12  הגדרת מודלי חישוב"]');
+  21 |
+  22 |   }
+  23 |
+  24 |   async goto() {
+  25 |     await this.page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+  26 |   }
+  27 |
+  28 |   async login(username: string, password: string) {
+  29 |     await this.loginInput.fill(username);
+  30 |     await this.passwordInput.fill(password);
+  31 |     await this.submitButton.click();
+  32 |     await this.page.waitForTimeout(1001);
+  33 |   }
+  34 |
+  35 |   async goToSociometricManagement() {
+  36 |     await this.surveyAdminLink.hover();
+  37 |     await this.sociometricLink.click();
+> 38 |     await this.modelingButton.scrollIntoViewIfNeeded()
+     |                               ^ Error: locator.scrollIntoViewIfNeeded: Target page, context or browser has been closed
+  39 |     await this.modelingButton.click();
+  40 |   }
+  41 | }
+  42 |
+```

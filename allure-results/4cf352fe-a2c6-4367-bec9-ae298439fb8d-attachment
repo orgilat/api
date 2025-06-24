@@ -1,0 +1,228 @@
+# Test info
+
+- Name: u,תFdgfתת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:112:10
+
+# Error details
+
+```
+Error: expect(locator).toBeVisible()
+
+Locator: locator('.tablestyle')
+Expected: visible
+Received: <element(s) not found>
+Call log:
+  - expect.toBeVisible with timeout 190000ms
+  - waiting for locator('.tablestyle')
+
+    at FlowPage.eleven3 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:306:29)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:118:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:117:5
+```
+
+# Test source
+
+```ts
+  206 |     logger.info('worked');
+  207 |     await this.mateC.click();
+  208 |     await this.pikud1.click();
+  209 |     logger.info('פיקוד אחד נלחץ');
+  210 |     await this.page.waitForTimeout(2000)
+  211 |     await this.page.locator('div:nth-child(18) > .dx-treeview-with-search > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container > .dx-scrollable-content > ul > li > .dx-treeview-node-container > li > .dx-widget').first().click();
+  212 |     logger.info('אוגדה 1 נלחצה');
+  213 |     await this.page.waitForTimeout(2500);
+  214 |     await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  215 |     await this.end1.click({ force: true });
+  216 |     await this.page.waitForTimeout(2500);
+  217 |   
+  218 |     await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  219 |     await this.end3.click({ force: true });
+  220 |     await this.page.waitForTimeout(2500);
+  221 |     await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  222 |     await this.final.click({ force: true });
+  223 |     await this.page.waitForTimeout(2500);
+  224 |     await this.calculate.click();
+  225 |     await this.show.click();
+  226 |     await this.f1.waitFor({ state: 'visible' });
+  227 |     await this.f1.click();
+  228 |     await this.f2.waitFor({ state: 'visible' });
+  229 |     await this.f2.click();
+  230 |     await this.f4.waitFor({ state: 'visible' });
+  231 |     await this.f4.click();
+  232 |     await this.show1.waitFor({ state: 'visible' });
+  233 |     await this.show1.click();
+  234 |   }
+  235 |   async six() {
+  236 |
+  237 |  await this.all.nth(0).click()
+  238 |  await expect(this.must).toBeVisible()
+  239 |  await expect(this.must2).toBeVisible()
+  240 |
+  241 | }
+  242 | async seven() {
+  243 |
+  244 |   await this.all.nth(1).click()
+  245 |   await expect(this.must3).toBeVisible()
+  246 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  247 |   await expect(this.must4).toBeVisible()
+  248 |   await expect(this.must5).toBeVisible()
+  249 |  }
+  250 |  async eight() {
+  251 |
+  252 |   await this.all.nth(2).click()
+  253 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  254 |   await expect(this.must6).toBeVisible()
+  255 |   await expect(this.must6).toContainText("סוציומטרי")
+  256 |   await expect(this.must7).toContainText("מספר אישי")
+  257 |  
+  258 | }
+  259 |  async nine() {
+  260 |
+  261 |   await this.all.nth(3).click()
+  262 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  263 |   await expect(this.must5).toBeVisible()
+  264 |   await expect(this.must8).toBeVisible()
+  265 |   await this.must8.click()
+  266 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  267 |
+  268 |  
+  269 |  }
+  270 |  async ten() {
+  271 |
+  272 |   await this.all.nth(4).click()
+  273 |   await expect(this.must9).toBeVisible()
+  274 |   await this.must9.click()
+  275 |   const count = await this.must10.count();
+  276 |   await expect(count).toBe(24);
+  277 |   await expect(this.must11).toBeVisible()
+  278 |
+  279 |
+  280 |  
+  281 |  }
+  282 |
+  283 |  async eleven() {
+  284 |    await this.all.nth(5).click()
+  285 |    await expect(this.must3).toContainText("כללי השתתפות לפי סוג יחידה")
+  286 |    await expect(this.must4).toBeVisible()
+  287 |    const value = await this.must14.textContent();
+  288 |    expect(value).toBe("שדה")
+  289 |    const value2 = await this.must15.textContent();
+  290 |    expect(value2).toBe("מטה")
+  291 |
+  292 |  
+  293 |  }
+  294 |
+  295 |  async eleven2() {
+  296 |    await this.all.nth(6).click()
+  297 |    await expect(this.must3).toContainText("הגדרת השדות שיופיעו בטבלאות")
+  298 |    await expect(this.table).toBeVisible()
+  299 |    await expect(this.must17).toBeVisible()
+  300 |
+  301 |  
+  302 |  }
+  303 |  async eleven3() {
+  304 |    await this.all.nth(7).click()
+  305 |    await expect(this.must3).toContainText("אופציות שונות לניהול מינ מקס לבחירת היגדים וכללים שונים")
+> 306 |    await expect(this.table).toBeVisible()
+      |                             ^ Error: expect(locator).toBeVisible()
+  307 |    await expect(this.must17).toBeVisible()
+  308 |
+  309 |  
+  310 |  }
+  311 |  async eleven4() {
+  312 |    await this.all.nth(8).click()
+  313 |    await expect(this.must3).toContainText("הגדרה וניהול סטטוסים לאירועים")
+  314 |    await expect(this.table).toBeVisible()
+  315 |    await expect(this.must17).toBeVisible()
+  316 |  
+  317 |  }
+  318 |
+  319 |  async eleven5() {
+  320 |    await this.all.nth(8).click()
+  321 |    await expect(this.must3).toContainText("סיבות להוספת או הסרת משתתפים באירוע סוציומטרי")
+  322 |    await expect(this.table).toBeVisible()
+  323 |    await expect(this.must17).toBeVisible()
+  324 |  
+  325 |  }
+  326 |
+  327 |  async eleven6() {
+  328 |    await this.all.nth(9).click()
+  329 |    await expect(this.must3).toContainText("הגדרה וניהול סטטוסים לאירועים")
+  330 |    await expect(this.table).toBeVisible()
+  331 |    await expect(this.must17).toBeVisible()
+  332 |  
+  333 |  }
+  334 | async eleven7() {
+  335 |    await this.all.nth(10).click()
+  336 |    await expect(this.must3).toContainText("כמות היגדים נדרשים למילוי כתלות בתשובה בהיגד ספציפי כגון מידת היכרות")
+  337 |    await expect(this.table).toBeVisible()
+  338 |    await expect(this.must17).toBeVisible()
+  339 |  
+  340 |  }
+  341 |
+  342 |
+  343 |
+  344 |
+  345 |
+  346 |
+  347 |
+  348 |
+  349 |
+  350 |
+  351 |
+  352 |
+  353 |
+  354 |
+  355 |
+  356 |
+  357 |
+  358 |
+  359 |
+  360 |
+  361 |
+  362 |
+  363 |
+  364 |
+  365 |
+  366 |
+  367 |
+  368 |
+  369 |
+  370 |
+  371 |
+  372 |
+  373 |
+  374 |
+  375 |
+  376 |
+  377 |
+  378 |
+  379 |
+  380 |
+  381 |
+  382 |
+  383 |
+  384 |
+  385 |
+  386 |
+  387 |
+  388 |
+  389 |  async ele() {
+  390 |   await this.all.nth(5).click();
+  391 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  392 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  393 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  394 |
+  395 |   // טען את תמונת ה-expected הקיימת
+  396 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  397 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  398 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  399 |
+  400 |   const { width, height } = expectedImage;
+  401 |   const diff = new PNG({ width, height });
+  402 |
+  403 |   // השווה בין התמונות
+  404 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  405 |
+  406 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+```

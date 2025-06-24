@@ -1,0 +1,133 @@
+# Test info
+
+- Name: e2e+api
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:149:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 22
+Received: {Symbol(async_id_symbol): 11740, Symbol(trigger_async_id_symbol): 9998, Symbol(kResourceStore): {"_asyncLocalStorage": {"enabled": true, "kResourceStore": Symbol(kResourceStore)}, "_data": Map {"stepZone" => {"attachmentIndices": [], "box": undefined, "boxedStack": undefined, "category": "test.step", "complete": [Function complete], "info": {"_stepId": "test.step@12", "_testInfo": [TestInfoImpl], "annotations": [Array]}, "location": {"column": 17, "file": "C:\\Users\\User\\Documents\\k6try\\node_modules\\allure-playwright\\src\\helpers.ts", "function": "Function.step", "line": 21}, "stepId": "test.step@12", "steps": [[Object], [Object], [Object], [Object], [Object], [Object], [Object], [Object], [Object], [Object]], "title": "מעבר לעמוד ניהול הסקר"}}}}
+    at FlowPage.e2e (C:\Users\User\Documents\k6try\pages\FlowPage.ts:347:19)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:159:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:154:3
+```
+
+# Test source
+
+```ts
+  247 |
+  248 |   await this.all.nth(3).click()
+  249 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  250 |   await expect(this.must5).toBeVisible()
+  251 |   await expect(this.must8).toBeVisible()
+  252 |   await this.must8.click()
+  253 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  254 |
+  255 |  
+  256 |  }
+  257 |  async ten() {
+  258 |
+  259 |   await this.all.nth(4).click()
+  260 |   await expect(this.must9).toBeVisible()
+  261 |   await this.must9.click()
+  262 |   const count = await this.must10.count();
+  263 |   await expect(count).toBe(24);
+  264 |   await expect(this.must11).toBeVisible()
+  265 |
+  266 |
+  267 |  
+  268 |  }
+  269 |  async ele() {
+  270 |   await this.all.nth(5).click();
+  271 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  272 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  273 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  274 |
+  275 |   // טען את תמונת ה-expected הקיימת
+  276 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  277 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  278 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  279 |
+  280 |   const { width, height } = expectedImage;
+  281 |   const diff = new PNG({ width, height });
+  282 |
+  283 |   // השווה בין התמונות
+  284 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  285 |
+  286 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  287 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  288 | };
+  289 | async compareScreenshots(start: number, end: number) {
+  290 |   for (let i = start; i <= end; i++) {
+  291 |     await this.all.nth(i).click();
+  292 |
+  293 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  294 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  295 |
+  296 |     const width = await this.page.evaluate(() => window.innerWidth);
+  297 |     const height = await this.page.evaluate(() => window.innerHeight);
+  298 |     
+  299 |     
+  300 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  301 |
+  302 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  303 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  304 |
+  305 |     const { width: w, height: h } = expectedImage;
+  306 |     const diff = new PNG({ width: w, height: h });
+  307 |
+  308 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  309 |
+  310 |     const TOLERANCE = 100;
+  311 |
+  312 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  313 |
+  314 |
+  315 |     await this.page.goBack();
+  316 |   }
+  317 | }
+  318 | async captureExpectedScreenshots(start: number, end: number) {
+  319 |   for (let i = start; i <= end; i++) {
+  320 |     await this.all.nth(i).click();
+  321 |
+  322 |     const width = await this.page.evaluate(() => window.innerWidth);
+  323 |     const height = await this.page.evaluate(() => window.innerHeight);
+  324 |
+  325 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  326 |
+  327 |     await this.page.screenshot({
+  328 |       path: screenshotPath,
+  329 |       clip: {
+  330 |         x: 0,
+  331 |         y: 0,
+  332 |         width,
+  333 |         height
+  334 |       }
+  335 |     });
+  336 |
+  337 |     console.log(`✔️ נשמרה תמונת expected לעמוד ${i}: ${screenshotPath}`);
+  338 |
+  339 |     await this.page.goBack();
+  340 |   }
+  341 | }
+  342 |
+  343 | async e2e() {
+  344 |
+  345 |   await this.eventManagementButton.click();
+  346 |   const counter=this.tr1.count()
+> 347 |   expect(counter).toBe(22)
+      |                   ^ Error: expect(received).toBe(expected) // Object.is equality
+  348 |
+  349 |
+  350 |
+  351 |  
+  352 |  }}
+  353 |
+  354 | // .click();
+  355 | // 
+  356 | // 
+  357 | // 
+```

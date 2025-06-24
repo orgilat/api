@@ -1,0 +1,446 @@
+# Test info
+
+- Name: u,תתגגת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:121:6
+
+# Error details
+
+```
+Error: יש הבדל של 14287 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 7
+
+expect(received).toBe(expected) // Object.is equality
+
+Expected: 0
+Received: 14287
+    at FlowPage.compareScreenshots (C:\Users\User\Documents\k6try\pages\FlowPage.ts:306:101)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:131:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:126:3
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=optionsmmda
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "ניהול סוציומטרי":
+      - /url: sm.asp
+  - listitem: ">>"
+  - listitem: אופציות לסוציומטרי
+  - listitem:
+    - img
+- text: אופציות שונות לניהול מינ מקס לבחירת היגדים וכללים שונים
+- table:
+  - rowgroup:
+    - row:
+      - cell:
+        - combobox:
+          - text: 1. שאלון סוציומטרי
+          - img
+    - row "הגדרת שדות במאגר":
+      - cell "הגדרת שדות במאגר"
+    - row "1 תאריך התחלה":
+      - cell "1"
+      - cell "תאריך התחלה"
+      - cell:
+        - combobox:
+          - text: 63.תאריך קליטה ביחידה (סאפ)
+          - img
+    - row "2 ימי היעדרות":
+      - cell "2"
+      - cell "ימי היעדרות"
+      - cell:
+        - combobox:
+          - text: 118.כמות ימים שלא היה ביחידה (סאפ)
+          - img
+    - row "הגדרת שאלות מינימום ומקסימום לקביעת שאלות בחירה":
+      - cell "הגדרת שאלות מינימום ומקסימום לקביעת שאלות בחירה"
+    - row "3 כמות מקסימלית של שאלות לבחירה 2":
+      - cell "3"
+      - cell "כמות מקסימלית של שאלות לבחירה"
+      - cell "2":
+        - spinbutton: "2"
+    - row "4 כמות מינימאלית של שאלות לבחירה 2":
+      - cell "4"
+      - cell "כמות מינימאלית של שאלות לבחירה"
+      - cell "2":
+        - spinbutton: "2"
+    - row "5 כמות ימים בין תזכורות 0":
+      - cell "5"
+      - cell "כמות ימים בין תזכורות"
+      - cell "0":
+        - spinbutton: "0"
+    - row "6 שאלת פנים / חוץ":
+      - cell "6"
+      - cell "שאלת פנים / חוץ"
+      - cell:
+        - combobox:
+          - text: 229.שאלת מחוץ ובתוך היחידה
+          - img
+    - row "7 קוד השאלה שהמערכת תתעלם ממנה בבדיקה האם השאלון רייק ויש למחוק אותו.":
+      - cell "7"
+      - cell "קוד השאלה שהמערכת תתעלם ממנה בבדיקה האם השאלון רייק ויש למחוק אותו."
+      - cell:
+        - combobox:
+          - text: 1.מידת היכרות
+          - img
+    - row "8 רשימת השאלונים במצב הושלם":
+      - cell "8"
+      - cell "רשימת השאלונים במצב הושלם"
+      - cell:
+        - combobox:
+          - text: הצג רק את אלו שבמצב הושלם
+          - img
+    - row "9 בחר את אשכול השאלות הרלוונטי":
+      - cell "9"
+      - cell "בחר את אשכול השאלות הרלוונטי"
+      - cell:
+        - combobox:
+          - text: 1.שאלות חובה
+          - img
+    - row "10 SM_PIKUDFIELDID":
+      - cell "10"
+      - cell "SM_PIKUDFIELDID"
+      - cell:
+        - combobox:
+          - text: 66.חיל (סאפ)
+          - img
+- button "שמור"
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+- listbox:
+  - searchbox "Search"
+  - option "בחר תאריך התחלה"
+  - option "41.מספר אישי (סאפ)"
+  - option "42.שם פרטי (סאפ)"
+  - option "43.שם משפחה (סאפ)"
+  - option "44.שם מלא"
+  - option "45.כינוי (מנוהל)"
+  - option "46.יחידת אירוע"
+  - option "47.יחידת אמת (סאפ)"
+  - option "49.מספר טלפון (סאפ)"
+  - option "50.מייל (מוסק)"
+  - option "51.תאריך טעינה למערכת (מוסק)"
+  - option "52.וותק בימים ביחידה (מוסק)"
+  - option "58.דרגת כתף"
+  - option "59.אוכלוסיות (מוסק)"
+  - option "61.סוג שירות (סאפ)"
+  - option "63.תאריך קליטה ביחידה (סאפ)" [selected]
+  - option "66.חיל (סאפ)"
+  - option "73.תעודת זהות (סאפ)"
+  - option "75.מין (סאפ)"
+  - option "76.תאריך לידה (סאפ)"
+  - option "97.תפקיד באירוע (מנוהל)"
+  - option "98.אוכלוסיות + (מוסק)"
+  - option "99.דרגה ייצוגית (סאפ)"
+  - option "113.תפקיד (סאפ)"
+  - option "114.מייל 2 (מוסק)"
+  - option "115.מייל 3 (מוסק)"
+  - option "116.סיבת העדרות אחרונה (סאפ)"
+  - option "117.נוכחות ביחידה פחות מ-30 יום (סאפ)"
+  - option "118.כמות ימים שלא היה ביחידה (סאפ)"
+  - option "119.דרגת כתף באירוע"
+  - option "120.משתתף בפיילוט"
+  - option "121.respid"
+- listbox:
+  - searchbox "Search"
+  - option "בחר שדה ימי היעדרות"
+  - option "41.מספר אישי (סאפ)"
+  - option "42.שם פרטי (סאפ)"
+  - option "43.שם משפחה (סאפ)"
+  - option "44.שם מלא"
+  - option "45.כינוי (מנוהל)"
+  - option "46.יחידת אירוע"
+  - option "47.יחידת אמת (סאפ)"
+  - option "49.מספר טלפון (סאפ)"
+  - option "50.מייל (מוסק)"
+  - option "51.תאריך טעינה למערכת (מוסק)"
+  - option "52.וותק בימים ביחידה (מוסק)"
+  - option "58.דרגת כתף"
+  - option "59.אוכלוסיות (מוסק)"
+  - option "61.סוג שירות (סאפ)"
+  - option "63.תאריך קליטה ביחידה (סאפ)"
+  - option "66.חיל (סאפ)"
+  - option "73.תעודת זהות (סאפ)"
+  - option "75.מין (סאפ)"
+  - option "76.תאריך לידה (סאפ)"
+  - option "97.תפקיד באירוע (מנוהל)"
+  - option "98.אוכלוסיות + (מוסק)"
+  - option "99.דרגה ייצוגית (סאפ)"
+  - option "113.תפקיד (סאפ)"
+  - option "114.מייל 2 (מוסק)"
+  - option "115.מייל 3 (מוסק)"
+  - option "116.סיבת העדרות אחרונה (סאפ)"
+  - option "117.נוכחות ביחידה פחות מ-30 יום (סאפ)"
+  - option "118.כמות ימים שלא היה ביחידה (סאפ)" [selected]
+  - option "119.דרגת כתף באירוע"
+  - option "120.משתתף בפיילוט"
+  - option "121.respid"
+- listbox:
+  - searchbox "Search"
+  - option "בחר שאלת פנים / חוץ"
+  - option "1.מידת היכרות"
+  - option "2.מקצועי בתחומו"
+  - option "3.מחוייבות והשקעה"
+  - option "4.דוגמא אישית"
+  - option "6.יחסי אנוש"
+  - option "7.ארגון וניהול"
+  - option "42.פיקוד ומנהיגות"
+  - option "44.הצלחה במילוי תפקיד"
+  - option "45.נכונות לצאת איתו לקרב"
+  - option "46.פוטנציאל לקידום"
+  - option "47.גמישות מחשבתית"
+  - option "48.מקוריות וחדשנות"
+  - option "120.האם המשיב הוא מעריך או מוערך?"
+  - option "123.רמת מעריך מורחב"
+  - option "124.רמת מעריך מצומצם"
+  - option "126.המעריך פסול או תקין?"
+  - option "132.מאפיין יחידה - שדה/מטה"
+  - option "141.הבחנה בין עיקר לטפל"
+  - option "142.ראייה והבנה מערכתית"
+  - option "143.יכולת תכנון"
+  - option "144.יכולת הפקת לקחים ויישומם"
+  - option "226.הערות מילוליות"
+  - option "228.דוח סוציומטרי"
+  - option "229.שאלת מחוץ ובתוך היחידה" [selected]
+  - option "234.מרוצה מהעבודה"
+- listbox:
+  - searchbox "Search"
+  - option "אין שאלות"
+  - option "1.מידת היכרות" [selected]
+  - option "2.מקצועי בתחומו"
+  - option "3.מחוייבות והשקעה"
+  - option "4.דוגמא אישית"
+  - option "6.יחסי אנוש"
+  - option "7.ארגון וניהול"
+  - option "42.פיקוד ומנהיגות"
+  - option "44.הצלחה במילוי תפקיד"
+  - option "45.נכונות לצאת איתו לקרב"
+  - option "46.פוטנציאל לקידום"
+  - option "47.גמישות מחשבתית"
+  - option "48.מקוריות וחדשנות"
+  - option "120.האם המשיב הוא מעריך או מוערך?"
+  - option "123.רמת מעריך מורחב"
+  - option "124.רמת מעריך מצומצם"
+  - option "126.המעריך פסול או תקין?"
+  - option "132.מאפיין יחידה - שדה/מטה"
+  - option "141.הבחנה בין עיקר לטפל"
+  - option "142.ראייה והבנה מערכתית"
+  - option "143.יכולת תכנון"
+  - option "144.יכולת הפקת לקחים ויישומם"
+  - option "226.הערות מילוליות"
+  - option "228.דוח סוציומטרי"
+  - option "229.שאלת מחוץ ובתוך היחידה"
+  - option "234.מרוצה מהעבודה"
+- listbox:
+  - searchbox "Search"
+  - option "הצג הכל"
+  - option "הצג רק את אלו שבמצב הושלם" [selected]
+- listbox:
+  - searchbox "Search"
+  - option "לא נבחר אשכול שאלות"
+  - option "1.שאלות חובה" [selected]
+  - option "2.שאלות בחירה"
+  - option "8.כל השאלות"
+  - option "9.שאלת מידת היכרות"
+  - option "10.שאלות ציון מסכם ממוצע"
+  - option "11.שאלות סטיית תקן"
+  - option "12.שאלות אחוזון"
+  - option "13.שאלות N"
+- listbox:
+  - searchbox "Search"
+  - option "בחר שדה חייל"
+  - option "41.מספר אישי (סאפ)"
+  - option "42.שם פרטי (סאפ)"
+  - option "43.שם משפחה (סאפ)"
+  - option "44.שם מלא"
+  - option "45.כינוי (מנוהל)"
+  - option "46.יחידת אירוע"
+  - option "47.יחידת אמת (סאפ)"
+  - option "49.מספר טלפון (סאפ)"
+  - option "50.מייל (מוסק)"
+  - option "51.תאריך טעינה למערכת (מוסק)"
+  - option "52.וותק בימים ביחידה (מוסק)"
+  - option "58.דרגת כתף"
+  - option "59.אוכלוסיות (מוסק)"
+  - option "61.סוג שירות (סאפ)"
+  - option "63.תאריך קליטה ביחידה (סאפ)"
+  - option "66.חיל (סאפ)" [selected]
+  - option "73.תעודת זהות (סאפ)"
+  - option "75.מין (סאפ)"
+  - option "76.תאריך לידה (סאפ)"
+  - option "97.תפקיד באירוע (מנוהל)"
+  - option "98.אוכלוסיות + (מוסק)"
+  - option "99.דרגה ייצוגית (סאפ)"
+  - option "113.תפקיד (סאפ)"
+  - option "114.מייל 2 (מוסק)"
+  - option "115.מייל 3 (מוסק)"
+  - option "116.סיבת העדרות אחרונה (סאפ)"
+  - option "117.נוכחות ביחידה פחות מ-30 יום (סאפ)"
+  - option "118.כמות ימים שלא היה ביחידה (סאפ)"
+  - option "119.דרגת כתף באירוע"
+  - option "120.משתתף בפיילוט"
+  - option "121.respid"
+- listbox:
+  - searchbox "Search"
+  - option "1. שאלון סוציומטרי" [selected]
+  - option "2. מעקב תכולת עבודה"
+  - option "4. סוציומטריה יחידתית-בדיקה"
+  - option "5. סוציומטריה-מטה"
+  - option "6. שאלון סוציומטרי מאסטר לא לגעת"
+  - option "7. ניהול חריגים"
+  - option "9. נושאים שצריך לקבל תשובות מהצבא"
+  - option "10. תקלות במערכת"
+  - option "11. שאלון עזר לתוצאות המחושבות עבור כל משתתף"
+  - option "15. שאלון עזר לחישוב תוצאות"
+```
+
+# Test source
+
+```ts
+  206 |     await this.final.click({ force: true });
+  207 |     await this.page.waitForTimeout(2500);
+  208 |     await this.calculate.click();
+  209 |     await this.show.click();
+  210 |     await this.f1.waitFor({ state: 'visible' });
+  211 |     await this.f1.click();
+  212 |     await this.f2.waitFor({ state: 'visible' });
+  213 |     await this.f2.click();
+  214 |     await this.f4.waitFor({ state: 'visible' });
+  215 |     await this.f4.click();
+  216 |     await this.show1.waitFor({ state: 'visible' });
+  217 |     await this.show1.click();
+  218 |   }
+  219 |   async six() {
+  220 |
+  221 |  await this.all.nth(0).click()
+  222 |  await expect(this.must).toBeVisible()
+  223 |  await expect(this.must2).toBeVisible()
+  224 |
+  225 | }
+  226 | async seven() {
+  227 |
+  228 |   await this.all.nth(1).click()
+  229 |   await expect(this.must3).toBeVisible()
+  230 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  231 |   await expect(this.must4).toBeVisible()
+  232 |   await expect(this.must5).toBeVisible()
+  233 |  }
+  234 |  async eight() {
+  235 |
+  236 |   await this.all.nth(2).click()
+  237 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  238 |   await expect(this.must6).toBeVisible()
+  239 |   await expect(this.must6).toContainText("סוציומטרי")
+  240 |   await expect(this.must7).toContainText("מספר אישי")
+  241 |  
+  242 | }
+  243 |  async nine() {
+  244 |
+  245 |   await this.all.nth(3).click()
+  246 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  247 |   await expect(this.must5).toBeVisible()
+  248 |   await expect(this.must8).toBeVisible()
+  249 |   await this.must8.click()
+  250 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  251 |
+  252 |  
+  253 |  }
+  254 |  async ten() {
+  255 |
+  256 |   await this.all.nth(4).click()
+  257 |   await expect(this.must9).toBeVisible()
+  258 |   await this.must9.click()
+  259 |   const count = await this.must10.count();
+  260 |   await expect(count).toBe(24);
+  261 |   await expect(this.must11).toBeVisible()
+  262 |
+  263 |
+  264 |  
+  265 |  }
+  266 |  async ele() {
+  267 |   await this.all.nth(5).click();
+  268 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  269 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  270 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  271 |
+  272 |   // טען את תמונת ה-expected הקיימת
+  273 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  274 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  275 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  276 |
+  277 |   const { width, height } = expectedImage;
+  278 |   const diff = new PNG({ width, height });
+  279 |
+  280 |   // השווה בין התמונות
+  281 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  282 |
+  283 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  284 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  285 | };
+  286 | async compareScreenshots(start: number, end: number) {
+  287 |   for (let i = start; i <= end; i++) {
+  288 |     await this.all.nth(i).click();
+  289 |
+  290 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  291 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  292 |
+  293 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  294 |     const width = expectedImage.width;
+  295 |     const height = expectedImage.height;
+  296 |
+  297 |     await this.page.setViewportSize({ width, height });
+  298 |
+  299 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  300 |
+  301 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  302 |     const diff = new PNG({ width, height });
+  303 |
+  304 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  305 |
+> 306 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBe(0);
+      |                                                                                                     ^ Error: יש הבדל של 14287 פיקסלים בין התמונה הצפויה לפועלית במסך מספר 7
+  307 |
+  308 |     await this.page.goBack();
+  309 |   }
+  310 | }
+  311 |
+  312 |
+  313 | }
+  314 |
+  315 |
+  316 | // .click();
+```

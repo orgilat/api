@@ -1,24 +1,25 @@
-import { defineConfig, devices } from '@playwright/test';
+import { defineConfig } from '@playwright/test';
 
 export default defineConfig({
-  testDir: './tests',
-  timeout: 30 * 1000,
+  timeout: 190000, // כל טסט מקבל עד 90 שניות
   expect: {
-    timeout: 5000,
+    timeout: 190000, // זמן המתנה ל-expectים
   },
-  reporter: [['list'], ['html', { open: 'never' }]],
   use: {
-    extraHTTPHeaders: {
-      'User-Agent': 'PlaywrightTestBot/1.0',
-      'Accept': 'text/html',
+    headless: true, // אם אתה רוצה לראות את הדפדפן
+    viewport: { width: 1281, height: 720 },
+    ignoreHTTPSErrors: true,
+    actionTimeout: 0, // בלי מגבלה לפעולות כמו click, fill
+    
+    video: {
+      mode: 'on', // מקליט את כל הבדיקות
+      size: { width: 1281, height: 720 }, // גודל הוידאו
     },
   },
-  projects: [
-    {
-      name: 'API Tests',
-      use: {
-        ...devices['Desktop Chrome'],
-      },
-    },
+  reporter: [
+    ['list'], // מציג את התוצאות בטרמינל
+    ['html', { outputFolder: 'playwright-report', open: 'never' }], // דוח HTML
+    ['allure-playwright', { outputFolder: 'allure-results' }] // דוח Allure
   ],
+  
 });

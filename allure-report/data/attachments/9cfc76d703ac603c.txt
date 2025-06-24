@@ -1,0 +1,2404 @@
+# Test info
+
+- Name: ,תתת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:93:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 15
+Received: 24
+    at FlowPage.ten (C:\Users\User\Documents\k6try\pages\FlowPage.ts:249:23)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:103:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:98:3
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=rulesforqid
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "ערוך שאלון":
+      - /url: redit.asp
+  - listitem: ">>"
+  - listitem: חוקים על שאלות
+  - listitem:
+    - img
+- text: חוקים על שאלות
+- button "סגור סנן"
+- list:
+  - paragraph
+  - listitem:
+    - checkbox "הסתרה לפי תקופות" [checked]
+    - text: הסתרה לפי תקופות
+  - listitem:
+    - checkbox "הסתרה לפי שדה" [checked]
+    - text: הסתרה לפי שדה
+  - listitem:
+    - checkbox "הסתרה לפי הרשאה" [checked]
+    - text: הסתרה לפי הרשאה
+  - listitem:
+    - checkbox "הסתרה לפי גירסא" [checked]
+    - text: הסתרה לפי גירסא
+  - listitem:
+    - checkbox "הסתר אופציה לפי שדה" [checked]
+    - text: הסתר אופציה לפי שדה
+  - listitem:
+    - checkbox "הסתר אופציה באמצעות שאלה" [checked]
+    - text: הסתר אופציה באמצעות שאלה
+  - listitem:
+    - checkbox "הסתר אופציה לפי תקופה" [checked]
+    - text: הסתר אופציה לפי תקופה
+  - listitem:
+    - checkbox "הסתר עמוד" [checked]
+    - text: הסתר עמוד
+  - listitem:
+    - checkbox "הסתרות" [checked]
+    - text: הסתרות
+  - listitem:
+    - checkbox "העתק שאלה" [checked]
+    - text: העתק שאלה
+  - listitem:
+    - checkbox "העתקה ישירה של שאלה" [checked]
+    - text: העתקה ישירה של שאלה
+  - listitem:
+    - checkbox "העתקות 360" [checked]
+    - text: העתקות 360
+  - listitem:
+    - checkbox "העתק לאשכול" [checked]
+    - text: העתק לאשכול
+  - listitem:
+    - checkbox "העתק מ Mtable" [checked]
+    - text: העתק מ Mtable
+  - listitem:
+    - checkbox "העתק אופציות לאשכול" [checked]
+    - text: העתק אופציות לאשכול
+  - listitem:
+    - checkbox "העתק לפי קבוצה" [checked]
+    - text: העתק לפי קבוצה
+  - listitem:
+    - checkbox "סכום חובה" [checked]
+    - text: סכום חובה
+  - listitem:
+    - checkbox "תשובות ברירת מחדל" [checked]
+    - text: תשובות ברירת מחדל
+  - listitem:
+    - checkbox "חובה בהתנייה של שאלה" [checked]
+    - text: חובה בהתנייה של שאלה
+  - listitem:
+    - checkbox "שאלת חובה" [checked]
+    - text: שאלת חובה
+  - listitem:
+    - checkbox "פרמטר שימש כחתך" [checked]
+    - text: פרמטר שימש כחתך
+  - listitem:
+    - checkbox "מספר מקסימלי" [checked]
+    - text: מספר מקסימלי
+  - listitem:
+    - checkbox "מספר בחירות מינימלי" [checked]
+    - text: מספר בחירות מינימלי
+  - paragraph
+- paragraph:
+  - checkbox "בחר / בטל הכל"
+  - text: בחר / בטל הכל
+- paragraph:
+  - button "הצג עמודות שנבחרו"
+- separator
+- table:
+  - rowgroup:
+    - row "שאלון":
+      - cell "שאלון"
+      - cell:
+        - combobox:
+          - text: 1. שאלון סוציומטרי
+          - img
+    - row "קטגוריה או אשכול":
+      - cell "קטגוריה או אשכול"
+      - cell:
+        - combobox:
+          - text: בחר קטגוריה או אשכול
+          - img
+- combobox "entries per page":
+  - option "50" [selected]
+  - option "100"
+  - option "250"
+  - option "500"
+  - option "All"
+- text: "entries per page Search:"
+- searchbox "Search:"
+- table:
+  - rowgroup:
+    - 'row "מספר: Activate to invert sorting שאלות : Activate to sort קוד שאלון : Activate to sort הסתרה לפי תקופות : Activate to sort הסתרה לפי שדה : Activate to sort הסתרה לפי הרשאה : Activate to sort הסתרה לפי גירסא: Activate to sort הסתר אופציה לפי שדה : Activate to sort הסתר אופציה באמצעות שאלה : Activate to sort הסתר אופציה לפי תקופה : Activate to sort הסתר עמוד : Activate to sort הסתרות : Activate to sort העתק שאלה : Activate to sort העתקה ישירה של שאלה: Activate to sort העתקות 360 : Activate to sort העתק לאשכול : Activate to sort העתק מ Mtable: Activate to sort העתק אופציות לאשכול : Activate to sort העתק לפי קבוצה : Activate to sort סכום חובה : Activate to sort תשובות ברירת מחדל : Activate to sort חובה בהתנייה של שאלה : Activate to sort שאלת חובה : Activate to sort פרמטר שימש כחתך : Activate to sort מספר מקסימלי : Activate to sort מספר בחירות מינימלי : Activate to sort"':
+      - 'cell "מספר: Activate to invert sorting"':
+        - text: מספר
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "שאלות : Activate to sort"':
+        - text: שאלות
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "קוד שאלון : Activate to sort"':
+        - text: קוד שאלון
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתרה לפי תקופות : Activate to sort"':
+        - text: הסתרה לפי תקופות
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתרה לפי שדה : Activate to sort"':
+        - text: הסתרה לפי שדה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתרה לפי הרשאה : Activate to sort"':
+        - text: הסתרה לפי הרשאה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתרה לפי גירסא: Activate to sort"':
+        - text: הסתרה לפי גירסא
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתר אופציה לפי שדה : Activate to sort"':
+        - text: הסתר אופציה לפי שדה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתר אופציה באמצעות שאלה : Activate to sort"':
+        - text: הסתר אופציה באמצעות שאלה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתר אופציה לפי תקופה : Activate to sort"':
+        - text: הסתר אופציה לפי תקופה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתר עמוד : Activate to sort"':
+        - text: הסתר עמוד
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "הסתרות : Activate to sort"':
+        - text: הסתרות
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתק שאלה : Activate to sort"':
+        - text: העתק שאלה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתקה ישירה של שאלה: Activate to sort"':
+        - text: העתקה ישירה של שאלה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתקות 360 : Activate to sort"':
+        - text: העתקות 360
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתק לאשכול : Activate to sort"':
+        - text: העתק לאשכול
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתק מ Mtable: Activate to sort"':
+        - text: העתק מ Mtable
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתק אופציות לאשכול : Activate to sort"':
+        - text: העתק אופציות לאשכול
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "העתק לפי קבוצה : Activate to sort"':
+        - text: העתק לפי קבוצה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "סכום חובה : Activate to sort"':
+        - text: סכום חובה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "תשובות ברירת מחדל : Activate to sort"':
+        - text: תשובות ברירת מחדל
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "חובה בהתנייה של שאלה : Activate to sort"':
+        - text: חובה בהתנייה של שאלה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "שאלת חובה : Activate to sort"':
+        - text: שאלת חובה
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "פרמטר שימש כחתך : Activate to sort"':
+        - text: פרמטר שימש כחתך
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "מספר מקסימלי : Activate to sort"':
+        - text: מספר מקסימלי
+        - button "ג–²\" / \" ג–¼\" / \""
+      - 'cell "מספר בחירות מינימלי : Activate to sort"':
+        - text: מספר בחירות מינימלי
+        - button "ג–²\" / \" ג–¼\" / \""
+  - rowgroup:
+    - 'row "1 120. האם המשיב הוא מעריך או מוערך? סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב 1. שאלון סוציומטרי                       "':
+      - cell "1"
+      - 'cell "120. האם המשיב הוא מעריך או מוערך? סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב"':
+        - link "120. האם המשיב הוא מעריך או מוערך?":
+          - /url: editq.asp?qid=120
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "7. זיהוי המשיב":
+          - /url: Categoryquestions.asp?categoryid=7
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q120
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=120#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=120#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=120
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=120
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=120
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=120
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=120
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=120
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=120
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=120
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=120
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=120
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=120
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=120
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=120
+    - 'row "2 229. שאלת מחוץ ובתוך היחידה סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 1. ממדה 1 1. שאלון סוציומטרי                       "':
+      - cell "2"
+      - 'cell "229. שאלת מחוץ ובתוך היחידה סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 1. ממדה 1"':
+        - link "229. שאלת מחוץ ובתוך היחידה":
+          - /url: editq.asp?qid=229
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q229
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=229#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=229#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=229
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=229
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=229
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=229
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=229
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=229
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=229
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=229
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=229
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=229
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=229
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=229
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=229
+    - 'row "3 228. דוח סוציומטרי סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 9. 1. שאלון סוציומטרי                       "':
+      - cell "3"
+      - 'cell "228. דוח סוציומטרי סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 9."':
+        - link "228. דוח סוציומטרי":
+          - /url: editq.asp?qid=228
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "9.":
+          - /url: Categoryquestions.asp?categoryid=9
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q228
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=228#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=228#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=228
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=228
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=228
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=228
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=228
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=228
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=228
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=228
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=228
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=228
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=228
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=228
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=228
+    - 'row "4 123. רמת מעריך מורחב סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב 1. שאלון סוציומטרי                       "':
+      - cell "4"
+      - 'cell "123. רמת מעריך מורחב סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב"':
+        - link "123. רמת מעריך מורחב":
+          - /url: editq.asp?qid=123
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "7. זיהוי המשיב":
+          - /url: Categoryquestions.asp?categoryid=7
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q123
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=123#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=123#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=123
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=123
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=123
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=123
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=123
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=123
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=123
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=123
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=123
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=123
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=123
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=123
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=123
+    - 'row "5 124. רמת מעריך מצומצם סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב 1. שאלון סוציומטרי                       "':
+      - cell "5"
+      - 'cell "124. רמת מעריך מצומצם סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב"':
+        - link "124. רמת מעריך מצומצם":
+          - /url: editq.asp?qid=124
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "7. זיהוי המשיב":
+          - /url: Categoryquestions.asp?categoryid=7
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q124
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=124#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=124#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=124
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=124
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=124
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=124
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=124
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=124
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=124
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=124
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=124
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=124
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=124
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=124
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=124
+    - 'row "6 126. המעריך פסול או תקין? סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 4. ניהול חריגים 1. שאלון סוציומטרי                       "':
+      - cell "6"
+      - 'cell "126. המעריך פסול או תקין? סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 4. ניהול חריגים"':
+        - link "126. המעריך פסול או תקין?":
+          - /url: editq.asp?qid=126
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "4. ניהול חריגים":
+          - /url: Categoryquestions.asp?categoryid=4
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q126
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=126#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=126#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=126
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=126
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=126
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=126
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=126
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=126
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=126
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=126
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=126
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=126
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=126
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=126
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=126
+    - 'row "7 132. מאפיין יחידה - שדה/מטה סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב 1. שאלון סוציומטרי                       "':
+      - cell "7"
+      - 'cell "132. מאפיין יחידה - שדה/מטה סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה: 7. זיהוי המשיב"':
+        - link "132. מאפיין יחידה - שדה/מטה":
+          - /url: editq.asp?qid=132
+        - text: "סוג שאלון - בחירת אחת מתוך האפשרויות קטגוריה:"
+        - link "7. זיהוי המשיב":
+          - /url: Categoryquestions.asp?categoryid=7
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q132
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=132#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=132#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=132
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=132
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=132
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=132
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=132
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=132
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=132
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=132
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=132
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=132
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=132
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=132
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=132
+    - 'row "8 1. מידת היכרות סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 8. כל השאלות 9. שאלת מידת היכרות 1. שאלון סוציומטרי                       "':
+      - cell "8"
+      - 'cell "1. מידת היכרות סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 8. כל השאלות 9. שאלת מידת היכרות"':
+        - link "1. מידת היכרות":
+          - /url: editq.asp?qid=1
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+        - link "9. שאלת מידת היכרות":
+          - /url: clusterquestions.asp?clusterid=9
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q1
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=1#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=1#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=1
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=1
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=1
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=1
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=1
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=1
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=1
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=1
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=1
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=1
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=1
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=1
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=1
+    - 'row "9 2. מקצועי בתחומו סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "9"
+      - 'cell "2. מקצועי בתחומו סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 8. כל השאלות"':
+        - link "2. מקצועי בתחומו":
+          - /url: editq.asp?qid=2
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q2
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=2#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=2#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=2
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=2
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=2
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=2
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=2
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=2
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=2
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=2
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=2
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=2
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=2
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=2
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=2
+    - 'row "10 6. יחסי אנוש סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "10"
+      - 'cell "6. יחסי אנוש סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 8. כל השאלות"':
+        - link "6. יחסי אנוש":
+          - /url: editq.asp?qid=6
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q6
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=6#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=6#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=6
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=6
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=6
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=6
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=6
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=6
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=6
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=6
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=6
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=6
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=6
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=6
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=6
+    - 'row "11 4. דוגמא אישית סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "11"
+      - 'cell "4. דוגמא אישית סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות"':
+        - link "4. דוגמא אישית":
+          - /url: editq.asp?qid=4
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q4
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=4#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=4#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=4
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=4
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=4
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=4
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=4
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=4
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=4
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=4
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=4
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=4
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=4
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=4
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=4
+    - 'row "12 7. ארגון וניהול סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "12"
+      - 'cell "7. ארגון וניהול סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות"':
+        - link "7. ארגון וניהול":
+          - /url: editq.asp?qid=7
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q7
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=7#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=7#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=7
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=7
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=7
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=7
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=7
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=7
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=7
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=7
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=7
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=7
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=7
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=7
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=7
+    - 'row "13 42. פיקוד ומנהיגות סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "13"
+      - 'cell "42. פיקוד ומנהיגות סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות"':
+        - link "42. פיקוד ומנהיגות":
+          - /url: editq.asp?qid=42
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q42
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=42#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=42#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=42
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=42
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=42
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=42
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=42
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=42
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=42
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=42
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=42
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=42
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=42
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=42
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=42
+    - 'row "14 3. מחוייבות והשקעה סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "14"
+      - 'cell "3. מחוייבות והשקעה סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות"':
+        - link "3. מחוייבות והשקעה":
+          - /url: editq.asp?qid=3
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q3
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=3#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=3#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=3
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=3
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=3
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=3
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=3
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=3
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=3
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=3
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=3
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=3
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=3
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=3
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=3
+    - 'row "15 44. הצלחה במילוי תפקיד סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "15"
+      - 'cell "44. הצלחה במילוי תפקיד סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות"':
+        - link "44. הצלחה במילוי תפקיד":
+          - /url: editq.asp?qid=44
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q44
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=44#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=44#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=44
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=44
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=44
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=44
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=44
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=44
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=44
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=44
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=44
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=44
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=44
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=44
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=44
+    - 'row "16 46. פוטנציאל לקידום סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "16"
+      - 'cell "46. פוטנציאל לקידום סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 2. שאלות בחירה 8. כל השאלות"':
+        - link "46. פוטנציאל לקידום":
+          - /url: editq.asp?qid=46
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q46
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=46#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=46#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=46
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=46
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=46
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=46
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=46
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=46
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=46
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=46
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=46
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=46
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=46
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=46
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=46
+    - 'row "17 45. נכונות לצאת איתו לקרב סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "17"
+      - 'cell "45. נכונות לצאת איתו לקרב סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 1. שאלות חובה 8. כל השאלות"':
+        - link "45. נכונות לצאת איתו לקרב":
+          - /url: editq.asp?qid=45
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q45
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=45#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=45#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=45
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=45
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=45
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=45
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=45
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=45
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=45
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=45
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=45
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=45
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=45
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=45
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=45
+    - 'row "18 141. הבחנה בין עיקר לטפל סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "18"
+      - 'cell "141. הבחנה בין עיקר לטפל סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 2. שאלות בחירה 8. כל השאלות"':
+        - link "141. הבחנה בין עיקר לטפל":
+          - /url: editq.asp?qid=141
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "12. שאלות בחירה":
+          - /url: Categoryquestions.asp?categoryid=12
+        - text: "אשכולות:"
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q141
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=141#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=141#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=141
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=141
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=141
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=141
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=141
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=141
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=141
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=141
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=141
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=141
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=141
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=141
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=141
+    - 'row "19 142. ראייה והבנה מערכתית סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 1. שאלות חובה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "19"
+      - 'cell "142. ראייה והבנה מערכתית סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 1. שאלות חובה 8. כל השאלות"':
+        - link "142. ראייה והבנה מערכתית":
+          - /url: editq.asp?qid=142
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "12. שאלות בחירה":
+          - /url: Categoryquestions.asp?categoryid=12
+        - text: "אשכולות:"
+        - link "1. שאלות חובה":
+          - /url: clusterquestions.asp?clusterid=1
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q142
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=142#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=142#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=142
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=142
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=142
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=142
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=142
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=142
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=142
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=142
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=142
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=142
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=142
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=142
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=142
+    - 'row "20 48. מקוריות וחדשנות סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "20"
+      - 'cell "48. מקוריות וחדשנות סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 2. שאלות בחירה 8. כל השאלות"':
+        - link "48. מקוריות וחדשנות":
+          - /url: editq.asp?qid=48
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q48
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=48#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=48#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=48
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=48
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=48
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=48
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=48
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=48
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=48
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=48
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=48
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=48
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=48
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=48
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=48
+    - 'row "21 47. גמישות מחשבתית סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 2. שאלות בחירה 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "21"
+      - 'cell "47. גמישות מחשבתית סוג שאלון - מספר שלם או עשרוני קטגוריה: 1. ממדה 1 אשכולות: 2. שאלות בחירה 8. כל השאלות"':
+        - link "47. גמישות מחשבתית":
+          - /url: editq.asp?qid=47
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "1. ממדה 1":
+          - /url: Categoryquestions.asp?categoryid=1
+        - text: "אשכולות:"
+        - link "2. שאלות בחירה":
+          - /url: clusterquestions.asp?clusterid=2
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q47
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=47#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=47#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=47
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=47
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=47
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=47
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=47
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=47
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=47
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=47
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=47
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=47
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=47
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=47
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=47
+    - 'row "22 143. יכולת תכנון סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "22"
+      - 'cell "143. יכולת תכנון סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 8. כל השאלות"':
+        - link "143. יכולת תכנון":
+          - /url: editq.asp?qid=143
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "12. שאלות בחירה":
+          - /url: Categoryquestions.asp?categoryid=12
+        - text: "אשכולות:"
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q143
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=143#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=143#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=143
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=143
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=143
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=143
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=143
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=143
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=143
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=143
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=143
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=143
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=143
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=143
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=143
+    - 'row "23 144. יכולת הפקת לקחים ויישומם סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 8. כל השאלות 1. שאלון סוציומטרי                       "':
+      - cell "23"
+      - 'cell "144. יכולת הפקת לקחים ויישומם סוג שאלון - מספר שלם או עשרוני קטגוריה: 12. שאלות בחירה אשכולות: 8. כל השאלות"':
+        - link "144. יכולת הפקת לקחים ויישומם":
+          - /url: editq.asp?qid=144
+        - text: "סוג שאלון - מספר שלם או עשרוני קטגוריה:"
+        - link "12. שאלות בחירה":
+          - /url: Categoryquestions.asp?categoryid=12
+        - text: "אשכולות:"
+        - link "8. כל השאלות":
+          - /url: clusterquestions.asp?clusterid=8
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q144
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=144#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=144#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=144
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=144
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=144
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=144
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=144
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=144
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=144
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=144
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=144
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=144
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=144
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=144
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=144
+    - 'row "24 226. הערות מילוליות סוג שאלון - שדה טקסט ארוך קטגוריה: 15. שאלות מילוליות 1. שאלון סוציומטרי                       "':
+      - cell "24"
+      - 'cell "226. הערות מילוליות סוג שאלון - שדה טקסט ארוך קטגוריה: 15. שאלות מילוליות"':
+        - link "226. הערות מילוליות":
+          - /url: editq.asp?qid=226
+        - text: "סוג שאלון - שדה טקסט ארוך קטגוריה:"
+        - link "15. שאלות מילוליות":
+          - /url: Categoryquestions.asp?categoryid=15
+      - cell "1. שאלון סוציומטרי":
+        - link "1. שאלון סוציומטרי":
+          - /url: redit.asp?rid=1#q226
+      - cell "":
+        - link "":
+          - /url: hidebyperiod.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: hidebyfield.asp?rid=1&filterqid=226#1
+      - cell "":
+        - link "":
+          - /url: hidebyuser.asp?rid=1&filterqid=226#1
+      - cell "":
+        - link "":
+          - /url: hidebyversion.asp?rid=1&filterqid=226
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyfield.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyq.asp?rid=1&masterqid=226
+      - cell "":
+        - link "":
+          - /url: hideoptionsbyperiod.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: hidepages.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: hide.asp?rid=1&masterqid=226
+      - cell "":
+        - link "":
+          - /url: qcopying.asp?rid=1&fromqid=226
+      - cell "":
+        - link "":
+          - /url: qcopyingdirect.asp?rid=1&qidstorerid=226
+      - cell "":
+        - link "":
+          - /url: copyto360.asp?fromrid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: copytocluster.asp?fromrid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: copyfrommtable.asp?rid=1&targetqid=226
+      - cell "":
+        - link "":
+          - /url: copyoptionstocluster.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: copybygroups.asp?fromrid=1&fromqid=226
+      - cell "":
+        - link "":
+          - /url: mandatorysum.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: defaultanswers.asp?rid=1&qid=226
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=226
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=226
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=226
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=226
+      - cell "":
+        - link "":
+          - /url: mandatorybyquestion.asp?rid=1&masterqid=226
+- status: Showing 1 to 24 of 24 entries
+- navigation "pagination":
+  - link "First" [disabled]: ֲ«
+  - link "Previous" [disabled]: ג€¹
+  - link "1"
+  - link "Next" [disabled]: ג€÷
+  - link "Last" [disabled]: ֲ»
+- separator
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+- listbox:
+  - searchbox "Search"
+  - option "1. שאלון סוציומטרי" [selected]
+  - option "2. מעקב תכולת עבודה"
+  - option "4. סוציומטריה יחידתית-בדיקה"
+  - option "5. סוציומטריה-מטה"
+  - option "6. שאלון סוציומטרי מאסטר לא לגעת"
+  - option "7. ניהול חריגים"
+  - option "9. נושאים שצריך לקבל תשובות מהצבא"
+  - option "10. תקלות במערכת"
+  - option "11. שאלון עזר לתוצאות המחושבות עבור כל משתתף"
+  - option "15. שאלון עזר לחישוב תוצאות"
+- listbox:
+  - searchbox "Search"
+  - option "בחר קטגוריה או אשכול" [selected]
+  - text: קטגוריות השאלון
+  - option "12. שאלות בחירה"
+  - option "1. ממדה 1"
+  - option "4. ניהול חריגים"
+  - option "7. זיהוי המשיב"
+  - option "9."
+  - option "15. שאלות מילוליות"
+  - text: אשכולות השאלון
+  - option "1. שאלות חובה"
+  - option "2. שאלות בחירה"
+  - option "9. שאלת מידת היכרות"
+  - option "8. כל השאלות"
+```
+
+# Test source
+
+```ts
+  149 |   
+  150 |   }
+  151 |   async five() {
+  152 |     await this.eventManagementButton.click();
+  153 |     await this.createNewEventButton.click();
+  154 |     await this.eventNameInput.waitFor({ state: 'visible' });
+  155 |     await this.eventNameInput.click({ force: true });
+  156 |     await this.page.waitForTimeout(200); // זמן קטן לייצוב
+  157 |     await this.eventNameInput.fill(''); // לנקות את השדה
+  158 |     await this.page.waitForTimeout(200); // עוד זמן קטן
+  159 |     await this.page.keyboard.type('מרינה 2025', { delay: 150 });
+  160 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  161 |
+  162 |
+  163 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  164 |
+  165 |
+  166 |     await this.seasonDropdown.click();
+  167 |     await this.seasonOption.click();
+  168 |     // הוספת בחירת עונה כאן אם צריך
+  169 |
+  170 |     // בחירת תאריך התחלה
+  171 |     await this.startDateButton.click();
+  172 |     await this.page.keyboard.press('Enter');   // בחירת תאריך סיום
+  173 |     await this.endDateButton.click();
+  174 |     await this.page.keyboard.press('Enter');
+  175 |     await this.recruit.click();
+  176 |     await this.recruitOption.click();
+  177 |     logger.info('we came to the end');
+  178 |     await this.mateS.click();
+  179 |     logger.info('worked');
+  180 |     await this.mateC.click();
+  181 |     await this.pikud1.click();
+  182 |     logger.info('פיקוד אחד נלחץ');
+  183 |     await this.page.waitForTimeout(2000)
+  184 |     await this.page.locator('div:nth-child(18) > .dx-treeview-with-search > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container > .dx-scrollable-content > ul > li > .dx-treeview-node-container > li > .dx-widget').first().click();
+  185 |     logger.info('אוגדה 1 נלחצה');
+  186 |     await this.page.waitForTimeout(2500);
+  187 |     await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  188 |     await this.end1.click({ force: true });
+  189 |     await this.page.waitForTimeout(2500);
+  190 |   
+  191 |     await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  192 |     await this.end3.click({ force: true });
+  193 |     await this.page.waitForTimeout(2500);
+  194 |     await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  195 |     await this.final.click({ force: true });
+  196 |     await this.page.waitForTimeout(2500);
+  197 |     await this.calculate.click();
+  198 |     await this.show.click();
+  199 |     await this.f1.waitFor({ state: 'visible' });
+  200 |     await this.f1.click();
+  201 |     await this.f2.waitFor({ state: 'visible' });
+  202 |     await this.f2.click();
+  203 |     await this.f4.waitFor({ state: 'visible' });
+  204 |     await this.f4.click();
+  205 |     await this.show1.waitFor({ state: 'visible' });
+  206 |     await this.show1.click();
+  207 |   }
+  208 |   async six() {
+  209 |
+  210 |  await this.all.nth(0).click()
+  211 |  await expect(this.must).toBeVisible()
+  212 |  await expect(this.must2).toBeVisible()
+  213 |
+  214 | }
+  215 | async seven() {
+  216 |
+  217 |   await this.all.nth(1).click()
+  218 |   await expect(this.must3).toBeVisible()
+  219 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  220 |   await expect(this.must4).toBeVisible()
+  221 |   await expect(this.must5).toBeVisible()
+  222 |  }
+  223 |  async eight() {
+  224 |
+  225 |   await this.all.nth(2).click()
+  226 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  227 |   await expect(this.must6).toBeVisible()
+  228 |   await expect(this.must6).toContainText("סוציומטרי")
+  229 |   await expect(this.must7).toContainText("מספר אישי")
+  230 |  
+  231 | }
+  232 |  async nine() {
+  233 |
+  234 |   await this.all.nth(3).click()
+  235 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  236 |   await expect(this.must5).toBeVisible()
+  237 |   await expect(this.must8).toBeVisible()
+  238 |   await this.must8.click()
+  239 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  240 |
+  241 |  
+  242 |  }
+  243 |  async ten() {
+  244 |
+  245 |   await this.all.nth(4).click()
+  246 |   await expect(this.must9).toBeVisible()
+  247 |   await this.must9.click()
+  248 |   const count = await this.must10.count();
+> 249 |   await expect(count).toBe(15);
+      |                       ^ Error: expect(received).toBe(expected) // Object.is equality
+  250 |
+  251 |
+  252 |  
+  253 |  }}
+  254 | // .click();
+```

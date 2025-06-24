@@ -1,0 +1,163 @@
+# Test info
+
+- Name: e2e+api2
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:163:6
+
+# Error details
+
+```
+Error: page.textContent: Test timeout of 190000ms exceeded.
+Call log:
+  - waiting for locator('//*[@id="statusNameSpan501"]')
+
+    at FlowPage.e2eAddEventAndCheckItAppears (C:\Users\User\Documents\k6try\pages\FlowPage.ts:450:38)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:173:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:168:3
+```
+
+# Page snapshot
+
+```yaml
+- complementary:
+  - button " עזרה":
+    - text: 
+    - paragraph: עזרה
+  - button " חזרה לדף הבית":
+    - text: 
+    - paragraph: חזרה לדף הבית
+  - link "":
+    - /url: "#/userLinks/9395637236524D9FA19B"
+    - button ""
+  - text: 1.0.0.94
+- main:
+  - button "להקמת אירוע חדש"
+```
+
+# Test source
+
+```ts
+  350 |   await this.eventManagementButton.click();
+  351 |
+  352 |   // 2. מחכים במקביל לתגובה מה-API
+  353 |   const [response] = await Promise.all([
+  354 |     this.page.waitForResponse(resp =>
+  355 |       resp.url().includes('/TPSMOH.API/api/servicecall') &&
+  356 |       resp.request().method() === 'POST' &&
+  357 |       resp.status() === 200 &&
+  358 |       (resp.request().postData() || '').length === 93
+  359 |     ),
+  360 |   ]);
+  361 |   
+  362 |   
+  363 |   const apiJson = await response.json();
+  364 |   const events = apiJson?.calls?.[0]?.callResult?.data ?? [];
+  365 |   const backendCount = Array.isArray(events)
+  366 |     ? events.filter(e => e.eventId !== undefined).length
+  367 |     : 0;
+  368 |   
+  369 |   console.log('Count from API:', backendCount);
+  370 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  371 |   const counter = await this.tr1.count();
+  372 |
+  373 |   // 5. אם יש לחיצה נוספת שמשפיעה על הטבלה
+  374 |   await this.page2.click();
+  375 |   await this.page.waitForSelector("//tr[@aria-selected='false']");
+  376 |   const counter2 = await this.tr1.count();
+  377 |
+  378 |
+  379 |   const sum = 6 * counter + counter2;
+  380 |   console.log('Count from UI:', sum);
+  381 |
+  382 |   // 7. בדיקה שהמספרים שווים
+  383 |   expect(sum).toBe(backendCount);
+  384 | }
+  385 |
+  386 |
+  387 | async e2eAddEventAndCheckItAppears() {
+  388 |   // שלב 1: הגדרת המוק מראש כדי להשתמש בו גם בבדיקות בהמשך
+  389 |   const mockEvent = {
+  390 |     eventId: 501,
+  391 |     eventName: "Marina 2027",
+  392 |     status: 1,
+  393 |     statusDate: "28/04/2025",
+  394 |     statusName: "בהכנה",
+  395 |     startDepName: "248. פיקוד 1",
+  396 |     startDepCode: "248",
+  397 |     creator: null,
+  398 |     creatorRole: null,
+  399 |     actual: 0,
+  400 |     modelType: null,
+  401 |     period: 1,
+  402 |     periodName: "עונת 1",
+  403 |     pikud: 188,
+  404 |     pikudName: "כללי",
+  405 |     startDate: "06/04/2025",
+  406 |     endDate: "28/04/2025",
+  407 |     potential: 19343,
+  408 |     completed: 0,
+  409 |     suspected: 0,
+  410 |     disqualified: 0,
+  411 |     approved: 0,
+  412 |     id: 0,
+  413 |     code: null,
+  414 |     isActive: true,
+  415 |     isDeleted: false,
+  416 |     createdBy: null,
+  417 |     createdOn: "0001-01-01T00:00:00",
+  418 |     lastUpdateBy: null,
+  419 |     version: "0001-01-01T00:00:00"
+  420 |   };
+  421 |
+  422 |   const mockResponse = {
+  423 |     calls: [{
+  424 |       callResult: {
+  425 |         data: [mockEvent]
+  426 |       }
+  427 |     }]
+  428 |   };
+  429 |
+  430 |   // שלב 2: ניתוב הקריאה ל־API והחזרת המוק
+  431 |   await this.page.route('**/TPSMOH.API/api/servicecall', async (route, request) => {
+  432 |     if (
+  433 |       request.method() === 'POST' &&
+  434 |       (request.postData() || '').length === 93
+  435 |     ) {
+  436 |       await route.fulfill({
+  437 |         status: 200,
+  438 |         contentType: 'application/json',
+  439 |         body: JSON.stringify(mockResponse),
+  440 |       });
+  441 |     } else {
+  442 |       await route.continue();
+  443 |     }
+  444 |   });
+  445 |
+  446 |   // שלב 3: כניסה לעמוד שמפעיל את הקריאה
+  447 |   await this.eventManagementButton.click();
+  448 |
+  449 |   // שלב 4: בדיקות – וידוא שהערכים מופיעים במסך כמו שצריך- client
+> 450 |   const statusText = await this.page.textContent('//*[@id="statusNameSpan501"]');
+      |                                      ^ Error: page.textContent: Test timeout of 190000ms exceeded.
+  451 |   expect(statusText?.trim()).toBe(mockEvent.statusName);
+  452 |
+  453 |   const seasonText = await this.page.textContent("(//td[@aria-colindex='4'])[3]");
+  454 |   expect(seasonText?.trim()).toBe(mockEvent.periodName);
+  455 |
+  456 |
+  457 |   const nameText = await this.page.textContent("(//td[@aria-colindex='2'])[3]");
+  458 |   expect(nameText?.trim()).toBe(mockEvent.eventName);
+  459 |
+  460 |   
+  461 |   const dateText = await this.page.textContent("(//span[@class='dx-template-wrapper'])[2]");
+  462 |   expect(dateText).toContain(mockEvent.startDate);
+  463 |   expect(dateText).toContain(mockEvent.endDate);
+  464 |
+  465 |
+  466 | }
+  467 |
+  468 | }
+  469 | // .click();
+  470 | // 
+  471 | // //*[@id="statusNameSpan501"]
+  472 | // 
+```

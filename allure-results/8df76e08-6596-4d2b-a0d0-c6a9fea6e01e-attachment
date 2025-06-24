@@ -1,0 +1,293 @@
+# Test info
+
+- Name: u,תFbffעעעfzzfffתvvvcccccccccת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:212:8
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 2
+Received: 4
+    at FlowPage.eleven16 (C:\Users\User\Documents\k6try\pages\FlowPage.ts:462:17)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:218:7
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:217:5
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=batchpresentations
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem: ייצוא מצגות לקבוצה של מוערכים או יחידות
+  - listitem:
+    - img
+- text: יצוא מצגות לקבוצות משתמשים במרוכז
+- table:
+  - rowgroup:
+    - row "אנא בחר מצב":
+      - cell "אנא בחר מצב"
+      - cell:
+        - combobox:
+          - text: הקמה וייצוא של מצגות אישיות ויחידתיות (שמירה בתיקיית המוערך)
+          - img
+    - row "אנא בחר מצגת:":
+      - cell "אנא בחר מצגת:"
+      - cell:
+        - combobox:
+          - text: אנא בחר מצגת
+          - img
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+- listbox:
+  - searchbox "Search"
+  - option "הקמה וייצוא של מצגות אישיות ויחידתיות (שמירה בתיקיית המוערך)" [selected]
+  - option "איסוף וייצוא של פלטים אישיים מתיקיית עובד"
+- listbox:
+  - searchbox "Search"
+  - option "אנא בחר מצגת" [selected]
+  - option "1. דוחות לפי ציון מסכם - כקבוצה - עונת 1 - שינוי האחרון 06/02/2025 12:25:03"
+  - option "2. דוחות חתך - אישי - עונת 1 - שינוי האחרון"
+  - option "7. test esu - כקבוצה - עונת 1 - שינוי האחרון"
+```
+
+# Test source
+
+```ts
+  362 |
+  363 |  async eleven9() {
+  364 |    await this.all.nth(12).click()
+  365 |    await expect(this.must3).toContainText("העברת משיבים ממאגר פוטנציאלי למאגר פעיל ולהיפך")
+  366 |    await expect(this.all).toBeVisible()
+  367 |    const a=await this.table5.count()
+  368 |    expect(a).toBe(46)
+  369 |    await expect(this.must4).toBeVisible()
+  370 |
+  371 |  }
+  372 |   async eleven10() {
+  373 |    await this.all.nth(13).click()
+  374 |    await expect(this.must3).toContainText("ניהול הרשאות משתמשים")
+  375 |    await expect(this.all).toBeVisible()
+  376 |    const a=await this.table5.count()
+  377 |    expect(a).toBe(46)
+  378 |    await expect(this.must4).toBeVisible()
+  379 |
+  380 |  }
+  381 |
+  382 |   async eleven11() {
+  383 |    await this.all.nth(14).click()
+  384 |  
+  385 |    await expect(this.submitButton).toBeVisible()
+  386 |    await expect(this.all).toBeVisible()
+  387 |    // ניגש לאלמנט לפי ID (כמו בדוגמה שלך)
+  388 |    const dateInput = this.page.locator('#dateFrom');
+  389 |    const dateTo = await this.page.locator('#dateTo').inputValue();
+  390 |
+  391 | // קולטים את הערך מתוך השדה
+  392 |     const inputValue = await dateInput.inputValue();
+  393 |
+  394 | // מייצרים את התאריך של היום בפורמט dd/MM/yyyy
+  395 | const today = new Date();
+  396 | const day = String(today.getDate()).padStart(2, '0');
+  397 | const month = String(today.getMonth() + 1).padStart(2, '0');
+  398 | const year = today.getFullYear();
+  399 | const todayFormatted = `${day}/${month}/${year}`;
+  400 |
+  401 | // משווים בין התאריך שבשדה לתאריך של היום
+  402 | expect(inputValue).toBe(todayFormatted);
+  403 | expect(dateTo).toBe(todayFormatted);
+  404 |
+  405 |
+  406 |  }
+  407 |
+  408 |
+  409 | async eleven12() {
+  410 |    await this.all.nth(15).click()
+  411 |    await expect(this.must3).toContainText("הגדרת חוקי העתקה של נתונים מחושבים לשאלון העזר")
+  412 |    await expect(this.must4).toBeVisible()
+  413 |    // קולט את כל הלייבלים שבתוך הטופס
+  414 |     const labels = this.page.locator("//form[@name='sm_precalcrules']//label");
+  415 |     const count1 = await labels.count();
+  416 |     expect(count1).toBe(5);
+  417 | }
+  418 |
+  419 | async eleven13() {
+  420 |    await this.all.nth(16).click()
+  421 |    await expect(this.must3).toContainText("הגדרת כללים לחוקות חישוב ואוכלוסיות למודל חישוב")
+  422 |    await expect(this.submitButton).toBeVisible()
+  423 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  424 |    const table = this.page.locator("(//table[@cellpadding='0'])");
+  425 |
+  426 | // סופר את מספר השורות
+  427 | const rowCount = await table.count();
+  428 |
+  429 | // בודק שיש בדיוק 2
+  430 | expect(rowCount).toBe(2);
+  431 |
+  432 | }
+  433 |
+  434 | async eleven14() {
+  435 |    await this.all.nth(17).click()
+  436 |    await expect(this.must3).toContainText("רשימת שדות עבור המאגר: מאגר עדכני")
+  437 |   
+  438 |    // מאתר את הטבלה הראשונה עם cellpadding='0'
+  439 |     const table2 = this.page.locator(".mtableedit-table");
+  440 |    const table = this.page.locator("(//input[@type='button'])");
+  441 | const table3 = this.page.locator("input[value='הוסף שדה חדש']");
+  442 |  await expect(table2).toBeVisible()
+  443 |    await expect(table3).toBeVisible()
+  444 | // סופר את מספר השורות
+  445 | const rowCount = await table.count();
+  446 |
+  447 | // בודק שיש בדיוק 2
+  448 | expect(rowCount).toBe(15);
+  449 |
+  450 | }
+  451 |
+  452 | async eleven15() {
+  453 |   
+  454 |   await this.all.nth(18).click();
+  455 |   await expect(this.page).toHaveURL("https://www.survey.co.il/pms/MMDANEW/sm.asp");
+  456 | }
+  457 | async eleven16() {
+  458 |   await this.all.nth(19).click();
+  459 |  await expect(this.must3).toContainText("יצוא מצגות לקבוצות משתמשים במרוכז")
+  460 |   const elements = await this.page.locator("(//div[@class='BodyOut-continar']//td)");
+  461 |   const count = await elements.count();
+> 462 |   expect(count).toBe(2);
+      |                 ^ Error: expect(received).toBe(expected) // Object.is equality
+  463 |   const elements2 = await this.page.locator("(//div[@role='combobox'])");
+  464 |   const count2 = await elements2.count();
+  465 |   expect(count2).toBe(2);
+  466 | }
+  467 |
+  468 |
+  469 |
+  470 |
+  471 |
+  472 |
+  473 |
+  474 |
+  475 |
+  476 |
+  477 |
+  478 |
+  479 |
+  480 |
+  481 |
+  482 |
+  483 |
+  484 |
+  485 |
+  486 |
+  487 |
+  488 |
+  489 |
+  490 |
+  491 |
+  492 |
+  493 |
+  494 |
+  495 |
+  496 |
+  497 |
+  498 |
+  499 |
+  500 |
+  501 |
+  502 |
+  503 |
+  504 |
+  505 |
+  506 |
+  507 |  async ele() {
+  508 |   await this.all.nth(5).click();
+  509 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  510 |   const screenshotPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele_actual.png');
+  511 |   await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width: await this.page.evaluate(() => window.innerWidth), height: 1000 } });
+  512 |
+  513 |   // טען את תמונת ה-expected הקיימת
+  514 |   const expectedPath = path.resolve('C:\\Users\\User\\Documents\\k6try\\screenshots\\ele.png');
+  515 |   const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  516 |   const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  517 |
+  518 |   const { width, height } = expectedImage;
+  519 |   const diff = new PNG({ width, height });
+  520 |
+  521 |   // השווה בין התמונות
+  522 |   const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, width, height, { threshold: 0.1 });
+  523 |
+  524 |   // בדוק שאין הבדל (תפסיק אם יש הבדל)
+  525 |   expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית`).toBe(0);
+  526 | };
+  527 | async compareScreenshots(start: number, end: number) {
+  528 |   for (let i = start; i <= end; i++) {
+  529 |     await this.all.nth(i).click();
+  530 |
+  531 |     const screenshotPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_actual_${i}.png`);
+  532 |     const expectedPath = path.resolve(`C:\\Users\\User\\Documents\\k6try\\screenshots\\twohalve_${i}.png`);
+  533 |
+  534 |     const width = await this.page.evaluate(() => window.innerWidth);
+  535 |     const height = await this.page.evaluate(() => window.innerHeight);
+  536 |     
+  537 |     
+  538 |     await this.page.screenshot({ path: screenshotPath, clip: { x: 0, y: 0, width, height } });
+  539 |
+  540 |     const expectedImage = PNG.sync.read(fs.readFileSync(expectedPath));
+  541 |     const actualImage = PNG.sync.read(fs.readFileSync(screenshotPath));
+  542 |
+  543 |     const { width: w, height: h } = expectedImage;
+  544 |     const diff = new PNG({ width: w, height: h });
+  545 |
+  546 |     const diffPixels = pixelmatch(expectedImage.data, actualImage.data, diff.data, w, h, { threshold: 0.1 });
+  547 |
+  548 |     const TOLERANCE = 100;
+  549 |
+  550 |     expect(diffPixels, `יש הבדל של ${diffPixels} פיקסלים בין התמונה הצפויה לפועלית במסך מספר ${i}`).toBeLessThanOrEqual(TOLERANCE);
+  551 |
+  552 |
+  553 |     await this.page.goBack();
+  554 |   }
+  555 | }
+  556 | async captureExpectedScreenshots(start: number, end: number) {
+  557 |   for (let i = start; i <= end; i++) {
+  558 |     await this.all.nth(i).click();
+  559 |
+  560 |     const width = await this.page.evaluate(() => window.innerWidth);
+  561 |     const height = await this.page.evaluate(() => window.innerHeight);
+  562 |
+```

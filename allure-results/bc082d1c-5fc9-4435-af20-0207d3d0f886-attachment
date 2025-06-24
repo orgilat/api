@@ -1,0 +1,83 @@
+# Test info
+
+- Name: בדיקה פלואו- בחירת מודל חישוב 
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:5:5
+
+# Error details
+
+```
+Error: locator.click: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('div.col-4:has(div.section_title:has-text("בחירת יחידות מאגדות להצגת דוח מילוי"))')
+    2 × waiting for" https://www.survey.co.il/pms/MMDANEW/reportsList.asp" navigation to finish...
+      - navigated to "https://www.survey.co.il/pms/MMDANEW/reportsList.asp"
+
+    at FlowPage.four (C:\Users\User\Documents\k6try\pages\FlowPage.ts:118:21)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:16:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:11:3
+```
+
+# Test source
+
+```ts
+  18 |   readonly seasonDropdown: Locator;
+  19 |   readonly startDateButton: Locator;
+  20 |   readonly endDateButton: Locator;
+  21 |   readonly seasonOption: Locator;
+  22 |   readonly recruit: Locator;
+  23 |   readonly recruitOption: Locator;
+  24 |   readonly mateS: Locator;
+  25 |   readonly mateC: Locator;
+  26 |   readonly pikud1: Locator; 
+  27 |   readonly list22: Locator;
+  28 |   readonly ogda1: Locator;
+  29 |   readonly end1: Locator;
+  30 |   readonly end2: Locator;
+  31 |   readonly end3: Locator;
+  32 |   readonly end4: Locator;
+  33 |   readonly final: Locator;
+  34 |
+  35 |
+  36 |   constructor(page: Page) {
+  37 |     this.page = page;
+  38 |     this.loginInput = page.locator('input[name="login"]');
+  39 |     this.passwordInput = page.locator('input[name="password"]');
+  40 |     this.submitButton = page.locator('input[type="submit"]');
+  41 |     this.surveyAdminLink = page.locator('a:has-text("ניהול הסקר")');
+  42 |     this.sociometricLink = page.locator('a:has-text("ניהול סוציומטרי")');
+  43 |     this.modelingButton =page.getByRole('button', { name: 'הגדרת מודלי חישוב' })
+  44 |     this.modelingButton1 =page.locator('div.ss-values')
+  45 |     this.list =page.locator('div.ss-list')
+  46 |     this.list1 =page.locator('//a[normalize-space(text())="ניתוח והצגת תוצאות"]')
+  47 |     this.list2 = page.locator('a:has-text("דוחות")');
+  48 |   }
+  49 |
+  50 |   async goto() {
+  51 |     await this.page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+  52 |   }
+  53 |
+  54 |   async login(username: string, password: string) {
+  55 |     await this.loginInput.fill(username);
+  56 |     await this.passwordInput.fill(password);
+  57 |     await this.submitButton.click();
+  58 |     await this.page.waitForTimeout(1001);
+  59 |   }
+  60 |
+  61 |   async goToSociometricManagement() {
+  62 |     await this.surveyAdminLink.hover();
+  63 |     await this.sociometricLink.click();
+  64 |    
+  65 |
+  66 |   }
+  67 |   async four() {
+  68 |     await this.modelingButton.scrollIntoViewIfNeeded()
+  69 |     await this.modelingButton.click();
+  70 |     await this.modelingButton1.click();
+  71 |     await this.list.locator('div.ss-option').nth(1).click();
+  72 |    await this.list1.hover()
+  73 |    await this.list2.click()
+  74 |   
+  75 |   }
+  76 | }
+  77 | // .click();
+```

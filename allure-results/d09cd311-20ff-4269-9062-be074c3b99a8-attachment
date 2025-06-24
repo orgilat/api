@@ -1,0 +1,58 @@
+# Test info
+
+- Name: בדיקה מלאה: מעבר לניהול הסקר ואז למסך עונות
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:5:5
+
+# Error details
+
+```
+Error: locator.hover: Target page, context or browser has been closed
+Call log:
+  - waiting for locator('a:has-text("ניהול הסקר")')
+
+    at FlowPage.goToSociometricManagement (C:\Users\User\Documents\k6try\pages\FlowPage.ts:24:25)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:14:20
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:11:3
+```
+
+# Test source
+
+```ts
+   1 | import { Page } from '@playwright/test';
+   2 |
+   3 | export class FlowPage{
+   4 |   constructor(private page: Page) {}
+   5 |
+   6 |   async goto() {
+   7 |     await this.page.goto('https://www.survey.co.il/pms/MMDANEW/default.asp');
+   8 |   }
+   9 |
+  10 |   async login(username: string, password: string) {
+  11 |     await this.page.locator('input[name="login"]').fill(username);
+  12 |     await this.page.locator('input[name="password"]').fill(password);
+  13 |     await this.page.locator('input[type="submit"]').click();
+  14 |     await this.page.waitForTimeout(1001);
+  15 |   }
+  16 |
+  17 |   /**
+  18 |    * לוחץ על קישור "ניהול הסקר" ומוודא ניווט לעמוד המתאים
+  19 |    */
+  20 | // פונקציה חדשה ב-LoginPage.ts:
+  21 | async goToSociometricManagement() {
+  22 |   // ריחוף על "ניהול הסקר"
+  23 |   const surveyAdminLink = this.page.locator('a:has-text("ניהול הסקר")');
+> 24 |   await surveyAdminLink.hover();
+     |                         ^ Error: locator.hover: Target page, context or browser has been closed
+  25 |
+  26 |   // המתנה שתתפרס התפריט
+  27 |   const sociometricLink = this.page.locator('a:has-text("ניהול סוציומטרי")');
+  28 |  
+  29 |
+  30 |   // לחיצה על "ניהול סוציומטרי"
+  31 |   await sociometricLink.click();
+  32 |   await this.page.waitForTimeout(1000)
+  33 |
+  34 | }
+  35 |
+  36 | }
+```

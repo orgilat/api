@@ -1,0 +1,247 @@
+# Test info
+
+- Name: u,תתת
+- Location: C:\Users\User\Documents\k6try\tests\api.spec.ts:107:6
+
+# Error details
+
+```
+Error: expect(received).toBe(expected) // Object.is equality
+
+Expected: 3
+Received: 0
+    at FlowPage.ele (C:\Users\User\Documents\k6try\pages\FlowPage.ts:267:23)
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:117:5
+    at C:\Users\User\Documents\k6try\tests\api.spec.ts:112:3
+```
+
+# Page snapshot
+
+```yaml
+- navigation:
+  - list:
+    - listitem:
+      - link "ניתוח והצגת תוצאות":
+        - /url: ../MMDANEW/main.asp
+    - listitem:
+      - link "ניהול הסקר":
+        - /url: ../MMDANEW/qadministration.asp
+    - listitem:
+      - link "בניית שאלונים":
+        - /url: ../MMDANEW/buildsurvey.asp
+    - listitem:
+      - link "מנהל מערכת":
+        - /url: ../MMDANEW/system.asp
+    - listitem:
+      - link "English":
+        - /url: ../MMDANEW/swlanguage.asp
+    - listitem:
+      - link "יציאה":
+        - /url: logout.asp
+    - listitem
+    - listitem: Warning! PROD server
+- list:
+  - listitem
+  - listitem:
+    - link:
+      - /url: interface.asp?iPageName=sm_daysfilterrules
+      - img
+  - listitem:
+    - link "דף הבית":
+      - /url: main.asp
+  - listitem: ">>"
+  - listitem:
+    - link "ניהול סוציומטרי":
+      - /url: sm.asp
+  - listitem: ">>"
+  - listitem: כללי סינון פוטנציאל על בסיס ימים
+  - listitem:
+    - img
+- text: כללי השתתפות לפי סוג יחידה/ותק/היעדרות
+- table:
+  - rowgroup:
+    - row "סווג היחידה באירוע (אם פרמטר זה נבחר אין לבחור גם בשדה לקביעת החוקה) לא נבחר":
+      - cell "סווג היחידה באירוע (אם פרמטר זה נבחר אין לבחור גם בשדה לקביעת החוקה)"
+      - cell "לא נבחר":
+        - combobox:
+          - option "לא נבחר" [selected]
+          - option "שדה"
+          - option "מטה"
+    - row "קוד שדה (אם פרמטר זה נבחר אין לבחור גם בסיווג היחידה לצורך קביעת חוקת היעדרות) לא נבחר שדה":
+      - cell "קוד שדה (אם פרמטר זה נבחר אין לבחור גם בסיווג היחידה לצורך קביעת חוקת היעדרות)"
+      - cell "לא נבחר שדה":
+        - combobox:
+          - option "לא נבחר שדה" [selected]
+          - option "בחר שדה"
+          - option "58. דרגת כתף"
+          - option "59. אוכלוסיות (מוסק)"
+          - option "61. סוג שירות (סאפ)"
+          - option "66. חיל (סאפ)"
+          - option "75. מין (סאפ)"
+          - option "98. אוכלוסיות + (מוסק)"
+          - option "99. דרגה ייצוגית (סאפ)"
+          - option "119. דרגת כתף באירוע"
+          - option "120. משתתף בפיילוט"
+    - row "ערך בשדה":
+      - cell "ערך בשדה"
+      - cell:
+        - combobox
+    - row "ימים ביחידה ממועד ההצבה לתאריך האירוע 0":
+      - cell "ימים ביחידה ממועד ההצבה לתאריך האירוע"
+      - cell "0":
+        - spinbutton: "0"
+    - row "שמור":
+      - cell "שמור":
+        - button "שמור"
+- table:
+  - rowgroup:
+    - row "סוג יחידה שדה ערך ימים ביחידה ימי היעדרות עריכה מחיקה":
+      - cell
+      - cell "סוג יחידה"
+      - cell "שדה"
+      - cell "ערך"
+      - cell "ימים ביחידה"
+      - cell "ימי היעדרות"
+      - cell "עריכה"
+      - cell "מחיקה"
+    - row "1 שדה 0. 0. . 60 הוסף ימי היעדרות עריכה  מחק":
+      - cell "1"
+      - cell "שדה"
+      - cell "0."
+      - cell "0. ."
+      - cell "60"
+      - cell "הוסף ימי היעדרות":
+        - button "הוסף ימי היעדרות"
+      - cell "עריכה":
+        - button "עריכה"
+      - cell " מחק":
+        - button " מחק"
+    - row "2 מטה 0. 0. . 90 הוסף ימי היעדרות עריכה  מחק":
+      - cell "2"
+      - cell "מטה"
+      - cell "0."
+      - cell "0. ."
+      - cell "90"
+      - cell "הוסף ימי היעדרות":
+        - button "הוסף ימי היעדרות"
+      - cell "עריכה":
+        - button "עריכה"
+      - cell " מחק":
+        - button " מחק"
+- list:
+  - listitem: © כל הזכויות שמורות לתמורות
+  - listitem: 03-9246246
+  - listitem:
+    - img
+```
+
+# Test source
+
+```ts
+  167 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  168 |
+  169 |
+  170 |     await expect(this.eventNameInput).toHaveValue('מרינה 2025', { timeout: 5000 });
+  171 |
+  172 |
+  173 |     await this.seasonDropdown.click();
+  174 |     await this.seasonOption.click();
+  175 |     // הוספת בחירת עונה כאן אם צריך
+  176 |
+  177 |     // בחירת תאריך התחלה
+  178 |     await this.startDateButton.click();
+  179 |     await this.page.keyboard.press('Enter');   // בחירת תאריך סיום
+  180 |     await this.endDateButton.click();
+  181 |     await this.page.keyboard.press('Enter');
+  182 |     await this.recruit.click();
+  183 |     await this.recruitOption.click();
+  184 |     logger.info('we came to the end');
+  185 |     await this.mateS.click();
+  186 |     logger.info('worked');
+  187 |     await this.mateC.click();
+  188 |     await this.pikud1.click();
+  189 |     logger.info('פיקוד אחד נלחץ');
+  190 |     await this.page.waitForTimeout(2000)
+  191 |     await this.page.locator('div:nth-child(18) > .dx-treeview-with-search > .dx-scrollable > .dx-scrollable-wrapper > .dx-scrollable-container > .dx-scrollable-content > ul > li > .dx-treeview-node-container > li > .dx-widget').first().click();
+  192 |     logger.info('אוגדה 1 נלחצה');
+  193 |     await this.page.waitForTimeout(2500);
+  194 |     await this.end1.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  195 |     await this.end1.click({ force: true });
+  196 |     await this.page.waitForTimeout(2500);
+  197 |   
+  198 |     await this.end3.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  199 |     await this.end3.click({ force: true });
+  200 |     await this.page.waitForTimeout(2500);
+  201 |     await this.final.scrollIntoViewIfNeeded();  // הגלילה כדי לוודא שהאלמנט גלוי
+  202 |     await this.final.click({ force: true });
+  203 |     await this.page.waitForTimeout(2500);
+  204 |     await this.calculate.click();
+  205 |     await this.show.click();
+  206 |     await this.f1.waitFor({ state: 'visible' });
+  207 |     await this.f1.click();
+  208 |     await this.f2.waitFor({ state: 'visible' });
+  209 |     await this.f2.click();
+  210 |     await this.f4.waitFor({ state: 'visible' });
+  211 |     await this.f4.click();
+  212 |     await this.show1.waitFor({ state: 'visible' });
+  213 |     await this.show1.click();
+  214 |   }
+  215 |   async six() {
+  216 |
+  217 |  await this.all.nth(0).click()
+  218 |  await expect(this.must).toBeVisible()
+  219 |  await expect(this.must2).toBeVisible()
+  220 |
+  221 | }
+  222 | async seven() {
+  223 |
+  224 |   await this.all.nth(1).click()
+  225 |   await expect(this.must3).toBeVisible()
+  226 |   await expect(this.must3).toContainText("קביעת שאלות חובה")
+  227 |   await expect(this.must4).toBeVisible()
+  228 |   await expect(this.must5).toBeVisible()
+  229 |  }
+  230 |  async eight() {
+  231 |
+  232 |   await this.all.nth(2).click()
+  233 |   await expect(this.must3).toContainText("שדות לניהול פוטנציאל")
+  234 |   await expect(this.must6).toBeVisible()
+  235 |   await expect(this.must6).toContainText("סוציומטרי")
+  236 |   await expect(this.must7).toContainText("מספר אישי")
+  237 |  
+  238 | }
+  239 |  async nine() {
+  240 |
+  241 |   await this.all.nth(3).click()
+  242 |   await expect(this.must3).toContainText("קביעת חוקים לבדיקת שאלונים לא תקינים: ")
+  243 |   await expect(this.must5).toBeVisible()
+  244 |   await expect(this.must8).toBeVisible()
+  245 |   await this.must8.click()
+  246 |   await expect(this.page).toHaveURL('https://www.survey.co.il/pms/MMDANEW/sm_minMaxAnswerRules.asp');
+  247 |
+  248 |  
+  249 |  }
+  250 |  async ten() {
+  251 |
+  252 |   await this.all.nth(4).click()
+  253 |   await expect(this.must9).toBeVisible()
+  254 |   await this.must9.click()
+  255 |   const count = await this.must10.count();
+  256 |   await expect(count).toBe(24);
+  257 |   await expect(this.must11).toBeVisible()
+  258 |
+  259 |
+  260 |  
+  261 |  }
+  262 |  async ele() {
+  263 |   await this.all.nth(5).click();
+  264 |   await expect(this.must3).toContainText("כללי השתתפות ");
+  265 |   
+  266 |   const count = await this.must13.count();
+> 267 |   await expect(count).toBe(3);
+      |                       ^ Error: expect(received).toBe(expected) // Object.is equality
+  268 |   
+  269 | }
+  270 | }
+  271 | // .click();
+```
